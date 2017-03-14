@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- India State Map  -->
+    <title>Margin Visualization</title>
+
+    <!--  Scripts  -->
+    <script type="text/javascript" src="scripts/d3.v4.js"></script>
+    <script src="scripts/queue.js"></script>
+
+    <!--  Styles  -->
+    <style type="text/css">
+    svg {
+      background: white;
+      }
+
+    #up {
+      opacity: .8;
+      stroke-width: .7;
+      }
+
+      .line {
+        fill: none;
+        stroke-width: 4px;
+      }
+    </style>
+  </head>
+
+<body>
+
+  <div id="chart"></div>
+  <p id="const_name"></p>
+  <script type="text/javascript">
+
+  // #00C8F8
+  // #59C4C5
+  // #FFC33C
+  // #FBE2B4
+  // #FF4C65
+  // #d7191c
+  // #fdae61
+  // #ffffbf
+  // #abdda4
+  // #2b83ba
+  var party_colors = {
+      'Indian National Congress': '#d7191c',
+      'Bharatiya Janata Party': '#2b83ba',
+      'Samajwadi Party': '#abdda4',
+      'Bahujan Samaj Party': '#fdae61',
+      'Apna Dal (Soneylal)': '#ffffbf',
+      'Nirbal Indian Shoshit Hamara Aam Dal': '#ffffbf',
+      'Suheldev Bhartiya Samaj Party': '#ffffbf',
+      'Rashtriya Lok Dal': '#ffffbf',
+      'Independent': '#ffffbf'
+  }
+  var width = 1200,
+      height = 300;
+  var card_circle_radius = 5;
+  var selected_const_code = 1;
+  var svg = d3.select('#chart').append('svg')
+      .attr('width', width + 20)
+      .attr('height', height);
+
+  queue()
+      .defer(d3.csv, 'data/margins/2002.csv')
+      .defer(d3.csv, 'data/margins/2007.csv')
+      .defer(d3.csv, 'data/margins/2012.csv')
+      .defer(d3.csv, 'data/margins/2017.csv')
+      .await(makeMyMap);
+
+  function makeMyMap(error, data_2002, data_2007, data_2012, data_2017) {
+
+      //Add years texts
+      for (var i = 0; i < 4; i++) {
+          svg.append('text')
+              .attr('x', 0)
+              .attr('y', height * (1-(i + 0.5) / 4) + 5)
+              .attr('text-anchor', 'start')
+              .text(2002 + i * 5);
+      }
+
+      // Important ! domain is given manually
+      margin_scale_2002 = d3.scaleLinear().domain([0, 150685]).range([40, width]);
+      margin_scale_2007 = d3.scaleLinear().domain([0, 150685]).range([40, width]);
+      margin_scale_2012 = d3.scaleLinear().domain([0, 150685]).range([40, width]);
+      margin_scale_2017 = d3.scaleLinear().domain([171, 150685]).range([40, width]);
+      //add cards horizontally
+      highlight_line = svg.append("path")
+          .datum(create_path(1))
+          .attr("class", "line")
+          .attr("d", d3.line()
+            .curve(d3.curveBundle.beta(1))
+            .x(function(d) { return d[0]; })
+            .y(function(d) { return d[1]; })
+          )
+          .style('stroke', 'tansparent');
+
+      var year_scale_functions = [
+        {"func":margin_scale_2017, "data":data_2017},
+        {"func":margin_scale_2012, "data":data_2012},
+        {"func":margin_scale_2007, "data":data_2007},
+        {"func":margin_scale_2002, "data":data_2002},
+      ];
+
+      year_scale_functions.forEach(function(year, i){
+        for (var j = 0; j < 403; j++) {
+            //Create cards for each datapoint
+            card = svg.append('g').on('mouseover', highlight).on('mouseout', normalCard).attr('id', 'yr'+(2002 + 5*i)+'id'+j);
+            card.append('rect')
+                .attr("x", 5)
+                .attr("y", 0)
+                .attr("width", 10)
+                .attr("height", height / 4)
+                .attr('fill', 'transparent');
+            card.append('circle')
+                .attr('cx', 10)
+                .attr('cy', height / 8)
+                .attr('r', card_circle_radius)
+                .attr('fill', party_colors[year.data[j]['party']])
+                .attr('opacity', 0.5);
+            card.attr("transform", "translate(" + (year.func(year.data[j]['margin'])-5) + ", "+ (height*(i/4)) +")");
+        }
+      });
+
+      function highlight(){
+        //Highlight if l = True else make normal
+        selected_const_code = parseInt(this.getAttribute('id').split('id')[1]);
+        highlight_line.datum(create_path(selected_const_code))
+            .attr("class", "line")
+            .attr("d", d3.line()
+              .curve(d3.curveBundle.beta(1))
+              .x(function(d) { return d[0]; })
+              .y(function(d) { return d[1]; })
+          )
+          .style('stroke', '#777777');
+        for(var i = 0; i<4; i++){
+          highlightCard(document.getElementById('yr'+(2002 + 5*i)+ 'id' + selected_const_code));
+        }
+        console.log(data_2017[selected_const_code])
+        document.getElementById("const_name").innerHTML = data_2017[selected_const_code]['constituency'] + ' margin 2017 :' + data_2017[selected_const_code]['margin']
+      }
+      function highlightCard(c) {
+          d3.select(c).moveToFront();
+          d3.select(c.getElementsByTagName("circle")[0])
+              //.transition() //Removed transition since it is overloading the program
+              //.duration(100)
+              .attr('r', card_circle_radius + 5)
+              .attr('opacity', 1);
+      }
+      function normalCard() {
+        highlight_line.style('stroke', 'transparent');
+        for(var i = 0; i<4; i++){
+          console.log
+          d3.select(document.getElementById('yr'+(2002 + 5*i)+ 'id' + selected_const_code).getElementsByTagName("circle")[0])
+            .attr('r', card_circle_radius)
+            .attr('opacity', 0.5);
+        }
+        document.getElementById("const_name").innerHTML = ''
+      }
+      function create_path(i){
+        var path_array = [];
+        path_array.push([margin_scale_2017(data_2017[i]['margin']) + 5, height/8]);
+        path_array.push([margin_scale_2017(data_2017[i]['margin']) + 5, height/8*2 - 5]);
+        path_array.push([margin_scale_2017(data_2017[i]['margin']) + 5, height/8*2 - 2.5]);
+        path_array.push([margin_scale_2012(data_2012[i]['margin']) + 5, height/8*2 + 2.5]);
+        path_array.push([margin_scale_2012(data_2012[i]['margin']) + 5, height/8*2 + 5]);
+        path_array.push([margin_scale_2012(data_2012[i]['margin']) + 5, height/8*3]);
+        path_array.push([margin_scale_2012(data_2012[i]['margin']) + 5, height/8*4 - 5]);
+        path_array.push([margin_scale_2012(data_2012[i]['margin']) + 5, height/8*4 - 2.5]);
+        path_array.push([margin_scale_2007(data_2007[i]['margin']) + 5, height/8*4 + 2.5]);
+        path_array.push([margin_scale_2007(data_2007[i]['margin']) + 5, height/8*4 + 5]);
+        path_array.push([margin_scale_2007(data_2007[i]['margin']) + 5, height/8*5]);
+        path_array.push([margin_scale_2007(data_2007[i]['margin']) + 5, height/8*6 - 5]);
+        path_array.push([margin_scale_2007(data_2007[i]['margin']) + 5, height/8*6 - 2.5]);
+        path_array.push([margin_scale_2002(data_2002[i]['margin']) + 5, height/8*6 +2.5]);
+        path_array.push([margin_scale_2002(data_2002[i]['margin']) + 5, height/8*6 +5]);
+        path_array.push([margin_scale_2002(data_2002[i]['margin']) + 5, height/8*7]);
+        return path_array;
+      }
+      d3.selection.prototype.moveToFront = function() {
+        return this.each(function(){
+          this.parentNode.appendChild(this);
+        });
+      };
+  }
+  </script>
+</body>
+</html>
