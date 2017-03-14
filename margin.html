@@ -89,7 +89,8 @@
           .datum(create_path(1))
           .attr("class", "line")
           .attr("d", d3.line()
-            .curve(d3.curveBundle.beta(1))
+            //.curve(d3.curveBundle.beta(1))
+            .curve(d3.curveMonotoneY)
             .x(function(d) { return d[0]; })
             .y(function(d) { return d[1]; })
           )
@@ -105,7 +106,9 @@
       year_scale_functions.forEach(function(year, i){
         for (var j = 0; j < 403; j++) {
             //Create cards for each datapoint
-            card = svg.append('g').on('mouseover', highlight).on('mouseout', normalCard).attr('id', 'yr'+(2002 + 5*i)+'id'+j);
+            card = svg.append('g').on('mouseover', highlight)
+                //.on('mouseout', normalCard)
+                .attr('id', 'yr'+(2017 - 5*i)+'id'+j);
             card.append('rect')
                 .attr("x", 5)
                 .attr("y", 0)
@@ -123,6 +126,7 @@
       });
 
       function highlight(){
+        normalCard();
         //Highlight if l = True else make normal
         selected_const_code = parseInt(this.getAttribute('id').split('id')[1]);
         highlight_line.datum(create_path(selected_const_code))
@@ -136,7 +140,6 @@
         for(var i = 0; i<4; i++){
           highlightCard(document.getElementById('yr'+(2002 + 5*i)+ 'id' + selected_const_code));
         }
-        console.log(data_2017[selected_const_code])
         document.getElementById("const_name").innerHTML = data_2017[selected_const_code]['constituency'] + ' margin 2017 :' + data_2017[selected_const_code]['margin']
       }
       function highlightCard(c) {
@@ -150,7 +153,6 @@
       function normalCard() {
         highlight_line.style('stroke', 'transparent');
         for(var i = 0; i<4; i++){
-          console.log
           d3.select(document.getElementById('yr'+(2002 + 5*i)+ 'id' + selected_const_code).getElementsByTagName("circle")[0])
             .attr('r', card_circle_radius)
             .attr('opacity', 0.5);
@@ -160,20 +162,41 @@
       function create_path(i){
         var path_array = [];
         path_array.push([margin_scale_2017(data_2017[i]['margin']) + 5, height/8]);
+        path_array.push([margin_scale_2017(data_2017[i]['margin']) + 5, height/8*2 - 10]);
         path_array.push([margin_scale_2017(data_2017[i]['margin']) + 5, height/8*2 - 5]);
-        path_array.push([margin_scale_2017(data_2017[i]['margin']) + 5, height/8*2 - 2.5]);
-        path_array.push([margin_scale_2012(data_2012[i]['margin']) + 5, height/8*2 + 2.5]);
+
+        var d1 = margin_scale_2017(data_2017[i]['margin']) + 5;
+        var d2 = margin_scale_2012(data_2012[i]['margin']) + 5;
+        path_array.push([d1+Math.sign(d2-d1)*d3.min([5,Math.abs((d2-d1))]), height/8*2]);
+        path_array.push([(d1+d2)/2, height/8*2]);
+        path_array.push([d2-Math.sign(d2-d1)*d3.min([5,Math.abs((d2-d1))]), height/8*2]);
+
         path_array.push([margin_scale_2012(data_2012[i]['margin']) + 5, height/8*2 + 5]);
+        path_array.push([margin_scale_2012(data_2012[i]['margin']) + 5, height/8*2 + 10]);
         path_array.push([margin_scale_2012(data_2012[i]['margin']) + 5, height/8*3]);
+        path_array.push([margin_scale_2012(data_2012[i]['margin']) + 5, height/8*4 - 10]);
         path_array.push([margin_scale_2012(data_2012[i]['margin']) + 5, height/8*4 - 5]);
-        path_array.push([margin_scale_2012(data_2012[i]['margin']) + 5, height/8*4 - 2.5]);
-        path_array.push([margin_scale_2007(data_2007[i]['margin']) + 5, height/8*4 + 2.5]);
+
+        d1 = margin_scale_2012(data_2012[i]['margin']) + 5;
+        d2 = margin_scale_2007(data_2007[i]['margin']) + 5;
+        path_array.push([d1+Math.sign(d2-d1)*d3.min([5,Math.abs((d2-d1))]), height/8*4]);
+        path_array.push([(d1+d2)/2, height/8*4]);
+        path_array.push([d2-Math.sign(d2-d1)*d3.min([5,Math.abs((d2-d1))]), height/8*4]);
+
         path_array.push([margin_scale_2007(data_2007[i]['margin']) + 5, height/8*4 + 5]);
+        path_array.push([margin_scale_2007(data_2007[i]['margin']) + 5, height/8*4 + 10]);
         path_array.push([margin_scale_2007(data_2007[i]['margin']) + 5, height/8*5]);
+        path_array.push([margin_scale_2007(data_2007[i]['margin']) + 5, height/8*6 - 10]);
         path_array.push([margin_scale_2007(data_2007[i]['margin']) + 5, height/8*6 - 5]);
-        path_array.push([margin_scale_2007(data_2007[i]['margin']) + 5, height/8*6 - 2.5]);
-        path_array.push([margin_scale_2002(data_2002[i]['margin']) + 5, height/8*6 +2.5]);
-        path_array.push([margin_scale_2002(data_2002[i]['margin']) + 5, height/8*6 +5]);
+
+        d1 = margin_scale_2007(data_2007[i]['margin']) + 5;
+        d2 = margin_scale_2002(data_2002[i]['margin']) + 5;
+        path_array.push([d1+Math.sign(d2-d1)*d3.min([5,Math.abs((d2-d1))]), height/8*6]);
+        path_array.push([(d1+d2)/2, height/8*6]);
+        path_array.push([d2-Math.sign(d2-d1)*d3.min([5,Math.abs((d2-d1))]), height/8*6]);
+
+        path_array.push([margin_scale_2002(data_2002[i]['margin']) + 5, height/8*6 + 5]);
+        path_array.push([margin_scale_2002(data_2002[i]['margin']) + 5, height/8*6 + 10]);
         path_array.push([margin_scale_2002(data_2002[i]['margin']) + 5, height/8*7]);
         return path_array;
       }
