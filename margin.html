@@ -43,19 +43,15 @@
   // #abdda4
   // #2b83ba
   var party_colors = {
-      'Indian National Congress': '#d7191c',
-      'Bharatiya Janata Party': '#2b83ba',
-      'Samajwadi Party': '#abdda4',
-      'Bahujan Samaj Party': '#fdae61',
-      'Apna Dal (Soneylal)': '#ffffbf',
-      'Nirbal Indian Shoshit Hamara Aam Dal': '#ffffbf',
-      'Suheldev Bhartiya Samaj Party': '#ffffbf',
-      'Rashtriya Lok Dal': '#ffffbf',
-      'Independent': '#ffffbf'
+      'INC': '#0392cf', // blue
+      'BJP': '#f37736', // orange
+      'SP': '#ee4035', // red
+      'BSP': '#7bc043', // green
+      'IND': '#fdf498'
   }
   var width = 1200,
-      height = 300;
-  var card_circle_radius = 5;
+      height = 400;
+  var card_circle_radius = 9;
   var selected_const_code = 1;
   var svg = d3.select('#chart').append('svg')
       .attr('width', width + 20)
@@ -94,7 +90,8 @@
             .x(function(d) { return d[0]; })
             .y(function(d) { return d[1]; })
           )
-          .style('stroke', 'tansparent');
+            .style('stroke', '#777777')
+            .style('opacity', 0.5);
 
       var year_scale_functions = [
         {"func":margin_scale_2017, "data":data_2017},
@@ -119,8 +116,14 @@
                 .attr('cx', 10)
                 .attr('cy', height / 8)
                 .attr('r', card_circle_radius)
-                .attr('fill', party_colors[year.data[j]['party']])
-                .attr('opacity', 0.5);
+                .attr('fill', function(){
+                  if (party_colors[year.data[j]['win_party']]){
+                    return party_colors[year.data[j]['win_party']];
+                  } else{
+                    return '#fdf498';
+                  }
+                })
+                .attr('opacity', 0.25);
             card.attr("transform", "translate(" + (year.func(year.data[j]['margin'])-5) + ", "+ (height*(i/4)) +")");
         }
       });
@@ -135,8 +138,7 @@
               .curve(d3.curveBundle.beta(1))
               .x(function(d) { return d[0]; })
               .y(function(d) { return d[1]; })
-          )
-          .style('stroke', '#777777');
+          );
         for(var i = 0; i<4; i++){
           highlightCard(document.getElementById('yr'+(2002 + 5*i)+ 'id' + selected_const_code));
         }
@@ -151,7 +153,6 @@
               .attr('opacity', 1);
       }
       function normalCard() {
-        highlight_line.style('stroke', 'transparent');
         for(var i = 0; i<4; i++){
           d3.select(document.getElementById('yr'+(2002 + 5*i)+ 'id' + selected_const_code).getElementsByTagName("circle")[0])
             .attr('r', card_circle_radius)

@@ -1,404 +1,404 @@
-margin,party,const_code,constituency
-25586,Indian National Congress,1,Behat
-4057,Bharatiya Janata Party,2,Nakur
-4636,Samajwadi Party,3,Saharanpur Nagar
-12324,Indian National Congress,4,Saharanpur
-29400,Bharatiya Janata Party,5,Deoband
-595,Bharatiya Janata Party,6,Rampur Maniharan
-38028,Bharatiya Janata Party,7,Gangoh
-21162,Samajwadi Party,8,Kairana
-16817,Bharatiya Janata Party,9,Thana Bhawan
-29720,Bharatiya Janata Party,10,Shamli
-13201,Bharatiya Janata Party,11,Budhana
-23231,Bharatiya Janata Party,12,Charthawal
-11253,Bharatiya Janata Party,13,Purqazi
-10704,Bharatiya Janata Party,14,Muzaffar Nagar
-31374,Bharatiya Janata Party,15,Khatauli
-193,Bharatiya Janata Party,16,Meerapur
-2002,Samajwadi Party,17,Najibabad
-7967,Samajwadi Party,18,Nagina
-9824,Bharatiya Janata Party,19,Barhapur
-17864,Bharatiya Janata Party,20,Dhampur
-23151,Bharatiya Janata Party,21,Nehtaur
-27281,Bharatiya Janata Party,22,Bijnor
-35649,Bharatiya Janata Party,23,Chandpur
-12736,Bharatiya Janata Party,24,Noorpur
-2348,Bharatiya Janata Party,25,Kanth
-13409,Samajwadi Party,26,Thakurdwara
-28781,Samajwadi Party,27,Moradabad Rural
-3193,Bharatiya Janata Party,28,Moradabad Nagar
-10821,Samajwadi Party,29,Kundarki
-13441,Samajwadi Party,30,Bilari
-45469,Bharatiya Janata Party,31,Chandausi
-21126,Samajwadi Party,32,Asmoli
-18822,Samajwadi Party,33,Sambhal
-53096,Samajwadi Party,34,Suar
-34376,Samajwadi Party,35,Chamraua
-22359,Bharatiya Janata Party,36,Bilaspur
-46842,Samajwadi Party,37,Rampur
-16667,Bharatiya Janata Party,38,Milak
-38229,Bharatiya Janata Party,39,Dhanaura
-20648,Bharatiya Janata Party,40,Naugawan Sadat
-15042,Samajwadi Party,41,Amroha
-27770,Bharatiya Janata Party,42,Hasanpur
-11421,Bharatiya Janata Party,43,Siwalkhas
-21625,Bharatiya Janata Party,44,Sardhana
-36062,Bharatiya Janata Party,45,Hastinapur
-10822,Bharatiya Janata Party,46,Kithore
-76619,Bharatiya Janata Party,47,Meerut Cantt.
-28769,Samajwadi Party,48,Meerut
-35395,Bharatiya Janata Party,49,Meerut South
-3842,Rashtriya Lok Dal,50,Chhaprauli
-26486,Bharatiya Janata Party,51,Baraut
-31360,Bharatiya Janata Party,52,Baghpat
-42813,Bharatiya Janata Party,53,Loni
-89612,Bharatiya Janata Party,54,Muradnagar
-150685,Bharatiya Janata Party,55,Sahibabad
-70505,Bharatiya Janata Party,56,Ghaziabad
-66582,Bharatiya Janata Party,57,Modi Nagar
-3576,Bahujan Samaj Party,58,Dholana
-15006,Bharatiya Janata Party,59,Hapur
-35294,Bharatiya Janata Party,60,Garhmukteshwar
-104016,Bharatiya Janata Party,61,Noida
-80177,Bharatiya Janata Party,62,Dadri
-22173,Bharatiya Janata Party,63,Jewar
-28623,Bharatiya Janata Party,64,Sikandrabad
-23084,Bharatiya Janata Party,65,Bulandshahr
-71630,Bharatiya Janata Party,66,Syana
-60314,Bharatiya Janata Party,67,Anupshahr
-65630,Bharatiya Janata Party,68,Debai
-50245,Bharatiya Janata Party,69,Shikarpur
-64299,Bharatiya Janata Party,70,Khurja
-70721,Bharatiya Janata Party,71,Khair
-38763,Bharatiya Janata Party,72,Barauli
-50967,Bharatiya Janata Party,73,Atrauli
-56134,Bharatiya Janata Party,74,Chharra
-50963,Bharatiya Janata Party,75,Koil
-15440,Bharatiya Janata Party,76,Aligarh
-74800,Bharatiya Janata Party,77,Iglas
-70661,Bharatiya Janata Party,78,Hathras
-26610,Bahujan Samaj Party,79,Sadabad
-14772,Bharatiya Janata Party,80,Sikandra Rao
-63838,Bharatiya Janata Party,81,Chhata
-432,Bahujan Samaj Party,82,Mant
-33009,Bharatiya Janata Party,83,Goverdhan
-101161,Bharatiya Janata Party,84,Mathura
-13208,Bharatiya Janata Party,85,Baldev
-47255,Bharatiya Janata Party,86,Etmadpur
-46325,Bharatiya Janata Party,87,Agra Cantt.
-54225,Bharatiya Janata Party,88,Agra South
-86320,Bharatiya Janata Party,89,Agra North
-65296,Bharatiya Janata Party,90,Agra Rural
-52337,Bharatiya Janata Party,91,Fatehpur Sikri
-31999,Bharatiya Janata Party,92,Kheragarh
-34364,Bharatiya Janata Party,93,Fatehabad
-23140,Bharatiya Janata Party,94,Bah
-56070,Bharatiya Janata Party,95,Tundla
-20328,Bharatiya Janata Party,96,Jasrana
-41727,Bharatiya Janata Party,97,Firozabad
-10777,Bharatiya Janata Party,98,Shikohabad
-10676,Samajwadi Party,99,Sirsaganj
-52030,Bharatiya Janata Party,100,Kasganj
-41804,Bharatiya Janata Party,101,Amanpur
-3771,Bharatiya Janata Party,102,Patiyali
-13851,Bharatiya Janata Party,103,Aliganj
-21129,Bharatiya Janata Party,104,Etah
-33432,Bharatiya Janata Party,105,Marhara
-19808,Bharatiya Janata Party,106,Jalesar
-8831,Samajwadi Party,107,Mainpuri
-20297,Bharatiya Janata Party,108,Bhongaon
-16529,Samajwadi Party,109,Kishani (SC)
-38405,Samajwadi Party,110,Karhal
-11386,Bharatiya Janata Party,111,Gunnaur
-10688,Bharatiya Janata Party,112,Bisauli
-4269,Samajwadi Party,113,Sahaswan
-26979,Bharatiya Janata Party,114,Bilsi
-16467,Bharatiya Janata Party,115,Badaun
-23386,Bharatiya Janata Party,116,Shekhupur
-25759,Bharatiya Janata Party,117,Dataganj
-42837,Bharatiya Janata Party,118,Baheri
-54500,Bharatiya Janata Party,119,Meerganj
-27764,Bharatiya Janata Party,120,Bhojipura
-39142,Bharatiya Janata Party,121,Nawabganj
-24721,Bharatiya Janata Party,122,Faridpur
-19511,Bharatiya Janata Party,123,Bithari Chainpur
-28667,Bharatiya Janata Party,124,Bareilly
-12664,Bharatiya Janata Party,125,Bareilly Cantt.
-3546,Bharatiya Janata Party,126,Aonla
-43356,Bharatiya Janata Party,127,Pilibhit
-57930,Bharatiya Janata Party,128,Barkhera
-39242,Bharatiya Janata Party,129,Puranpur
-40996,Bharatiya Janata Party,130,Bisalpur
-16730,Bharatiya Janata Party,131,Katra
-9297,Samajwadi Party,132,Jalalabad
-5705,Bharatiya Janata Party,133,Tilhar
-72417,Bharatiya Janata Party,134,Powayan
-19203,Bharatiya Janata Party,135,Shahjahanpur
-17398,Bharatiya Janata Party,136,Dadraul
-69228,Bharatiya Janata Party,137,PALIA
-46123,Bharatiya Janata Party,138,NIGHASAN
-55017,Bharatiya Janata Party,139,GOLA GOKRANNATH
-54939,Bharatiya Janata Party,140,SRI NAGAR
-3353,Bharatiya Janata Party,141,DHAURAHRA
-37748,Bharatiya Janata Party,142,LAKHIMPUR
-24273,Bharatiya Janata Party,143,KASTA
-33918,Bharatiya Janata Party,144,MOHAMMDI
-3717,Bharatiya Janata Party,145,Maholi
-24839,Bharatiya Janata Party,146,Sitapur
-44995,Bharatiya Janata Party,147,Hargaon
-9118,Bharatiya Janata Party,148,Laharpur
-10235,Bharatiya Janata Party,149,Biswan
-43659,Bharatiya Janata Party,150,Sevata
-1906,Samajwadi Party,151,Mahmoodabad
-2510,Bahujan Samaj Party,152,Sidhauli
-20672,Bharatiya Janata Party,153,Misrikh
-26970,Bharatiya Janata Party,154,Sawaijpur
-4260,Bharatiya Janata Party,155,Shahabad
-5109,Samajwadi Party,156,Hardoi
-31378,Bharatiya Janata Party,157,Gopamau
-20225,Bharatiya Janata Party,158,Sandi
-8025,Bharatiya Janata Party,159,Bilgram-Mallanwan
-22888,Bharatiya Janata Party,160,Balamau
-20403,Bharatiya Janata Party,161,Sandila
-28327,Bharatiya Janata Party,162,Bangermau
-27236,Bharatiya Janata Party,163,Safipur
-54095,Bharatiya Janata Party,164,Mohan
-46072,Bharatiya Janata Party,165,Unnao
-53366,Bharatiya Janata Party,166,Bhagwantnagar
-26483,Bahujan Samaj Party,167,Purwa
-22668,Bharatiya Janata Party,168,Malihabad
-17584,Bharatiya Janata Party,169,Bakshi Kaa Talab
-34179,Bharatiya Janata Party,170,Sarojini Nagar
-13072,Bharatiya Janata Party,171,Lucknow West
-27276,Bharatiya Janata Party,172,Lucknow North
-79230,Bharatiya Janata Party,173,Lucknow East
-5094,Bharatiya Janata Party,174,Lucknow Central
-33796,Bharatiya Janata Party,175,175-LUCKNOW CANTT.
-530,Samajwadi Party,176,Mohanlalganj
-22309,Bharatiya Janata Party,177,Bachhrawan
-44047,Bharatiya Janata Party,178,Tiloi
-3652,Indian National Congress,179,Harchandpur
-89163,Indian National Congress,180,Rae Bareli
-16055,Bharatiya Janata Party,181,Salon
-13007,Bharatiya Janata Party,182,Sareni
-1934,Samajwadi Party,183,Unchahar
-16600,Bharatiya Janata Party,184,Jagdishpur
-26419,Samajwadi Party,185,Gauriganj
-5065,Bharatiya Janata Party,186,Amethi
-4241,Samajwadi Party,187,Isauli
-32393,Bharatiya Janata Party,188,Sultanpur
-18773,Bharatiya Janata Party,189,Sadar
-12903,Bharatiya Janata Party,190,Lambhua
-26604,Bharatiya Janata Party,191,Kadipur
-36525,Bharatiya Janata Party,192,Kaimganj
-40507,Bharatiya Janata Party,193,Amritpur
-45427,Bharatiya Janata Party,194,Farrukhabad
-34877,Bharatiya Janata Party,195,Bhojpur
-37224,Bharatiya Janata Party,196,Chhibramau
-24209,Bharatiya Janata Party,197,Tirwa
-2454,Samajwadi Party,198,Kannauj
-52616,Samajwadi Party,199,Jaswantnagar
-17342,Bharatiya Janata Party,200,Etawah
-1968,Bharatiya Janata Party,201,Bharthana
-3910,Bharatiya Janata Party,202,Bidhuna
-12094,Bharatiya Janata Party,203,Dibiyapur
-31862,Bharatiya Janata Party,204,Auraiya
-33394,Bharatiya Janata Party,205,Rasulabad
-28729,Bharatiya Janata Party,206,Akbarpur - Raniya
-38103,Bharatiya Janata Party,207,Sikandra
-19005,Bharatiya Janata Party,208,Bhognipur
-31166,Bharatiya Janata Party,209,Bilhaur
-58987,Bharatiya Janata Party,210,Bithoor
-23342,Bharatiya Janata Party,211,Kalyanpur
-71509,Bharatiya Janata Party,212,Govindnagar
-5826,Samajwadi Party,213,Sishamau
-5723,Samajwadi Party,214,Arya Nagar
-33983,Bharatiya Janata Party,215,KIDWAI NAGAR
-9364,Indian National Congress,216,Kanpur Cantt.
-91826,Bharatiya Janata Party,217,Maharajpur
-45178,Bharatiya Janata Party,218,Ghatampur
-45985,Bharatiya Janata Party,219,Madhaugarh
-51484,Bharatiya Janata Party,220,Kalpi
-78879,Bharatiya Janata Party,221,Orai
-16837,Bharatiya Janata Party,222,Babina
-55778,Bharatiya Janata Party,223,Jhansi Nagar
-16971,Bharatiya Janata Party,224,Mauranipur
-15831,Bharatiya Janata Party,225,Garautha
-68255,Bharatiya Janata Party,226,Lalitpur
-99564,Bharatiya Janata Party,227,Mehroni
-48655,Bharatiya Janata Party,228,Hamirpur
-104643,Bharatiya Janata Party,229,Rath
-31387,Bharatiya Janata Party,230,Mahoba
-44014,Bharatiya Janata Party,231,Charkhari
-37407,Bharatiya Janata Party,232,Tindwari
-22301,Bharatiya Janata Party,233,Baberu
-45007,Bharatiya Janata Party,234,Naraini
-32828,Bharatiya Janata Party,235,Banda
-26936,Bharatiya Janata Party,236,Chitrakoot
-44464,Bharatiya Janata Party,237,Manikpur
-47606,Apna Dal (Soneylal),238,Jahanabad
-56378,Bharatiya Janata Party,239,Bindki
-31498,Bharatiya Janata Party,240,Fatehpur
-51965,Bharatiya Janata Party,241,Ayah Shah
-18593,Bharatiya Janata Party,242,Husainganj
-56434,Bharatiya Janata Party,243,Khaga
-17066,Indian National Congress,244,Rampur Khas
-37160,Independent,245,Babaganj
-103647,Independent,246,Kunda
-23358,Apna Dal (Soneylal),247,Vishwanathganj
-34554,Apna Dal (Soneylal),248,Pratapgarh
-1473,Bharatiya Janata Party,249,Patti
-9009,Bharatiya Janata Party,250,Raniganj
-26203,Bharatiya Janata Party,251,Sirathu
-4160,Bharatiya Janata Party,252,Manjhanpur
-40116,Bharatiya Janata Party,253,Chail
-25985,Bharatiya Janata Party,254,Phaphamau
-17735,Apna Dal (Soneylal),255,Soraon
-26613,Bharatiya Janata Party,256,Phulpur
-2654,Bahujan Samaj Party,257,Pratappur
-8526,Bahujan Samaj Party,258,Handia
-19843,Bharatiya Janata Party,259,Meja
-15024,Samajwadi Party,260,Karachhana
-25336,Bharatiya Janata Party,261,Allahabad West
-35025,Bharatiya Janata Party,262,Allahabad North
-28587,Bharatiya Janata Party,263,Allahabad South
-34053,Bharatiya Janata Party,264,Bara
-53696,Bharatiya Janata Party,265,Koraon
-28679,Bharatiya Janata Party,266,Kursi
-22727,Bharatiya Janata Party,267,Ram Nagar
-29705,Samajwadi Party,268,Barabanki
-29181,Bharatiya Janata Party,269,Zaidpur
-50686,Bharatiya Janata Party,270,Dariyabad
-31259,Bharatiya Janata Party,271,Rudauli
-33520,Bharatiya Janata Party,272,Haidergarh
-28276,Bharatiya Janata Party,273,Milkipur
-26652,Bharatiya Janata Party,274,Bikapur
-50440,Bharatiya Janata Party,275,Ayodhya
-11620,Bharatiya Janata Party,276,Goshainganj
-6287,Bahujan Samaj Party,277,Katehari
-1725,Bharatiya Janata Party,278,Tanda
-12513,Bharatiya Janata Party,279,Alapur
-13030,Bahujan Samaj Party,280,Jalalpur
-14013,Bahujan Samaj Party,281,Akbarpur
-46616,Bharatiya Janata Party,282,BALHA (S.C.)
-18669,Bharatiya Janata Party,283,Nanpara
-1595,Samajwadi Party,284,Matera
-58969,Bharatiya Janata Party,285,Mahasi
-6702,Bharatiya Janata Party,286,Bahraich
-41541,Bharatiya Janata Party,287,Payagpur
-27363,Bharatiya Janata Party,288,Kaiserganj
-6090,Bahujan Samaj Party,289,Bhinga
-445,Bharatiya Janata Party,290,Shrawasti
-18659,Bharatiya Janata Party,291,Tulsipur
-2303,Bharatiya Janata Party,292,Gainsari
-29174,Bharatiya Janata Party,293,Utraula
-24860,Bharatiya Janata Party,294,Balrampur
-36378,Bharatiya Janata Party,295,Mehnaun
-11678,Bharatiya Janata Party,296,Gonda
-30811,Bharatiya Janata Party,297,Katra Bazar
-28405,Bharatiya Janata Party,298,Colonelganj
-38442,Bharatiya Janata Party,299,Tarabganj
-60161,Bharatiya Janata Party,300,Mankapur
-29855,Bharatiya Janata Party,301,Gaura
-22124,Apna Dal (Soneylal),302,Shohratgarh
-38154,Bharatiya Janata Party,303,Kapilvastu
-18942,Bharatiya Janata Party,304,Bansi
-10208,Bharatiya Janata Party,305,Itwa
-171,Bharatiya Janata Party,306,Doomariyaganj
-30106,Bharatiya Janata Party,307,Harraiya
-6827,Bharatiya Janata Party,308,Kaptanganj
-21805,Bharatiya Janata Party,309,Rudhauli
-42594,Bharatiya Janata Party,310,Basti Sadar
-25884,Bharatiya Janata Party,311,Mahadewa S.C
-42914,Bharatiya Janata Party,312,MENHDAWAL
-16037,Bharatiya Janata Party,313,KHALILABAD
-16909,Bharatiya Janata Party,314,Dhanghata
-2354,Bharatiya Janata Party,315,Pharenda
-32256,Independent,316,Nautanwa
-68186,Bharatiya Janata Party,317,Siswa
-68361,Bharatiya Janata Party,318,Maharajganj
-67491,Bharatiya Janata Party,319,Paniyara
-32854,Bharatiya Janata Party,320,Caimpiyarganj
-12809,Bharatiya Janata Party,321,Pipraich
-60730,Bharatiya Janata Party,322,Gorakhpur Urban
-4410,Bharatiya Janata Party,323,Gorakhpur Rural
-15377,Bharatiya Janata Party,324,Sahajanwa
-20079,Bharatiya Janata Party,325,Khajani
-45660,Bharatiya Janata Party,326,Chauri-Chaura
-22873,Bharatiya Janata Party,327,Bansgaon
-3359,Bahujan Samaj Party,328,Chillupar
-38497,Bharatiya Janata Party,329,Khadda
-40552,Bharatiya Janata Party,330,Padrauna
-18114,Indian National Congress,331,Tamkuhi Raj
-41922,Bharatiya Janata Party,332,Fazilnagar
-48103,Bharatiya Janata Party,333,Kushinagar
-53076,Bharatiya Janata Party,334,Hata
-55729,Suheldev Bhartiya Samaj Party,335,Ramkola
-26789,Bharatiya Janata Party,336,Rudrapur
-46236,Bharatiya Janata Party,337,Deoria
-42997,Bharatiya Janata Party,338,Pathardeva
-9987,Bharatiya Janata Party,339,Rampur Karkhana
-11097,Samajwadi Party,340,Bhatpar Rani
-25654,Bharatiya Janata Party,341,Salempur
-11716,Bharatiya Janata Party,342,Barhaj
-2467,Samajwadi Party,343,Atrauliya
-14960,Samajwadi Party,344,Gopalpur
-5475,Bahujan Samaj Party,345,Sagri
-688,Bahujan Samaj Party,346,Mubarakpur
-26262,Samajwadi Party,347,Azamgarh
-18529,Samajwadi Party,348,Nizamabad
-7295,Bharatiya Janata Party,349,Phoolpur Pawai
-3645,Bahujan Samaj Party,350,Didarganj
-2227,Bahujan Samaj Party,351,Lalganj
-5412,Samajwadi Party,352,Mehnagar
-29415,Bharatiya Janata Party,353,Madhuban
-7003,Bharatiya Janata Party,354,Ghosi
-538,Bharatiya Janata Party,355,Muhammadabad- Gohna (SC)
-8698,Bahujan Samaj Party,356,Mau
-18319,Bharatiya Janata Party,357,Belthara Road
-33887,Bahujan Samaj Party,358,Rasara
-23548,Bharatiya Janata Party,359,Sikanderpur
-17897,Bharatiya Janata Party,360,Phephana
-40011,Bharatiya Janata Party,361,Ballia Nagar
-1687,Samajwadi Party,362,Bansdih
-17077,Bharatiya Janata Party,363,Bairia
-2372,Bharatiya Janata Party,364,Badlapur
-9162,Samajwadi Party,365,Shahganj
-12284,Bharatiya Janata Party,366,Jaunpur
-21210,Samajwadi Party,367,Malhani
-5920,Bahujan Samaj Party,368,Mungra Badshahpur
-4179,Samajwadi Party,369,Machhlishahr S.C.
-11350,Apna Dal (Soneylal),370,Mariyahu
-24865,Bharatiya Janata Party,371,Zafrabad
-15259,Bharatiya Janata Party,372,Kerakat S.C.
-5157,Suheldev Bhartiya Samaj Party,373,Jakhanian
-8710,Samajwadi Party,374,Saidpur
-32607,Bharatiya Janata Party,375,Ghazipur
-3239,Samajwadi Party,376,Jangipur
-18081,Suheldev Bhartiya Samaj Party,377,Zahoorabad
-32727,Bharatiya Janata Party,378,Mohammadabad
-9264,Bharatiya Janata Party,379,Zamania
-13243,Bharatiya Janata Party,380,Mughalsarai
-14969,Samajwadi Party,381,Sakaldiha
-14494,Bharatiya Janata Party,382,Saiyadraja
-20063,Bharatiya Janata Party,383,Chakia
-36849,Bharatiya Janata Party,384,Pindra
-21349,Suheldev Bhartiya Samaj Party,385,Ajagara
-54259,Bharatiya Janata Party,386,Shivpur
-57553,Bharatiya Janata Party,387,Rohaniya
-45502,Bharatiya Janata Party,388,Varanasi North
-17226,Bharatiya Janata Party,389,Varanasi South
-61326,Bharatiya Janata Party,390,Varanasi Cantt.
-49182,Apna Dal (Soneylal),391,Sevapuri
-1105,Bharatiya Janata Party,392,Bhadohi
-20230,Nirbal Indian Shoshit Hamara Aam Dal,393,Gyanpur
-19779,Bharatiya Janata Party,394,Aurai
-63468,Apna Dal (Soneylal),395,Chhanbey
-57412,Bharatiya Janata Party,396,Mirzapur
-41159,Bharatiya Janata Party,397,Majhawan
-62228,Bharatiya Janata Party,398,Chunar
-46598,Bharatiya Janata Party,399,Marihan
-57649,Bharatiya Janata Party,400,Ghorawal
-40538,Bharatiya Janata Party,401,Robertsganj
-44269,Bharatiya Janata Party,402,Obra
-1085,Apna Dal (Soneylal),403,Duddhi
+﻿"win_party","second_votes","None of the Above","win_votes","constituency","second_party","margin","const_code"
+"INC","71449","1576","97035","Behat","BJP","25586","1"
+"BJP","90318","1232","94375","Nakur","INC","4057","2"
+"SP","122574","675","127210","Saharanpur Nagar","BJP","4636","3"
+"INC","75365","968","87689","Saharanpur","BSP","12324","4"
+"BJP","72844","798","102244","Deoband","BSP","29400","5"
+"BJP","75870","856","76465","Rampur Maniharan","BSP","595","6"
+"BJP","61418","971","99446","Gangoh","INC","38028","7"
+"SP","77668","1060","98830","Kairana","BJP","21162","8"
+"BJP","74178","883","90995","Thana Bhawan","BSP","16817","9"
+"BJP","40365","901","70085","Shamli","INC","29720","10"
+"BJP","84580","1286","97781","Budhana","SP","13201","11"
+"BJP","58815","1018","82046","Charthawal","SP","23231","12"
+"BJP","66238","1139","77491","Purqazi","INC","11253","13"
+"BJP","87134","1133","97838","Muzaffar Nagar","SP","10704","14"
+"BJP","63397","694","94771","Khatauli","SP","31374","15"
+"BJP","68842","1090","69035","Meerapur","SP","193","16"
+"SP","79080","1516","81082","Najibabad","BJP","2002","17"
+"SP","69178","1431","77145","Nagina","BJP","7967","18"
+"BJP","68920","556","78744","Barhapur","INC","9824","19"
+"BJP","64305","1020","82169","Dhampur","SP","17864","20"
+"BJP","53493","1273","76644","Nehtaur","INC","23151","21"
+"BJP","78267","1241","105548","Bijnor","SP","27281","22"
+"BJP","56696","932","92345","Chandpur","BSP","35649","23"
+"BJP","66436","1115","79172","Noorpur","SP","12736","24"
+"BJP","73959","1199","76307","Kanth","SP","2348","25"
+"SP","94456","1040","107865","Thakurdwara","BJP","13409","26"
+"SP","69135","639","97916","Moradabad Rural","BJP","28781","27"
+"BJP","120274","855","123467","Moradabad Nagar","SP","3193","28"
+"SP","99740","1170","110561","Kundarki","BJP","10821","29"
+"SP","72241","1123","85682","Bilari","BJP","13441","30"
+"BJP","59337","2135","104806","Chandausi","INC","45469","31"
+"SP","76484","1872","97610","Asmoli","BJP","21126","32"
+"SP","60426","1683","79248","Sambhal","All India Majlis-E-Ittehadul Muslimeen","18822","33"
+"SP","53347","872","106443","Suar","BJP","53096","34"
+"SP","53024","1077","87400","Chamraua","BSP","34376","35"
+"BJP","76741","1227","99100","Bilaspur","INC","22359","36"
+"SP","55258","1191","102100","Rampur","BJP","46842","37"
+"BJP","73194","1477","89861","Milak","SP","16667","38"
+"BJP","64714","1824","102943","Dhanaura","SP","38229","39"
+"BJP","76382","1132","97030","Naugawan Sadat","SP","20648","40"
+"SP","59671","1219","74713","Amroha","BSP","15042","41"
+"BJP","83499","1694","111269","Hasanpur","SP","27770","42"
+"BJP","61421","1086","72842","Siwalkhas","SP","11421","43"
+"BJP","76296","1087","97921","Sardhana","SP","21625","44"
+"BJP","63374","1013","99436","Hastinapur","BSP","36062","45"
+"BJP","79800","1224","90622","Kithore","SP","10822","46"
+"BJP","55899","1110","132518","Meerut Cantt.","BSP","76619","47"
+"SP","74448","738","103217","Meerut","BJP","28769","48"
+"BJP","77830","1401","113225","Meerut South","BSP","35395","49"
+"Rashtriya Lok Dal","61282","1027","65124","Chhaprauli","BJP","3842","50"
+"BJP","52941","870","79427","Baraut","Rashtriya Lok Dal","26486","51"
+"BJP","61206","954","92566","Baghpat","BSP","31360","52"
+"BJP","70275","1663","113088","Loni","BSP","42813","53"
+"BJP","51147","1053","140759","Muradnagar","BSP","89612","54"
+"BJP","112056","3057","262741","Sahibabad","INC","150685","55"
+"BJP","53696","1184","124201","Ghaziabad","BSP","70505","56"
+"BJP","42049","1074","108631","Modi Nagar","BSP","66582","57"
+"BSP","85004","1279","88580","Dholana","BJP","3576","58"
+"BJP","69526","944","84532","Hapur","INC","15006","59"
+"BJP","55792","572","91086","Garhmukteshwar","BSP","35294","60"
+"BJP","58401","1787","162417","Noida","SP","104016","61"
+"BJP","61049","1665","141226","Dadri","BSP","80177","62"
+"BJP","80806","1276","102979","Jewar","BSP","22173","63"
+"BJP","76333","1038","104956","Sikandrabad","BSP","28623","64"
+"BJP","88454","1638","111538","Bulandshahr","BSP","23084","65"
+"BJP","54224","1392","125854","Syana","BSP","71630","66"
+"BJP","52117","1620","112431","Anupshahr","BSP","60314","67"
+"BJP","46177","2048","111807","Debai","SP","65630","68"
+"BJP","51667","2115","101912","Shikarpur","BSP","50245","69"
+"BJP","55194","1716","119493","Khurja","BSP","64299","70"
+"BJP","53477","1651","124198","Khair","BSP","70721","71"
+"BJP","86782","1338","125545","Barauli","BSP","38763","72"
+"BJP","64430","1325","115397","Atrauli","SP","50967","73"
+"BJP","54604","1250","110738","Chharra","SP","56134","74"
+"BJP","42851","1580","93814","Koil","SP","50963","75"
+"BJP","98312","1375","113752","Aligarh","SP","15440","76"
+"BJP","53200","1122","128000","Iglas","BSP","74800","77"
+"BJP","63179","1256","133840","Hathras","BSP","70661","78"
+"BSP","64775","1103","91385","Sadabad","Rashtriya Lok Dal","26610","79"
+"BJP","61357","1426","76129","Sikandra Rao","BSP","14772","80"
+"BJP","53699","1224","117537","Chhata","IND","63838","81"
+"BSP","65430","1253","65862","Mant","Rashtriya Lok Dal","432","82"
+"BJP","60529","1398","93538","Goverdhan","BSP","33009","83"
+"BJP","42200","1235","143361","Mathura","INC","101161","84"
+"BJP","75203","1601","88411","Baldev","Rashtriya Lok Dal","13208","85"
+"BJP","90126","1872","137381","Etmadpur","BSP","47255","86"
+"BJP","66853","1185","113178","Agra Cantt.","BSP","46325","87"
+"BJP","57657","753","111882","Agra South","BSP","54225","88"
+"BJP","48800","1266","135120","Agra North","BSP","86320","89"
+"BJP","64591","1856","129887","Agra Rural","BSP","65296","90"
+"BJP","56249","1864","108586","Fatehpur Sikri","BSP","52337","91"
+"BJP","61511","1223","93510","Kheragarh","BSP","31999","92"
+"BJP","67596","1470","101960","Fatehabad","SP","34364","93"
+"BJP","57427","2214","80567","Bah","BSP","23140","94"
+"BJP","62514","1381","118584","Tundla","BSP","56070","95"
+"BJP","83098","1908","103426","Jasrana","SP","20328","96"
+"BJP","60927","906","102654","Firozabad","SP","41727","97"
+"BJP","77074","1700","87851","Shikohabad","SP","10777","98"
+"SP","79605","1552","90281","Sirsaganj","BJP","10676","99"
+"BJP","49878","2023","101908","Kasganj","SP","52030","100"
+"BJP","43395","1242","85199","Amanpur","SP","41804","101"
+"BJP","68643","1556","72414","Patiyali","SP","3771","102"
+"BJP","74844","1572","88695","Aliganj","SP","13851","103"
+"BJP","61387","1277","82516","Etah","SP","21129","104"
+"BJP","59075","1351","92507","Marhara","SP","33432","105"
+"BJP","61694","1188","81502","Jalesar","SP","19808","106"
+"SP","66956","1157","75787","Mainpuri","BJP","8831","107"
+"BJP","72400","1242","92697","Bhongaon","SP","20297","108"
+"SP","63946","1070","80475","Kishani (SC)","BJP","16529","109"
+"SP","65816","1014","104221","Karhal","BJP","38405","110"
+"BJP","95958","2639","107344","Gunnaur","SP","11386","111"
+"BJP","89599","2342","100287","Bisauli","SP","10688","112"
+"SP","73274","2902","77543","Sahaswan","BSP","4269","113"
+"BJP","55091","1930","82070","Bilsi","BSP","26979","114"
+"BJP","70847","1509","87314","Badaun","SP","16467","115"
+"BJP","70316","1896","93702","Shekhupur","SP","23386","116"
+"BJP","53351","1971","79110","Dataganj","BSP","25759","117"
+"BJP","66009","1479","108846","Baheri","BSP","42837","118"
+"BJP","54289","1749","108789","Meerganj","BSP","54500","119"
+"BJP","72617","1763","100381","Bhojipura","SP","27764","120"
+"BJP","54569","1860","93711","Nawabganj","SP","39142","121"
+"BJP","58935","1831","83656","Faridpur","SP","24721","122"
+"BJP","76886","2647","96397","Bithari Chainpur","SP","19511","123"
+"BJP","86343","1421","115010","Bareilly","INC","28667","124"
+"BJP","75777","1061","88441","Bareilly Cantt.","INC","12664","125"
+"BJP","59619","1794","63165","Aonla","SP","3546","126"
+"BJP","93130","1818","136486","Pilibhit","SP","43356","127"
+"BJP","46665","2307","104595","Barkhera","SP","57930","128"
+"BJP","89251","2246","128493","Puranpur","SP","39242","129"
+"BJP","62502","2301","103498","Bisalpur","INC","40996","130"
+"BJP","59779","1830","76509","Katra","SP","16730","131"
+"SP","66029","1614","75326","Jalalabad","BJP","9297","132"
+"BJP","76065","1683","81770","Tilhar","INC","5705","133"
+"BJP","54218","2065","126635","Powayan","SP","72417","134"
+"BJP","81531","1151","100734","Shahjahanpur","SP","19203","135"
+"BJP","69037","2383","86435","Dadraul","SP","17398","136"
+"BJP","48841","2077","118069","PALIA","INC","69228","137"
+"BJP","61364","2663","107487","NIGHASAN","SP","46123","138"
+"BJP","67480","3022","122497","GOLA GOKRANNATH","SP","55017","139"
+"BJP","58002","2141","112941","SRI NAGAR","SP","54939","140"
+"BJP","76456","3360","79809","DHAURAHRA","SP","3353","141"
+"BJP","84929","2434","122677","LAKHIMPUR","SP","37748","142"
+"BJP","68551","1978","92824","KASTA","SP","24273","143"
+"BJP","59082","2330","93000","MOHAMMDI","INC","33918","144"
+"BJP","77221","1665","80938","Maholi","SP","3717","145"
+"BJP","74011","1842","98850","Sitapur","SP","24839","146"
+"BJP","56685","2220","101680","Hargaon","BSP","44995","147"
+"BJP","70349","2861","79467","Laharpur","BSP","9118","148"
+"BJP","71672","2080","81907","Biswan","SP","10235","149"
+"BJP","51038","2990","94697","Sevata","BSP","43659","150"
+"SP","79563","1898","81469","Mahmoodabad","BJP","1906","151"
+"BSP","75996","2169","78506","Sidhauli","SP","2510","152"
+"BJP","65731","2222","86403","Misrikh","BSP","20672","153"
+"BJP","65631","1831","92601","Sawaijpur","SP","26970","154"
+"BJP","95364","2615","99624","Shahabad","BSP","4260","155"
+"SP","92626","2203","97735","Hardoi","BJP","5109","156"
+"BJP","56493","2252","87871","Gopamau","SP","31378","157"
+"BJP","51819","2222","72044","Sandi","INC","20225","158"
+"BJP","75380","1826","83405","Bilgram-Mallanwan","SP","8025","159"
+"BJP","52029","2005","74917","Balamau","BSP","22888","160"
+"BJP","69959","1532","90362","Sandila","SP","20403","161"
+"BJP","59330","1873","87657","Bangermau","SP","28327","162"
+"BJP","56832","1820","84068","Safipur","BSP","27236","163"
+"BJP","50789","2235","104884","Mohan","BSP","54095","164"
+"BJP","73597","1843","119669","Unnao","SP","46072","165"
+"BJP","50332","2730","103698","Bhagwantnagar","BSP","53366","166"
+"BSP","71084","2719","97567","Purwa","BJP","26483","167"
+"BJP","72009","1692","94677","Malihabad","SP","22668","168"
+"BJP","78898","2271","96482","Bakshi Kaa Talab","BSP","17584","169"
+"BJP","74327","1926","108506","Sarojini Nagar","SP","34179","170"
+"BJP","79950","635","93022","Lucknow West","SP","13072","171"
+"BJP","82039","1370","109315","Lucknow North","SP","27276","172"
+"BJP","55937","1747","135167","Lucknow East","INC","79230","173"
+"BJP","73306","824","78400","Lucknow Central","SP","5094","174"
+"BJP","61606","1150","95402","175-LUCKNOW CANTT.","SP","33796","175"
+"SP","71044","3471","71574","Mohanlalganj","BSP","530","176"
+"BJP","43015","3325","65324","Bachhrawan","INC","22309","177"
+"BJP","52072","2567","96119","Tiloi","BSP","44047","178"
+"INC","61452","2376","65104","Harchandpur","BJP","3652","179"
+"INC","39156","3448","128319","Rae Bareli","BSP","89163","180"
+"BJP","61973","3540","78028","Salon","INC","16055","181"
+"BJP","52866","2545","65873","Sareni","BSP","13007","182"
+"SP","57169","2517","59103","Unchahar","BJP","1934","183"
+"BJP","67619","3104","84219","Jagdishpur","INC","16600","184"
+"SP","51496","1155","77915","Gauriganj","INC","26419","185"
+"BJP","59161","694","64226","Amethi","SP","5065","186"
+"SP","47342","2256","51583","Isauli","BJP","4241","187"
+"BJP","54393","1234","86786","Sultanpur","BSP","32393","188"
+"BJP","50177","1935","68950","Sadar","BSP","18773","189"
+"BJP","65724","1785","78627","Lambhua","BSP","12903","190"
+"BJP","60749","2718","87353","Kadipur","BSP","26604","191"
+"BJP","79779","1964","116304","Kaimganj","SP","36525","192"
+"BJP","52995","1250","93502","Amritpur","SP","40507","193"
+"BJP","48199","359","93626","Farrukhabad","BSP","45427","194"
+"BJP","58796","299","93673","Bhojpur","SP","34877","195"
+"BJP","74985","1861","112209","Chhibramau","BSP","37224","196"
+"BJP","76217","1872","100426","Tirwa","SP","24209","197"
+"SP","97181","1706","99635","Kannauj","BJP","2454","198"
+"SP","74218","1327","126834","Jaswantnagar","BJP","52616","199"
+"BJP","73892","594","91234","Etawah","SP","17342","200"
+"BJP","80037","1608","82005","Bharthana","SP","1968","201"
+"BJP","77995","1270","81905","Bidhuna","SP","3910","202"
+"BJP","59386","690","71480","Dibiyapur","SP","12094","203"
+"BJP","51718","1191","83580","Auraiya","BSP","31862","204"
+"BJP","54996","1421","88390","Rasulabad","SP","33394","205"
+"BJP","58701","1098","87430","Akbarpur - Raniya","SP","28729","206"
+"BJP","49776","1442","87879","Sikandra","BSP","38103","207"
+"BJP","52461","1565","71466","Bhognipur","BSP","19005","208"
+"BJP","71160","1965","102326","Bilhaur","BSP","31166","209"
+"BJP","54302","1900","113289","Bithoor","SP","58987","210"
+"BJP","63278","921","86620","Kalyanpur","SP","23342","211"
+"BJP","40520","1247","112029","Govindnagar","INC","71509","212"
+"SP","67204","791","73030","Sishamau","BJP","5826","213"
+"SP","65270","681","70993","Arya Nagar","BJP","5723","214"
+"BJP","77424","1117","111407","KIDWAI NAGAR","INC","33983","215"
+"INC","71805","729","81169","Kanpur Cantt.","BJP","9364","216"
+"BJP","40568","1359","132394","Maharajpur","BSP","91826","217"
+"BJP","47598","2160","92776","Ghatampur","BSP","45178","218"
+"BJP","62752","2582","108737","Madhaugarh","BSP","45985","219"
+"BJP","54504","2356","105988","Kalpi","BSP","51484","220"
+"BJP","61606","2169","140485","Orai","SP","78879","221"
+"BJP","79876","1982","96713","Babina","SP","16837","222"
+"BJP","62095","953","117873","Jhansi Nagar","BSP","55778","223"
+"BJP","81934","3536","98905","Mauranipur","SP","16971","224"
+"BJP","77547","2645","93378","Garautha","SP","15831","225"
+"BJP","88687","4859","156942","Lalitpur","SP","68255","226"
+"BJP","59727","4092","159291","Mehroni","BSP","99564","227"
+"BJP","62233","3356","110888","Hamirpur","SP","48655","228"
+"BJP","42883","4595","147526","Rath","INC","104643","229"
+"BJP","56904","2720","88291","Mahoba","SP","31387","230"
+"BJP","54346","2775","98360","Charkhari","SP","44014","231"
+"BJP","44790","2875","82197","Tindwari","BSP","37407","232"
+"BJP","53886","3559","76187","Baberu","BSP","22301","233"
+"BJP","47405","3655","92412","Naraini","INC","45007","234"
+"BJP","50341","979","83169","Banda","BSP","32828","235"
+"BJP","63430","3529","90366","Chitrakoot","SP","26936","236"
+"BJP","40524","3752","84988","Manikpur","INC","44464","237"
+"Apna Dal (Soneylal)","33832","1262","81438","Jahanabad","SP","47606","238"
+"BJP","41618","2142","97996","Bindki","SP","56378","239"
+"BJP","57983","1961","89481","Fatehpur","SP","31498","240"
+"BJP","29238","1600","81203","Ayah Shah","SP","51965","241"
+"BJP","55002","2361","73595","Husainganj","INC","18593","242"
+"BJP","38520","3801","94954","Khaga","INC","56434","243"
+"INC","64397","1595","81463","Rampur Khas","BJP","17066","244"
+"IND","50618","3386","87778","Babaganj","BJP","37160","245"
+"IND","32950","3992","136597","Kunda","BJP","103647","246"
+"Apna Dal (Soneylal)","58541","1951","81899","Vishwanathganj","INC","23358","247"
+"Apna Dal (Soneylal)","46274","2191","80828","Pratapgarh","SP","34554","248"
+"BJP","73538","2244","75011","Patti","SP","1473","249"
+"BJP","58022","1259","67031","Raniganj","BSP","9009","250"
+"BJP","52418","1806","78621","Sirathu","SP","26203","251"
+"BJP","88658","3949","92818","Manjhanpur","BSP","4160","252"
+"BJP","45597","1352","85713","Chail","INC","40116","253"
+"BJP","57254","2571","83239","Phaphamau","SP","25985","254"
+"Apna Dal (Soneylal)","60079","2460","77814","Soraon","BSP","17735","255"
+"BJP","67299","1614","93912","Phulpur","SP","26613","256"
+"BSP","64151","2916","66805","Pratappur","Apna Dal (Soneylal)","2654","257"
+"BSP","63920","2414","72446","Handia","Apna Dal (Soneylal)","8526","258"
+"BJP","47964","2459","67807","Meja","SP","19843","259"
+"SP","65782","2308","80806","Karachhana","BJP","15024","260"
+"BJP","60182","1659","85518","Allahabad West","SP","25336","261"
+"BJP","54166","659","89191","Allahabad North","INC","35025","262"
+"BJP","64424","665","93011","Allahabad South","SP","28587","263"
+"BJP","45156","2327","79209","Bara","SP","34053","264"
+"BJP","46731","3208","100427","Koraon","INC","53696","265"
+"BJP","79724","1460","108403","Kursi","SP","28679","266"
+"BJP","66210","2094","88937","Ram Nagar","SP","22727","267"
+"SP","69748","1622","99453","Barabanki","BSP","29705","268"
+"BJP","81883","2968","111064","Zaidpur","INC","29181","269"
+"BJP","68487","3013","119173","Dariyabad","SP","50686","270"
+"BJP","59052","2225","90311","Rudauli","SP","31259","271"
+"BJP","63977","4096","97497","Haidergarh","SP","33520","272"
+"BJP","58684","2727","86960","Milkipur","SP","28276","273"
+"BJP","67422","2257","94074","Bikapur","SP","26652","274"
+"BJP","56574","1544","107014","Ayodhya","SP","50440","275"
+"BJP","77966","2878","89586","Goshainganj","SP","11620","276"
+"BSP","78071","2235","84358","Katehari","BJP","6287","277"
+"BJP","73043","1530","74768","Tanda","SP","1725","278"
+"BJP","59853","1949","72366","Alapur","SP","12513","279"
+"BSP","77279","1531","90309","Jalalpur","BJP","13030","280"
+"BSP","58312","1719","72325","Akbarpur","SP","14013","281"
+"BJP","57519","3382","104135","BALHA (S.C.)","BSP","46616","282"
+"BJP","67643","3121","86312","Nanpara","INC","18669","283"
+"SP","77593","2717","79188","Matera","BJP","1595","284"
+"BJP","45685","3201","104654","Mahasi","INC","58969","285"
+"BJP","80777","2604","87479","Bahraich","SP","6702","286"
+"BJP","60713","2871","102254","Payagpur","SP","41541","287"
+"BJP","57849","3291","85212","Kaiserganj","BSP","27363","288"
+"BSP","69950","4746","76040","Bhinga","BJP","6090","289"
+"BJP","78992","4289","79437","Shrawasti","SP","445","290"
+"BJP","43637","2459","62296","Tulsipur","INC","18659","291"
+"BJP","53413","1914","55716","Gainsari","BSP","2303","292"
+"BJP","56066","1977","85240","Utraula","SP","29174","293"
+"BJP","64541","3414","89401","Balrampur","INC","24860","294"
+"BJP","47926","2019","84304","Mehnaun","BSP","36378","295"
+"BJP","46576","1594","58254","Gonda","BSP","11678","296"
+"BJP","61284","3014","92095","Katra Bazar","SP","30811","297"
+"BJP","54462","2748","82867","Colonelganj","SP","28405","298"
+"BJP","61852","3384","100294","Tarabganj","SP","38442","299"
+"BJP","42701","2769","102862","Mankapur","BSP","60161","300"
+"BJP","42600","1435","72455","Gaura","SP","29855","301"
+"Apna Dal (Soneylal)","45529","1525","67653","Shohratgarh","BSP","22124","302"
+"BJP","75928","2623","114082","Kapilvastu","SP","38154","303"
+"BJP","58606","1641","77548","Bansi","SP","18942","304"
+"BJP","49316","1747","59524","Itwa","BSP","10208","305"
+"BJP","67056","1611","67227","Doomariyaganj","BSP","171","306"
+"BJP","66908","2274","97014","Harraiya","SP","30106","307"
+"BJP","63700","1898","70527","Kaptanganj","BSP","6827","308"
+"BJP","68423","2221","90228","Rudhauli","BSP","21805","309"
+"BJP","50103","1206","92697","Basti Sadar","SP","42594","310"
+"BJP","56545","2231","82429","Mahadewa S.C","BSP","25884","311"
+"BJP","44062","2663","86976","MENHDAWAL","BSP","42914","312"
+"BJP","56024","835","72061","KHALILABAD","BSP","16037","313"
+"BJP","62663","1871","79572","Dhanghata","SP","16909","314"
+"BJP","73958","1992","76312","Pharenda","INC","2354","315"
+"IND","47410","3490","79666","Nautanwa","SP","32256","316"
+"BJP","54698","2501","122884","Siswa","SP","68186","317"
+"BJP","56793","2573","125154","Maharajganj","BSP","68361","318"
+"BJP","51817","2124","119308","Paniyara","BSP","67491","319"
+"BJP","58782","1806","91636","Caimpiyarganj","INC","32854","320"
+"BJP","69930","1204","82739","Pipraich","BSP","12809","321"
+"BJP","61491","839","122221","Gorakhpur Urban","INC","60730","322"
+"BJP","79276","1634","83686","Gorakhpur Rural","SP","4410","323"
+"BJP","56836","1723","72213","Sahajanwa","SP","15377","324"
+"BJP","51413","2085","71492","Khajani","BSP","20079","325"
+"BJP","42203","1150","87863","Chauri-Chaura","SP","45660","326"
+"BJP","49093","2143","71966","Bansgaon","BSP","22873","327"
+"BSP","74818","2512","78177","Chillupar","BJP","3359","328"
+"BJP","44040","2140","82537","Khadda","BSP","38497","329"
+"BJP","53097","1658","93649","Padrauna","BSP","40552","330"
+"INC","43097","3305","61211","Tamkuhi Raj","BJP","18114","331"
+"BJP","60856","2811","102778","Fazilnagar","SP","41922","332"
+"BJP","49029","2208","97132","Kushinagar","BSP","48103","333"
+"BJP","50788","1933","103864","Hata","SP","53076","334"
+"Suheldev Bhartiya Samaj Party","47053","3144","102782","Ramkola","SP","55729","335"
+"BJP","50965","2561","77754","Rudrapur","INC","26789","336"
+"BJP","41794","1440","88030","Deoria","SP","46236","337"
+"BJP","56815","1450","99812","Pathardeva","SP","42997","338"
+"BJP","52899","2032","62886","Rampur Karkhana","SP","9987","339"
+"SP","50765","2039","61862","Bhatpar Rani","BJP","11097","340"
+"BJP","50521","1951","76175","Salempur","SP","25654","341"
+"BJP","50280","1338","61996","Barhaj","BSP","11716","342"
+"SP","71809","1980","74276","Atrauliya","BJP","2467","343"
+"SP","56020","1521","70980","Gopalpur","BJP","14960","344"
+"BSP","56728","964","62203","Sagri","SP","5475","345"
+"BSP","70017","1628","70705","Mubarakpur","SP","688","346"
+"SP","61825","2134","88087","Azamgarh","BJP","26262","347"
+"SP","48745","1243","67274","Nizamabad","BSP","18529","348"
+"BJP","61140","1609","68435","Phoolpur Pawai","BSP","7295","349"
+"BSP","58480","1653","62125","Didarganj","SP","3645","350"
+"BSP","70488","2123","72715","Lalganj","BJP","2227","351"
+"SP","63625","2492","69037","Mehnagar","Suheldev Bhartiya Samaj Party","5412","352"
+"BJP","56823","683","86238","Madhuban","INC","29415","353"
+"BJP","81295","1585","88298","Ghosi","BSP","7003","354"
+"BJP","72955","1945","73493","Muhammadabad- Gohna (SC)","BSP","538","355"
+"BSP","88095","1725","96793","Mau","Suheldev Bhartiya Samaj Party","8698","356"
+"BJP","59185","1305","77504","Belthara Road","SP","18319","357"
+"BSP","58385","1558","92272","Rasara","BJP","33887","358"
+"BJP","45988","1122","69536","Sikanderpur","SP","23548","359"
+"BJP","52691","1473","70588","Phephana","BSP","17897","360"
+"BJP","52878","1716","92889","Ballia Nagar","SP","40011","361"
+"SP","49514","918","51201","Bansdih","IND","1687","362"
+"BJP","47791","762","64868","Bairia","SP","17077","363"
+"BJP","57865","1612","60237","Badlapur","BSP","2372","364"
+"SP","58656","1473","67818","Shahganj","Suheldev Bhartiya Samaj Party","9162","365"
+"BJP","78040","1939","90324","Jaunpur","INC","12284","366"
+"SP","48141","1707","69351","Malhani","Nirbal Indian Shoshit Hamara Aam Dal","21210","367"
+"BSP","63637","2240","69557","Mungra Badshahpur","BJP","5920","368"
+"SP","68189","2165","72368","Machhlishahr S.C.","BJP","4179","369"
+"Apna Dal (Soneylal)","47454","1174","58804","Mariyahu","SP","11350","370"
+"BJP","61124","1198","85989","Zafrabad","SP","24865","371"
+"BJP","68819","2557","84078","Kerakat S.C.","SP","15259","372"
+"Suheldev Bhartiya Samaj Party","79001","1837","84158","Jakhanian","SP","5157","373"
+"SP","67954","1787","76664","Saidpur","BJP","8710","374"
+"BJP","59483","1479","92090","Ghazipur","SP","32607","375"
+"SP","68202","1109","71441","Jangipur","BJP","3239","376"
+"Suheldev Bhartiya Samaj Party","68502","1500","86583","Zahoorabad","BSP","18081","377"
+"BJP","89429","2283","122156","Mohammadabad","BSP","32727","378"
+"BJP","67559","1857","76823","Zamania","BSP","9264","379"
+"BJP","74158","1950","87401","Mughalsarai","SP","13243","380"
+"SP","64906","1787","79875","Sakaldiha","BJP","14969","381"
+"BJP","64375","1463","78869","Saiyadraja","BSP","14494","382"
+"BJP","76827","3162","96890","Chakia","BSP","20063","383"
+"BJP","53765","2889","90614","Pindra","BSP","36849","384"
+"Suheldev Bhartiya Samaj Party","62429","2350","83778","Ajagara","SP","21349","385"
+"BJP","56194","812","110453","Shivpur","SP","54259","386"
+"BJP","62332","2190","119885","Rohaniya","SP","57553","387"
+"BJP","70515","1115","116017","Varanasi North","INC","45502","388"
+"BJP","75334","457","92560","Varanasi South","INC","17226","389"
+"BJP","71283","758","132609","Varanasi Cantt.","INC","61326","390"
+"Apna Dal (Soneylal)","54241","1626","103423","Sevapuri","SP","49182","391"
+"BJP","78414","830","79519","Bhadohi","SP","1105","392"
+"Nirbal Indian Shoshit Hamara Aam Dal","46218","1034","66448","Gyanpur","BJP","20230","393"
+"BJP","63546","2480","83325","Aurai","SP","19779","394"
+"Apna Dal (Soneylal)","43539","4397","107007","Chhanbey","BSP","63468","395"
+"BJP","51784","1327","109196","Mirzapur","SP","57412","396"
+"BJP","66680","1655","107839","Majhawan","BSP","41159","397"
+"BJP","43380","2541","105608","Chunar","SP","62228","398"
+"BJP","59919","2614","106517","Marihan","INC","46598","399"
+"BJP","56656","5225","114305","Ghorawal","SP","57649","400"
+"BJP","49394","1163","89932","Robertsganj","SP","40538","401"
+"BJP","33789","4305","78058","Obra","SP","44269","402"
+"Apna Dal (Soneylal)","63314","8522","64399","Duddhi","BSP","1085","403"
