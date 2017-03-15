@@ -32,20 +32,10 @@
   <p id="const_name"></p>
   <script type="text/javascript">
 
-  // #00C8F8
-  // #59C4C5
-  // #FFC33C
-  // #FBE2B4
-  // #FF4C65
-  // #d7191c
-  // #fdae61
-  // #ffffbf
-  // #abdda4
-  // #2b83ba
   var party_colors = {
       'INC': '#0392cf', // blue
       'BJP': '#f37736', // orange
-      'SP': '#ee4035', // red
+      'SP':  '#ee4035', // red
       'BSP': '#7bc043', // green
       'IND': '#fdf498'
   }
@@ -65,7 +55,7 @@
       .await(makeMyMap);
 
   function makeMyMap(error, data_2002, data_2007, data_2012, data_2017) {
-
+      // #65737e
       //Add years texts
       for (var i = 0; i < 4; i++) {
           svg.append('text')
@@ -76,9 +66,9 @@
       }
 
       // Important ! domain is given manually
-      margin_scale_2002 = d3.scaleLinear().domain([0, 150685]).range([40, width]);
-      margin_scale_2007 = d3.scaleLinear().domain([0, 150685]).range([40, width]);
-      margin_scale_2012 = d3.scaleLinear().domain([0, 150685]).range([40, width]);
+      margin_scale_2002 = d3.scaleLinear().domain([26, 183899]).range([40, width]);
+      margin_scale_2007 = d3.scaleLinear().domain([9, 53128]).range([40, width]);
+      margin_scale_2012 = d3.scaleLinear().domain([18, 88255]).range([40, width]);
       margin_scale_2017 = d3.scaleLinear().domain([171, 150685]).range([40, width]);
       //add cards horizontally
       highlight_line = svg.append("path")
@@ -90,7 +80,7 @@
             .x(function(d) { return d[0]; })
             .y(function(d) { return d[1]; })
           )
-            .style('stroke', '#777777')
+            .style('stroke', 'transparent')
             .style('opacity', 0.5);
 
       var year_scale_functions = [
@@ -130,7 +120,6 @@
 
       function highlight(){
         normalCard();
-        //Highlight if l = True else make normal
         selected_const_code = parseInt(this.getAttribute('id').split('id')[1]);
         highlight_line.datum(create_path(selected_const_code))
             .attr("class", "line")
@@ -138,7 +127,8 @@
               .curve(d3.curveBundle.beta(1))
               .x(function(d) { return d[0]; })
               .y(function(d) { return d[1]; })
-          );
+            )
+            .style('stroke', '#c0c5ce');
         for(var i = 0; i<4; i++){
           highlightCard(document.getElementById('yr'+(2002 + 5*i)+ 'id' + selected_const_code));
         }
