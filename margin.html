@@ -13,7 +13,6 @@
     svg {
       background: white;
       }
-
     #up {
       opacity: .8;
       stroke-width: .7;
@@ -39,12 +38,12 @@
       'BSP': '#7bc043', // green
       'IND': '#fdf498'
   }
-  var width = 1200,
+  var width = document.body.clientWidth*0.90,
       height = 400;
   var card_circle_radius = 9;
   var selected_const_code = 1;
   var svg = d3.select('#chart').append('svg')
-      .attr('width', width + 20)
+      .attr('width', document.body.clientWidth)
       .attr('height', height);
 
   queue()
@@ -55,7 +54,6 @@
       .await(makeMyMap);
 
   function makeMyMap(error, data_2002, data_2007, data_2012, data_2017) {
-      // #65737e
       //Add years texts
       for (var i = 0; i < 4; i++) {
           svg.append('text')
@@ -89,7 +87,7 @@
         {"func":margin_scale_2007, "data":data_2007},
         {"func":margin_scale_2002, "data":data_2002},
       ];
-
+      var info_cards = []; //Svg group which stores margins, names, etc
       year_scale_functions.forEach(function(year, i){
         for (var j = 0; j < 403; j++) {
             //Create cards for each datapoint
@@ -116,6 +114,30 @@
                 .attr('opacity', 0.25);
             card.attr("transform", "translate(" + (year.func(year.data[j]['margin'])-5) + ", "+ (height*(i/4)) +")");
         }
+        info_cards.push(
+          svg.append('g').attr('id', 'info'+(2017 - 5*i))
+        );
+        info_cards[i].append('text')
+            .attr('id', 'yr'+(2017 - 5*i) + 'info_right_top')
+            .attr('x', 30)
+            .attr('y', height/4 - height/8 - 15)
+            .attr('text-anchor', 'start')
+            .text('adfaasdfasdfasdf')
+            .style('fill', 'transparent');
+          info_cards[i].append('text')
+            .attr('id', 'yr'+(2017 - 5*i) + 'info_left')
+            .attr('x', -10)
+            .attr('y', height/4 - height/8 - 15)
+            .attr('text-anchor', 'end')
+            .text('adfasasdfasfddf')
+            .style('fill', 'transparent');
+          info_cards[i].append('text')
+            .attr('id', 'yr'+(2017 - 5*i) + 'info_left_bottom')
+            .attr('x', 30)
+            .attr('y', height/4 - height/8 + 25)
+            .attr('text-anchor', 'start')
+            .text('adfasdf')
+            .style('fill', 'transparent');
       });
 
       function highlight(){
@@ -137,10 +159,29 @@
       function highlightCard(c) {
           d3.select(c).moveToFront();
           d3.select(c.getElementsByTagName("circle")[0])
-              //.transition() //Removed transition since it is overloading the program
-              //.duration(100)
               .attr('r', card_circle_radius + 5)
               .attr('opacity', 1);
+
+          year_scale_functions.forEach(function(year, i){
+            info_cards[i].attr("transform", "translate(" + (year.func(year.data[selected_const_code]['margin'])-5) + ", "+ (height*(i/4)) +")");
+            d3.select(document.getElementById('yr'+(2017 - 5*i)+ 'info_right_top')).text(year.data[selected_const_code]['win_votes'])
+              .style('fill', function(){
+                if (party_colors[year.data[selected_const_code]['win_party']]){
+                  return party_colors[year.data[selected_const_code]['win_party']];
+                } else{
+                  return '#fdf498';
+                }
+              });
+            d3.select(document.getElementById('yr'+(2017 - 5*i)+ 'info_left')).text(year.data[selected_const_code]['margin']).style('fill', '#65737e');
+            d3.select(document.getElementById('yr'+(2017 - 5*i)+ 'info_left_bottom')).text(year.data[selected_const_code]['second_votes'])
+              .style('fill', function(){
+                if (party_colors[year.data[selected_const_code]['second_party']]){
+                  return party_colors[year.data[selected_const_code]['second_party']];
+                } else{
+                  return '#fdf498';
+                }
+              });
+          });
       }
       function normalCard() {
         for(var i = 0; i<4; i++){
