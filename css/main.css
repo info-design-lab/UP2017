@@ -1,0 +1,8 @@
+body, html{
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.line {
+  fill: none;
+  stroke-width: 4px;
+}
