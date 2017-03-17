@@ -20,6 +20,8 @@ queue()
     .defer(d3.csv, 'data/margins/2017.csv')
     .await(makeMyMap);
 
+var margin_scale_2002, margin_scale_2007, margin_scale_2012, margin_scale_2017;
+
 function makeMyMap(error, data_2002, data_2007, data_2012, data_2017) {
     //Add years texts
     for (var i = 0; i < 4; i++) {
@@ -159,7 +161,7 @@ function makeMyMap(error, data_2002, data_2007, data_2012, data_2017) {
                 return '#65737e';
               }
             });
-          d3.select(document.getElementById('yr'+(2017 - 5*i)+ 'info_left')).text(year.data[selected_const_code][current_mode]).style('fill', '#65737e');
+          d3.select(document.getElementById('yr'+(2017 - 5*i)+ 'info_left')).text((parseInt(year.data[selected_const_code][current_mode]))).style('fill', '#65737e');
           d3.select(document.getElementById('yr'+(2017 - 5*i)+ 'info_right_bottom')).text(year.data[selected_const_code]['second_votes'])
             .style('fill', function(){
               if (party_colors[year.data[selected_const_code]['second_party']]){
@@ -256,4 +258,30 @@ function makeMyMap(error, data_2002, data_2007, data_2012, data_2017) {
       }
     });
     $(".js-example-basic-single").val("87").change();
+    $('.switch .margin-percent').change(function (e) {
+      if(this.checked){
+        current_mode = 'margin';
+        margin_scale_2002.domain([26, 183899]);
+        margin_scale_2007.domain([9, 53128]);
+        margin_scale_2012.domain([18, 88255]);
+        margin_scale_2017.domain([171, 150685]);
+      }
+      else{
+        current_mode = 'percent';
+        margin_scale_2002.domain([0, 75.84]);
+        margin_scale_2007.domain([0, 46.80]);
+        margin_scale_2012.domain([0, 53.84]);
+        margin_scale_2017.domain([0, 51.55]);
+      }
+      console.log(margin_scale_2002);
+      year_scale_functions.forEach(function(year, i){
+        for (var j = 0; j < 403; j++) {
+            d3.select('#yr'+(2017 - 5*i)+'id'+j)
+              .transition()
+              .duration(1000)
+              .attr("transform", "translate(" + (year.func(year.data[j][current_mode])-5) + ", "+ (height*(i/4)) +")");
+        }
+      });
+      $(".js-example-basic-single").val("87").change();
+    });
 }
