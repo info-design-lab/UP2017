@@ -9,6 +9,7 @@ var width = document.body.clientWidth*0.90,
     height = 300;
 var card_circle_radius = 6;
 var selected_const_code = 0;
+var current_mode = 'margin'; // = 'percent' for percentage mode
 var svg = d3.select('#chart').append('svg')
     .attr('width', document.body.clientWidth)
     .attr('height', height);
@@ -79,7 +80,7 @@ function makeMyMap(error, data_2002, data_2007, data_2012, data_2017) {
                 }
               })
               .attr('opacity', 0.25);
-          card.attr("transform", "translate(" + (year.func(year.data[j]['margin'])-5) + ", "+ (height*(i/4)) +")");
+          card.attr("transform", "translate(" + (year.func(year.data[j][current_mode])-5) + ", "+ (height*(i/4)) +")");
       }
       info_cards.push(
         svg.append('g').attr('id', 'info'+(2017 - 5*i))
@@ -149,7 +150,7 @@ function makeMyMap(error, data_2002, data_2007, data_2012, data_2017) {
             .attr('opacity', 1);
 
         year_scale_functions.forEach(function(year, i){
-          info_cards[i].attr("transform", "translate(" + (year.func(year.data[selected_const_code]['margin'])-5) + ", "+ (height*(i/4)) +")");
+          info_cards[i].attr("transform", "translate(" + (year.func(year.data[selected_const_code][current_mode])-5) + ", "+ (height*(i/4)) +")");
           d3.select(document.getElementById('yr'+(2017 - 5*i)+ 'info_right_top')).text(year.data[selected_const_code]['win_votes'])
             .style('fill', function(){
               if (party_colors[year.data[selected_const_code]['win_party']]){
@@ -158,7 +159,7 @@ function makeMyMap(error, data_2002, data_2007, data_2012, data_2017) {
                 return '#65737e';
               }
             });
-          d3.select(document.getElementById('yr'+(2017 - 5*i)+ 'info_left')).text(year.data[selected_const_code]['margin']).style('fill', '#65737e');
+          d3.select(document.getElementById('yr'+(2017 - 5*i)+ 'info_left')).text(year.data[selected_const_code][current_mode]).style('fill', '#65737e');
           d3.select(document.getElementById('yr'+(2017 - 5*i)+ 'info_right_bottom')).text(year.data[selected_const_code]['second_votes'])
             .style('fill', function(){
               if (party_colors[year.data[selected_const_code]['second_party']]){
@@ -194,43 +195,43 @@ function makeMyMap(error, data_2002, data_2007, data_2012, data_2017) {
     }
     function create_path(i){
       var path_array = [];
-      path_array.push([margin_scale_2017(data_2017[i]['margin']) + 5, height/8]);
-      path_array.push([margin_scale_2017(data_2017[i]['margin']) + 5, height/8*2 - 10]);
-      path_array.push([margin_scale_2017(data_2017[i]['margin']) + 5, height/8*2 - 5]);
+      path_array.push([margin_scale_2017(data_2017[i][current_mode]) + 5, height/8]);
+      path_array.push([margin_scale_2017(data_2017[i][current_mode]) + 5, height/8*2 - 10]);
+      path_array.push([margin_scale_2017(data_2017[i][current_mode]) + 5, height/8*2 - 5]);
 
-      var d1 = margin_scale_2017(data_2017[i]['margin']) + 5;
-      var d2 = margin_scale_2012(data_2012[i]['margin']) + 5;
+      var d1 = margin_scale_2017(data_2017[i][current_mode]) + 5;
+      var d2 = margin_scale_2012(data_2012[i][current_mode]) + 5;
       path_array.push([d1+Math.sign(d2-d1)*d3.min([5,Math.abs((d2-d1))]), height/8*2]);
       path_array.push([(d1+d2)/2, height/8*2]);
       path_array.push([d2-Math.sign(d2-d1)*d3.min([5,Math.abs((d2-d1))]), height/8*2]);
 
-      path_array.push([margin_scale_2012(data_2012[i]['margin']) + 5, height/8*2 + 5]);
-      path_array.push([margin_scale_2012(data_2012[i]['margin']) + 5, height/8*2 + 10]);
-      path_array.push([margin_scale_2012(data_2012[i]['margin']) + 5, height/8*3]);
-      path_array.push([margin_scale_2012(data_2012[i]['margin']) + 5, height/8*4 - 10]);
-      path_array.push([margin_scale_2012(data_2012[i]['margin']) + 5, height/8*4 - 5]);
+      path_array.push([margin_scale_2012(data_2012[i][current_mode]) + 5, height/8*2 + 5]);
+      path_array.push([margin_scale_2012(data_2012[i][current_mode]) + 5, height/8*2 + 10]);
+      path_array.push([margin_scale_2012(data_2012[i][current_mode]) + 5, height/8*3]);
+      path_array.push([margin_scale_2012(data_2012[i][current_mode]) + 5, height/8*4 - 10]);
+      path_array.push([margin_scale_2012(data_2012[i][current_mode]) + 5, height/8*4 - 5]);
 
-      d1 = margin_scale_2012(data_2012[i]['margin']) + 5;
-      d2 = margin_scale_2007(data_2007[i]['margin']) + 5;
+      d1 = margin_scale_2012(data_2012[i][current_mode]) + 5;
+      d2 = margin_scale_2007(data_2007[i][current_mode]) + 5;
       path_array.push([d1+Math.sign(d2-d1)*d3.min([5,Math.abs((d2-d1))]), height/8*4]);
       path_array.push([(d1+d2)/2, height/8*4]);
       path_array.push([d2-Math.sign(d2-d1)*d3.min([5,Math.abs((d2-d1))]), height/8*4]);
 
-      path_array.push([margin_scale_2007(data_2007[i]['margin']) + 5, height/8*4 + 5]);
-      path_array.push([margin_scale_2007(data_2007[i]['margin']) + 5, height/8*4 + 10]);
-      path_array.push([margin_scale_2007(data_2007[i]['margin']) + 5, height/8*5]);
-      path_array.push([margin_scale_2007(data_2007[i]['margin']) + 5, height/8*6 - 10]);
-      path_array.push([margin_scale_2007(data_2007[i]['margin']) + 5, height/8*6 - 5]);
+      path_array.push([margin_scale_2007(data_2007[i][current_mode]) + 5, height/8*4 + 5]);
+      path_array.push([margin_scale_2007(data_2007[i][current_mode]) + 5, height/8*4 + 10]);
+      path_array.push([margin_scale_2007(data_2007[i][current_mode]) + 5, height/8*5]);
+      path_array.push([margin_scale_2007(data_2007[i][current_mode]) + 5, height/8*6 - 10]);
+      path_array.push([margin_scale_2007(data_2007[i][current_mode]) + 5, height/8*6 - 5]);
 
-      d1 = margin_scale_2007(data_2007[i]['margin']) + 5;
-      d2 = margin_scale_2002(data_2002[i]['margin']) + 5;
+      d1 = margin_scale_2007(data_2007[i][current_mode]) + 5;
+      d2 = margin_scale_2002(data_2002[i][current_mode]) + 5;
       path_array.push([d1+Math.sign(d2-d1)*d3.min([5,Math.abs((d2-d1))]), height/8*6]);
       path_array.push([(d1+d2)/2, height/8*6]);
       path_array.push([d2-Math.sign(d2-d1)*d3.min([5,Math.abs((d2-d1))]), height/8*6]);
 
-      path_array.push([margin_scale_2002(data_2002[i]['margin']) + 5, height/8*6 + 5]);
-      path_array.push([margin_scale_2002(data_2002[i]['margin']) + 5, height/8*6 + 10]);
-      path_array.push([margin_scale_2002(data_2002[i]['margin']) + 5, height/8*7]);
+      path_array.push([margin_scale_2002(data_2002[i][current_mode]) + 5, height/8*6 + 5]);
+      path_array.push([margin_scale_2002(data_2002[i][current_mode]) + 5, height/8*6 + 10]);
+      path_array.push([margin_scale_2002(data_2002[i][current_mode]) + 5, height/8*7]);
       return path_array;
     }
     d3.selection.prototype.moveToFront = function() {
