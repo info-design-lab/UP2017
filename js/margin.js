@@ -6,8 +6,8 @@ var party_colors = {
     'IND': '#65737e'
 }
 var width = document.body.clientWidth*0.90,
-    height = 400;
-var card_circle_radius = 9;
+    height = 300;
+var card_circle_radius = 6;
 var selected_const_code = 0;
 var svg = d3.select('#chart').append('svg')
     .attr('width', document.body.clientWidth)
@@ -87,25 +87,25 @@ function makeMyMap(error, data_2002, data_2007, data_2012, data_2017) {
       info_cards[i].append('text')
           .attr('id', 'yr'+(2017 - 5*i) + 'info_right_top')
           .attr('x', 30)
-          .attr('y', height/4 - height/8 - 15)
+          .attr('y', height/4 - height/8 - 12)
           .attr('text-anchor', 'start')
           .text('')
-          .style("font-size","30px")
+          .style("font-size","18px")
           .style('fill', 'transparent');
         info_cards[i].append('text')
           .attr('id', 'yr'+(2017 - 5*i) + 'info_left')
           .attr('x', -10)
-          .attr('y', height/4 - height/8 - 15)
+          .attr('y', height/4 - height/8 - 12)
           .attr('text-anchor', 'end')
           .text('')
-          .style("font-size","30px")
+          .style("font-size","18px")
           .style('fill', 'transparent');
         info_cards[i].append('text')
-          .attr('id', 'yr'+(2017 - 5*i) + 'info_left_bottom')
+          .attr('id', 'yr'+(2017 - 5*i) + 'info_right_bottom')
           .attr('x', 30)
-          .attr('y', height/4 - height/8 + 37)
+          .attr('y', height/4 - height/8 + 23)
           .attr('text-anchor', 'start')
-          .style("font-size","30px")
+          .style("font-size","18px")
           .text('')
           .style('fill', 'transparent');
     });
@@ -129,7 +129,7 @@ function makeMyMap(error, data_2002, data_2007, data_2012, data_2017) {
     function highlightCard(c) {
         d3.select(c).moveToFront();
         d3.select(c.getElementsByTagName("circle")[0])
-            .attr('r', card_circle_radius + 5)
+            .attr('r', card_circle_radius + 4)
             .attr('opacity', 1);
 
         year_scale_functions.forEach(function(year, i){
@@ -143,7 +143,7 @@ function makeMyMap(error, data_2002, data_2007, data_2012, data_2017) {
               }
             });
           d3.select(document.getElementById('yr'+(2017 - 5*i)+ 'info_left')).text(year.data[selected_const_code]['margin']).style('fill', '#65737e');
-          d3.select(document.getElementById('yr'+(2017 - 5*i)+ 'info_left_bottom')).text(year.data[selected_const_code]['second_votes'])
+          d3.select(document.getElementById('yr'+(2017 - 5*i)+ 'info_right_bottom')).text(year.data[selected_const_code]['second_votes'])
             .style('fill', function(){
               if (party_colors[year.data[selected_const_code]['second_party']]){
                 return party_colors[year.data[selected_const_code]['second_party']];
