@@ -87,11 +87,35 @@ function makeMyMap(error, data_2002, data_2007, data_2012, data_2017) {
       info_cards[i].append('text')
           .attr('id', 'yr'+(2017 - 5*i) + 'info_right_top')
           .attr('x', 30)
-          .attr('y', height/4 - height/8 - 12)
+          .attr('y', height/4 - height/8 - 19)
           .attr('text-anchor', 'start')
           .text('')
           .style("font-size","18px")
           .style('fill', 'transparent');
+      info_cards[i].append('text')
+          .attr('id', 'yr'+(2017 - 5*i) + 'info_right_win')
+          .attr('x', 30)
+          .attr('y', height/4 - height/8 - 8)
+          .attr('text-anchor', 'start')
+          .text('')
+          .style("font-size","12px")
+          .style('fill', 'transparent');
+          info_cards[i].append('text')
+            .attr('id', 'yr'+(2017 - 5*i) + 'info_right_bottom')
+            .attr('x', 30)
+            .attr('y', height/4 - height/8 + 20)
+            .attr('text-anchor', 'start')
+            .style("font-size","18px")
+            .text('')
+            .style('fill', 'transparent');
+            info_cards[i].append('text')
+                .attr('id', 'yr'+(2017 - 5*i) + 'info_right_second')
+                .attr('x', 30)
+                .attr('y', height/4 - height/8 + 30)
+                .attr('text-anchor', 'start')
+                .text('')
+                .style("font-size","12px")
+                .style('fill', 'transparent');
         info_cards[i].append('text')
           .attr('id', 'yr'+(2017 - 5*i) + 'info_left')
           .attr('x', -10)
@@ -99,14 +123,6 @@ function makeMyMap(error, data_2002, data_2007, data_2012, data_2017) {
           .attr('text-anchor', 'end')
           .text('')
           .style("font-size","18px")
-          .style('fill', 'transparent');
-        info_cards[i].append('text')
-          .attr('id', 'yr'+(2017 - 5*i) + 'info_right_bottom')
-          .attr('x', 30)
-          .attr('y', height/4 - height/8 + 23)
-          .attr('text-anchor', 'start')
-          .style("font-size","18px")
-          .text('')
           .style('fill', 'transparent');
     });
 
@@ -151,6 +167,22 @@ function makeMyMap(error, data_2002, data_2007, data_2012, data_2017) {
                 return '#65737e';
               }
             });
+            d3.select(document.getElementById('yr'+(2017 - 5*i)+ 'info_right_win')).text(year.data[selected_const_code]['win_party'])
+              .style('fill', function(){
+                if (party_colors[year.data[selected_const_code]['win_party']]){
+                  return party_colors[year.data[selected_const_code]['win_party']];
+                } else{
+                  return '#65737e';
+                }
+              });
+              d3.select(document.getElementById('yr'+(2017 - 5*i)+ 'info_right_second')).text(year.data[selected_const_code]['second_party'])
+                .style('fill', function(){
+                  if (party_colors[year.data[selected_const_code]['second_party']]){
+                    return party_colors[year.data[selected_const_code]['second_party']];
+                  } else{
+                    return '#65737e';
+                  }
+                });
         });
     }
     function normalCard() {
