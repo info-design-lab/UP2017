@@ -221,5 +221,5 @@ function makeMyMap(error, data_2002, data_2007, data_2012, data_2017) {
         highlightCard(document.getElementById('yr'+(2002 + 5*i)+ 'id' + selected_const_code));
       }
     });
-    $(".js-example-basic-single").val("1").change();
+    $(".js-example-basic-single").val("175").change();
 }
