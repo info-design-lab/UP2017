@@ -18,6 +18,7 @@ queue()
     .defer(d3.csv, 'data/margins/2012.csv')
     .defer(d3.csv, 'data/margins/2017.csv')
     .await(makeMyMap);
+
 function makeMyMap(error, data_2002, data_2007, data_2012, data_2017) {
     //Add years texts
     for (var i = 0; i < 4; i++) {
@@ -221,5 +222,5 @@ function makeMyMap(error, data_2002, data_2007, data_2012, data_2017) {
         highlightCard(document.getElementById('yr'+(2002 + 5*i)+ 'id' + selected_const_code));
       }
     });
-    $(".js-example-basic-single").val("175").change();
+    $(".js-example-basic-single").val("261").change();
 }
