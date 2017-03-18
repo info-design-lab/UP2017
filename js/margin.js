@@ -158,10 +158,10 @@ function makeMyMap(error, data_2007, data_2012, data_2017, up) {
         .enter().append("path")
         .attr("d", path)
         .style('fill', function(d) {
-            return colorScale(data_2017[d.properties.ac - 1][current_mode]);
+            return colorScale(data_2017[d.properties.AC_NO - 1][current_mode]);
         })
         .on('mouseover', function(d) {
-            $(".js-example-basic-single").val(d.properties.ac).change();
+            $(".js-example-basic-single").val(d.properties.AC_NO).change();
         });
 
     function highlight() {
@@ -373,7 +373,7 @@ function makeMyMap(error, data_2007, data_2012, data_2017, up) {
             .duration(1000)
 
             .style('fill', function(d) {
-                return colorScale(data_2017[d.properties.ac - 1][current_mode]);
+                return colorScale(data_2017[d.properties.AC_NO - 1][current_mode]);
             });
 
         $(".js-example-basic-single").val("87").change();
