@@ -193,39 +193,76 @@ function makeMyMap(error, data_2007, data_2012, data_2017, up) {
 
         year_scale_functions.forEach(function(year, i) {
             info_cards[i].attr("transform", "translate(" + (year.func(year.data[selected_const_code][current_mode]) - 5) + ", " + (height * (i / 3)) + ")");
-            d3.select(document.getElementById('yr' + (2017 - 5 * i) + 'info_right_top')).text(year.data[selected_const_code]['win_votes'])
-                .style('fill', function() {
-                    if (party_colors[year.data[selected_const_code]['win_party']]) {
-                        return party_colors[year.data[selected_const_code]['win_party']];
-                    } else {
-                        return '#65737e';
-                    }
-                });
-            d3.select(document.getElementById('yr' + (2017 - 5 * i) + 'info_left')).text((year.data[selected_const_code][current_mode])).style('fill', '#65737e');
-            d3.select(document.getElementById('yr' + (2017 - 5 * i) + 'info_right_bottom')).text(year.data[selected_const_code]['second_votes'])
-                .style('fill', function() {
-                    if (party_colors[year.data[selected_const_code]['second_party']]) {
-                        return party_colors[year.data[selected_const_code]['second_party']];
-                    } else {
-                        return '#65737e';
-                    }
-                });
-            d3.select(document.getElementById('yr' + (2017 - 5 * i) + 'info_right_win')).text(year.data[selected_const_code]['win_party'])
-                .style('fill', function() {
-                    if (party_colors[year.data[selected_const_code]['win_party']]) {
-                        return party_colors[year.data[selected_const_code]['win_party']];
-                    } else {
-                        return '#65737e';
-                    }
-                });
-            d3.select(document.getElementById('yr' + (2017 - 5 * i) + 'info_right_second')).text(year.data[selected_const_code]['second_party'])
-                .style('fill', function() {
-                    if (party_colors[year.data[selected_const_code]['second_party']]) {
-                        return party_colors[year.data[selected_const_code]['second_party']];
-                    } else {
-                        return '#65737e';
-                    }
-                });
+            if(current_mode == 'margin'){
+              d3.select(document.getElementById('yr' + (2017 - 5 * i) + 'info_right_top')).text(year.data[selected_const_code]['win_votes'])
+                  .style('fill', function() {
+                      if (party_colors[year.data[selected_const_code]['win_party']]) {
+                          return party_colors[year.data[selected_const_code]['win_party']];
+                      } else {
+                          return '#65737e';
+                      }
+                  });
+              d3.select(document.getElementById('yr' + (2017 - 5 * i) + 'info_left')).text((year.data[selected_const_code][current_mode])).style('fill', '#65737e');
+              d3.select(document.getElementById('yr' + (2017 - 5 * i) + 'info_right_bottom')).text(year.data[selected_const_code]['second_votes'])
+                  .style('fill', function() {
+                      if (party_colors[year.data[selected_const_code]['second_party']]) {
+                          return party_colors[year.data[selected_const_code]['second_party']];
+                      } else {
+                          return '#65737e';
+                      }
+                  });
+              d3.select(document.getElementById('yr' + (2017 - 5 * i) + 'info_right_win')).text(year.data[selected_const_code]['win_party'])
+                  .style('fill', function() {
+                      if (party_colors[year.data[selected_const_code]['win_party']]) {
+                          return party_colors[year.data[selected_const_code]['win_party']];
+                      } else {
+                          return '#65737e';
+                      }
+                  });
+              d3.select(document.getElementById('yr' + (2017 - 5 * i) + 'info_right_second')).text(year.data[selected_const_code]['second_party'])
+                  .style('fill', function() {
+                      if (party_colors[year.data[selected_const_code]['second_party']]) {
+                          return party_colors[year.data[selected_const_code]['second_party']];
+                      } else {
+                          return '#65737e';
+                      }
+                  });
+            } else{
+              d3.select(document.getElementById('yr' + (2017 - 5 * i) + 'info_right_top')).text((year.data[selected_const_code]['win_votes']*year.data[selected_const_code][current_mode]/year.data[selected_const_code]['margin']).toFixed(2))
+                  .style('fill', function() {
+                      if (party_colors[year.data[selected_const_code]['win_party']]) {
+                          return party_colors[year.data[selected_const_code]['win_party']];
+                      } else {
+                          return '#65737e';
+                      }
+                  });
+              d3.select(document.getElementById('yr' + (2017 - 5 * i) + 'info_left')).text((year.data[selected_const_code][current_mode])).style('fill', '#65737e');
+              d3.select(document.getElementById('yr' + (2017 - 5 * i) + 'info_right_bottom')).text((year.data[selected_const_code]['second_votes']*year.data[selected_const_code][current_mode]/year.data[selected_const_code]['margin']).toFixed(2))
+                  .style('fill', function() {
+                      if (party_colors[year.data[selected_const_code]['second_party']]) {
+                          return party_colors[year.data[selected_const_code]['second_party']];
+                      } else {
+                          return '#65737e';
+                      }
+                  });
+              d3.select(document.getElementById('yr' + (2017 - 5 * i) + 'info_right_win')).text(year.data[selected_const_code]['win_party'])
+                  .style('fill', function() {
+                      if (party_colors[year.data[selected_const_code]['win_party']]) {
+                          return party_colors[year.data[selected_const_code]['win_party']];
+                      } else {
+                          return '#65737e';
+                      }
+                  });
+              d3.select(document.getElementById('yr' + (2017 - 5 * i) + 'info_right_second')).text(year.data[selected_const_code]['second_party'])
+                  .style('fill', function() {
+                      if (party_colors[year.data[selected_const_code]['second_party']]) {
+                          return party_colors[year.data[selected_const_code]['second_party']];
+                      } else {
+                          return '#65737e';
+                      }
+                  });
+            }
+
         });
     }
 
