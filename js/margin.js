@@ -26,7 +26,7 @@ queue()
     .defer(d3.json, 'map/uptopo.json')
     .await(makeMyMap);
 
-var margin_scale_2002, margin_scale_2007, margin_scale_2012, margin_scale_2017;
+var margin_scale_2002, margin_scale_2007, margin_scale_2012, margin_scale_2017, colorScale;
 
 function makeMyMap(error, data_2002, data_2007, data_2012, data_2017, up) {
     //Add years texts
@@ -44,8 +44,7 @@ function makeMyMap(error, data_2002, data_2007, data_2012, data_2017, up) {
     margin_scale_2007 = d3.scaleLinear().domain([9, 53128]).range([75, width]);
     margin_scale_2012 = d3.scaleLinear().domain([18, 88255]).range([75, width]);
     margin_scale_2017 = d3.scaleLinear().domain([171, 150685]).range([75, width]);
-    var colorScale = d3.scaleLinear().range(['red', 'blue']).domain([26, 183899]);
-    //add cards horizontally
+    colorScale = d3.scaleLinear().range(['red', 'blue']).domain([26, 183899]);
     highlight_line = svg.append("path")
         .datum(create_path(1))
         .attr("class", "line")
@@ -144,7 +143,13 @@ function makeMyMap(error, data_2002, data_2007, data_2012, data_2017, up) {
     margin_map_svg.selectAll("path")
       .data(geo_obj.features)
       .enter().append("path")
-      .attr("d", path);
+      .attr("d", path)
+      .style('fill', function(d){
+        return colorScale(data_2017[d.properties.ac - 1][current_mode]);
+      })
+      .on('mouseover', function(d){
+        $(".js-example-basic-single").val(d.properties.ac).change();
+      });
 
     function highlight(){
       normalCard();
@@ -282,15 +287,16 @@ function makeMyMap(error, data_2002, data_2007, data_2012, data_2017, up) {
         margin_scale_2007.domain([9, 53128]);
         margin_scale_2012.domain([18, 88255]);
         margin_scale_2017.domain([171, 150685]);
+        colorScale.domain([26, 183899]);
       }
       else{
         current_mode = 'percent';
         margin_scale_2002.domain([0, 100]);
-        margin_scale_2007.domain([0, 46]);
-        margin_scale_2012.domain([0, 52]);
-        margin_scale_2017.domain([0, 51]);
+        margin_scale_2007.domain([0, 46.81]);
+        margin_scale_2012.domain([0, 53.84]);
+        margin_scale_2017.domain([0, 51.56]);
+        colorScale.domain([0, 51]);
       }
-      console.log(margin_scale_2002);
       year_scale_functions.forEach(function(year, i){
         for (var j = 0; j < 403; j++) {
             d3.select('#yr'+(2017 - 5*i)+'id'+j)
@@ -299,6 +305,15 @@ function makeMyMap(error, data_2002, data_2007, data_2012, data_2017, up) {
               .attr("transform", "translate(" + (year.func(year.data[j][current_mode])-5) + ", "+ (height*(i/4)) +")");
         }
       });
+      margin_map_svg.selectAll("path")
+        .data(geo_obj.features)
+        .transition()
+        .duration(1000)
+
+        .style('fill', function(d){
+          return colorScale(data_2017[d.properties.ac - 1][current_mode]);
+        });
+
       $(".js-example-basic-single").val("87").change();
     });
 }
