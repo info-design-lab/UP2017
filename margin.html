@@ -9,6 +9,7 @@
     <script src="scripts/queue.js"></script>
     <script type="text/javascript" src="scripts/jquery-3.1.1.min.js"></script>
     <script src="scripts/select2.min.js"></script>
+    <script src="https://d3js.org/topojson.v2.min.js"></script>
     <script src="scripts/bootstrap/bootstrap.min.js"></script>
     <link href="scripts/bootstrap/bootstrap.min.css" rel="stylesheet" />
     <link href="css/select2.min.css" rel="stylesheet" />
@@ -18,25 +19,31 @@
   </head>
 
 <body>
-Percentage
-<label class="switch">
-  <input type="checkbox" class="margin-percent" checked>
-  <div class="slider round"></div>
-</label>
-Margin Numbers
-  <div id="chart"></div>
+
+  <div id="margin-chart"></div>
+
   <div class="section">
     <div class="row">
       <div class="col-md-3">
         <div class="section" style="margin-left:10%;">
-          <h3>Heading</h3>
+          <h4>How to read</h4>
+          <span style="color: #F55861;">
+            Percentage
+          </span>
+          <label class="switch">
+            <input type="checkbox" class="margin-percent" checked>
+            <div class="slider round"></div>
+          </label>
+          <span style="color: #399CFA;">
+              Margin Numbers
+          </span>
           <p>
             A number of Michelangelo's works of painting, sculpture, and architecture rank among the most famous in existence.[1] His output in every field of interest was prodigious; given the sheer volume of surviving correspondence, sketches, and reminiscences taken into account, he is the best-documented artist of the 16th century.
           </p>
         </div>
       </div>
       <div class="col-md-7">
-        <img src="http://www.onefivenine.com/images/StateMaps/Uttar%20Pradesh.jpg" alt="Mountain View" style="width:100%;height:100%;" />
+        <div id="margin-map"></div>
       </div>
       <div class="col-md-2">
         <select class="js-example-basic-single" style="width:90%;">
@@ -45,7 +52,6 @@ Margin Numbers
       </div>
     </div>
   </div>
-
   <script src="js/margin.js">  </script>
 </body>
 </html>

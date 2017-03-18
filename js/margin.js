@@ -10,19 +10,25 @@ var width = document.body.clientWidth*0.90,
 var card_circle_radius = 6;
 var selected_const_code = 0;
 var current_mode = 'margin'; // = 'percent' for percentage mode
-var svg = d3.select('#chart').append('svg')
+var svg = d3.select('#margin-chart').append('svg')
     .attr('width', document.body.clientWidth)
     .attr('height', height);
+var margin_map_width = $("#margin-map").width();
+var margin_map_height = 600;
+var margin_map_svg = d3.select("#margin-map").append("svg")
+                            .attr("width",margin_map_width)
+                            .attr("height",margin_map_width);
 queue()
     .defer(d3.csv, 'data/margins/2002.csv')
     .defer(d3.csv, 'data/margins/2007.csv')
     .defer(d3.csv, 'data/margins/2012.csv')
     .defer(d3.csv, 'data/margins/2017.csv')
+    .defer(d3.json, 'map/uptopo.json')
     .await(makeMyMap);
 
 var margin_scale_2002, margin_scale_2007, margin_scale_2012, margin_scale_2017;
 
-function makeMyMap(error, data_2002, data_2007, data_2012, data_2017) {
+function makeMyMap(error, data_2002, data_2007, data_2012, data_2017, up) {
     //Add years texts
     for (var i = 0; i < 4; i++) {
         svg.append('text')
@@ -38,6 +44,7 @@ function makeMyMap(error, data_2002, data_2007, data_2012, data_2017) {
     margin_scale_2007 = d3.scaleLinear().domain([9, 53128]).range([75, width]);
     margin_scale_2012 = d3.scaleLinear().domain([18, 88255]).range([75, width]);
     margin_scale_2017 = d3.scaleLinear().domain([171, 150685]).range([75, width]);
+    var colorScale = d3.scaleLinear().range(['red', 'blue']).domain([26, 183899]);
     //add cards horizontally
     highlight_line = svg.append("path")
         .datum(create_path(1))
@@ -128,6 +135,16 @@ function makeMyMap(error, data_2002, data_2007, data_2012, data_2017) {
           .style("font-size","18px")
           .style('fill', 'transparent');
     });
+    var geo_obj=topojson.feature(up,up.objects.up);
+    var projection=d3.geoMercator()
+                     .rotate([0,-25])
+                     .fitSize([margin_map_width,margin_map_width],geo_obj)
+                     ;
+    var path = d3.geoPath().projection(projection);
+    margin_map_svg.selectAll("path")
+      .data(geo_obj.features)
+      .enter().append("path")
+      .attr("d", path);
 
     function highlight(){
       normalCard();

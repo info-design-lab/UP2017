@@ -15,7 +15,6 @@ var svg = d3.select("body").append("svg").attr("width",width).attr("height",heig
 
 d3.json("map/uptopo.json", function(error, up) {
   if (error) throw error;
-//debugger;//
   var geo_obj=topojson.feature(up,up.objects.up);
   //debugger;
   var projection=d3.geoMercator()
