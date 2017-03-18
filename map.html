@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<body>
+
+</style>
+
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://d3js.org/topojson.v2.min.js"></script>
+<script>
+
+var width=600;
+var height=600;
+var svg = d3.select("body").append("svg").attr("width",width).attr("height",height);
+
+
+
+d3.json("map/uptopo.json", function(error, up) {
+  if (error) throw error;
+//debugger;//
+  var geo_obj=topojson.feature(up,up.objects.up);
+  //debugger;
+  var projection=d3.geoMercator()
+  .fitSize([width,height],geo_obj);
+  var path = d3.geoPath().projection(projection);
+
+
+  //debugger;
+  svg.selectAll("path")
+  .data(geo_obj.features)
+  .enter().append("path")
+    .attr("d", path);
+
+});
+
+</script>
+</body>
