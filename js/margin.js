@@ -150,7 +150,7 @@ function makeMyMap(error, data_2007, data_2012, data_2017, up) {
     });
     var geo_obj = topojson.feature(up, up.objects.up);
     var projection = d3.geoMercator()
-        .rotate([0, -25])
+        //.rotate([0, -25])
         .fitSize([margin_map_width, margin_map_width], geo_obj);
     var path = d3.geoPath().projection(projection);
     margin_map_svg.selectAll("path")
