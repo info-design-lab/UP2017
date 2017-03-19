@@ -1,8 +1,8 @@
 
 var party_colors = {
     'INC': '#0392cf', // blue
-    'BJP': '#f37736', // orange
-    'SP': '#ee4035', // red
+    'BJP': '#feb24c', // orange
+    'SP': '#bd0026', // red
     'BSP': '#7bc043', // green
     'IND': '#65737e'
 }
@@ -46,7 +46,7 @@ function makeMyMap(error, data_2007, data_2012, data_2017, up) {
     margin_scale_2007 = d3.scaleLinear().domain([9, 53128]).range([75, width]);
     margin_scale_2012 = d3.scaleLinear().domain([18, 88255]).range([75, width]);
     margin_scale_2017 = d3.scaleLinear().domain([171, 150685]).range([75, width]);
-    colorScale = d3.scaleLinear().range(['red', 'blue']).domain([26, 183899]);
+    colorScale = d3.scaleLinear().range(['#551A8B', '#fff']).domain([26, 183899]);
     highlight_line = svg.append("path")
         .datum(create_path(1))
         .attr("class", "line")
