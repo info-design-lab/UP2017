@@ -183,7 +183,7 @@ function makeMyMap(error, data_2007, data_2012, data_2017, up) {
             return map_tooltip.style("top", (event.pageY - 50) + "px").style("left", (event.pageX + 10) + "px");
         })
         .on("mouseout", function(d) {
-            $(this).removeClass('map-hover');
+            //$(this).removeClass('map-hover');
             return map_tooltip.style("visibility", "hidden");
         });
 
@@ -351,7 +351,9 @@ function makeMyMap(error, data_2007, data_2012, data_2017, up) {
     $(".js-example-basic-single").select2();
     $(".js-example-basic-single").on("change", function() {
         normalCard();
+        $('#map' + (selected_const_code + 1)).removeClass('map-hover');
         selected_const_code = parseInt($(this).val()) - 1;
+        $('#map' + (selected_const_code + 1)).addClass('map-hover');
         highlight_line.datum(create_path(selected_const_code))
             .attr("class", "line")
             .attr("d", d3.line()
@@ -395,12 +397,10 @@ function makeMyMap(error, data_2007, data_2012, data_2017, up) {
             .data(geo_obj.features)
             .transition()
             .duration(1000)
-
             .style('fill', function(d) {
                 return map_getColor(data_2017[d.properties.AC_NO - 1][current_mode]);
             });
-
-        $(".js-example-basic-single").val("87").change();
+        $(".js-example-basic-single").val(selected_const_code + 1).change();
     });
     function map_getColor(d) {
       if (current_mode == 'margin'){
