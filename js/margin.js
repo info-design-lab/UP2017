@@ -13,8 +13,7 @@ var selected_const_code = 0;
 var current_mode = 'margin'; // = 'percent' for percentage mode
 var svg = d3.select('#margin-chart').append('svg')
     .attr('width', document.body.clientWidth)
-    .attr('height', height)
-    .attr('transform', "translate(0, 100)");
+    .attr('height', height);
 var margin_map_width = $("#margin-map").width();
 var margin_map_height = 600;
 var margin_map_svg = d3.select("#margin-map").append("svg")
