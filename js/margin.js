@@ -36,7 +36,7 @@ var map_tooltip = d3.select("body")
     .style('font-size', '14')
     .style('font-weight', 'normal')
     .style("fill", '#808080');
-var margin_scale_2002, margin_scale_2007, margin_scale_2012, margin_scale_2017, colorScale;
+var margin_scale_2002, margin_scale_2007, margin_scale_2012, margin_scale_2017;
 
 function makeMyMap(error, data_2007, data_2012, data_2017, up) {
     //Add years texts
@@ -54,7 +54,6 @@ function makeMyMap(error, data_2007, data_2012, data_2017, up) {
     margin_scale_2007 = d3.scaleLinear().domain([9, 53128]).range([75, width]);
     margin_scale_2012 = d3.scaleLinear().domain([18, 88255]).range([75, width]);
     margin_scale_2017 = d3.scaleLinear().domain([171, 150685]).range([75, width]);
-    colorScale = d3.scaleLinear().range(['#551A8B', '#fff']).domain([26, 183899]);
     highlight_line = svg.append("path")
         .datum(create_path(1))
         .attr("class", "line")
@@ -171,7 +170,6 @@ function makeMyMap(error, data_2007, data_2012, data_2017, up) {
         })
         .style('fill', function(d) {
             return map_getColor(data_2017[d.properties.AC_NO - 1][current_mode]);
-            //return colorScale(data_2017[d.properties.AC_NO - 1][current_mode]);
         })
         .on('mouseover', function(d) {
             $('#map' + (selected_const_code + 1)).removeClass('map-hover');
@@ -180,7 +178,7 @@ function makeMyMap(error, data_2007, data_2012, data_2017, up) {
             if(event){
               map_tooltip.style("visibility", "visible")
             }
-            map_tooltip.html(data_2017[d.properties.AC_NO - 1]['constituency'] + '<br>' + data_2017[d.properties.AC_NO - 1][current_mode]);
+            map_tooltip.html('<strong>' + data_2017[d.properties.AC_NO - 1]['constituency'] + '</strong><br>' + data_2017[d.properties.AC_NO - 1][current_mode]);
         })
         .on("mousemove", function(d) {
             return map_tooltip.style("top", (event.pageY - 50) + "px").style("left", (event.pageX + 10) + "px");
@@ -379,14 +377,12 @@ function makeMyMap(error, data_2007, data_2012, data_2017, up) {
             margin_scale_2007.domain([9, 53128]);
             margin_scale_2012.domain([18, 88255]);
             margin_scale_2017.domain([171, 150685]);
-            colorScale.domain([26, 183899]);
         } else {
             current_mode = 'percent';
             //margin_scale_2002.domain([0, 100]);
             margin_scale_2007.domain([0, 46.81]);
             margin_scale_2012.domain([0, 53.84]);
             margin_scale_2017.domain([0, 51.56]);
-            colorScale.domain([0, 51]);
         }
         year_scale_functions.forEach(function(year, i) {
             for (var j = 0; j < 403; j++) {
@@ -418,14 +414,14 @@ function makeMyMap(error, data_2007, data_2012, data_2017, up) {
                d > 10000   ? '#f2f0f7' :
                           '#efedf5';
       } else{
-        return d > 30 ? '#4a1486' :
-               d > 20  ? '#6a51a3' :
-               d > 15  ? '#807dba' :
-               d > 11  ? '#9e9ac8' :
-               d > 7   ? '#bcbddc' :
-               d > 3   ? '#dadaeb' :
-               d > 0   ? '#f2f0f7' :
-                          '#efedf5';
+        return d > 30 ? '#91003f' :
+               d > 20  ? '#ce1256' :
+               d > 15  ? '#e7298a' :
+               d > 11  ? '#df65b0' :
+               d > 7   ? '#c994c7' :
+               d > 3   ? '#d4b9da' :
+               d > 0   ? '#e7e1ef' :
+                          '#f7f4f9';
       }
     }
 }
