@@ -174,6 +174,8 @@ function makeMyMap(error, data_2007, data_2012, data_2017, up) {
             //return colorScale(data_2017[d.properties.AC_NO - 1][current_mode]);
         })
         .on('mouseover', function(d) {
+            $('#map' + (selected_const_code + 1)).removeClass('map-hover');
+            $(this).addClass('map-hover');
             $(".js-example-basic-single").val(d.properties.AC_NO).change();
             if(event){
               map_tooltip.style("visibility", "visible")
@@ -184,12 +186,15 @@ function makeMyMap(error, data_2007, data_2012, data_2017, up) {
             return map_tooltip.style("top", (event.pageY - 50) + "px").style("left", (event.pageX + 10) + "px");
         })
         .on("mouseout", function(d) {
+            $(this).removeClass('map-hover');
             return map_tooltip.style("visibility", "hidden");
         });
 
     function highlight() {
         normalCard();
+        $('#map' + (selected_const_code + 1)).removeClass('map-hover');
         selected_const_code = parseInt(this.getAttribute('id').split('id')[1]);
+        $('#map' + (selected_const_code + 1)).addClass('map-hover');
         $(".js-example-basic-single").val(selected_const_code + 1).change();
         highlight_line.datum(create_path(selected_const_code))
             .attr("class", "line")
@@ -290,6 +295,7 @@ function makeMyMap(error, data_2007, data_2012, data_2017, up) {
     }
 
     function normalCard() {
+
         for (var i = 0; i < 3; i++) {
             d3.select(document.getElementById('yr' + (2007 + 5 * i) + 'id' + selected_const_code).getElementsByTagName("circle")[0])
                 .attr('r', card_circle_radius)
