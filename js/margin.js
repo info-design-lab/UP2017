@@ -36,6 +36,7 @@ var map_tooltip = d3.select("body")
     .style('font-weight', 'normal')
     .style("fill", '#808080');
 var margin_scale_2002, margin_scale_2007, margin_scale_2012, margin_scale_2017;
+var line_transition = false; // Transition for connecting lines
 
 function makeMyMap(error, data_2007, data_2012, data_2017, up) {
     //Add years texts
@@ -193,20 +194,26 @@ function makeMyMap(error, data_2007, data_2012, data_2017, up) {
         selected_const_code = parseInt(this.getAttribute('id').split('id')[1]);
         $('#map' + (selected_const_code + 1)).addClass('map-hover');
         $(".js-example-basic-single").val(selected_const_code + 1).change();
-        highlight_line.datum(create_path(selected_const_code))
-            .attr("class", "line")
-            .attr("d", d3.line()
-                .curve(d3.curveBundle.beta(1))
-                .x(function(d) {
-                    return d[0];
-                })
-                .y(function(d) {
-                    return d[1];
-                })
-            )
-            .style('stroke', '#c0c5ce');
+
         for (var i = 0; i < 3; i++) {
             highlightCard(document.getElementById('yr' + (2007 + 5 * i) + 'id' + selected_const_code));
+        }
+
+        if (!line_transition){
+          console.log('here')
+          highlight_line.datum(create_path(selected_const_code))
+              .attr("d", d3.line()
+                  .curve(d3.curveBundle.beta(1))
+                  .x(function(d) {
+                      return d[0];
+                  })
+                  .y(function(d) {
+                      return d[1];
+                  })
+              )
+              .style('stroke', '#c0c5ce');
+        } else{
+          line_transition = false;
         }
     }
 
@@ -215,7 +222,6 @@ function makeMyMap(error, data_2007, data_2012, data_2017, up) {
         d3.select(c.getElementsByTagName("circle")[0])
             .attr('r', card_circle_radius + 4)
             .attr('opacity', 1);
-
         year_scale_functions.forEach(function(year, i) {
             info_cards[i].attr("transform", "translate(" + (year.func(year.data[selected_const_code][current_mode]) - 5) + ", " + (height * (i / 3)) + ")");
             if(current_mode == 'margin'){
@@ -292,7 +298,6 @@ function makeMyMap(error, data_2007, data_2012, data_2017, up) {
     }
 
     function normalCard() {
-
         for (var i = 0; i < 3; i++) {
             d3.select(document.getElementById('yr' + (2007 + 5 * i) + 'id' + selected_const_code).getElementsByTagName("circle")[0])
                 .attr('r', card_circle_radius)
@@ -354,31 +359,39 @@ function makeMyMap(error, data_2007, data_2012, data_2017, up) {
         $('#map' + (selected_const_code + 1)).removeClass('map-hover');
         selected_const_code = parseInt($(this).val()) - 1;
         $('#map' + (selected_const_code + 1)).addClass('map-hover');
-        highlight_line.datum(create_path(selected_const_code))
-            .attr("class", "line")
-            .attr("d", d3.line()
-                .curve(d3.curveBundle.beta(1))
-                .x(function(d) {
-                    return d[0];
-                })
-                .y(function(d) {
-                    return d[1];
-                })
-            )
-            .style('stroke', '#c0c5ce');
+
         for (var i = 0; i < 3; i++) {
             highlightCard(document.getElementById('yr' + (2007 + 5 * i) + 'id' + selected_const_code));
+        }
+        
+        if (!line_transition){
+          console.log('here')
+          highlight_line.datum(create_path(selected_const_code))
+              .attr("d", d3.line()
+                  .curve(d3.curveBundle.beta(1))
+                  .x(function(d) {
+                      return d[0];
+                  })
+                  .y(function(d) {
+                      return d[1];
+                  })
+              )
+              .style('stroke', '#c0c5ce');
+        } else{
+          line_transition = false;
         }
     });
     $(".js-example-basic-single").val("87").change();
     $('.switch .margin-percent').change(function(e) {
+        line_transition = true;
         if (this.checked) {
             current_mode = 'margin';
             //margin_scale_2002.domain([26, 183899]);
             margin_scale_2007.domain([9, 53128]);
             margin_scale_2012.domain([18, 88255]);
             margin_scale_2017.domain([171, 150685]);
-        } else {
+        }
+        else {
             current_mode = 'percent';
             //margin_scale_2002.domain([0, 100]);
             margin_scale_2007.domain([0, 46.81]);
@@ -400,6 +413,18 @@ function makeMyMap(error, data_2007, data_2012, data_2017, up) {
             .style('fill', function(d) {
                 return map_getColor(data_2017[d.properties.AC_NO - 1][current_mode]);
             });
+        highlight_line.datum(create_path(selected_const_code))
+            .transition()
+            .duration(1000)
+            .attr("d", d3.line()
+              .curve(d3.curveBundle.beta(1))
+                    .x(function(d) {
+                        return d[0];
+                    })
+                    .y(function(d) {
+                        return d[1];
+                    })
+                );
         $(".js-example-basic-single").val(selected_const_code + 1).change();
     });
     function map_getColor(d) {
