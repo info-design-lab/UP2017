@@ -158,7 +158,8 @@ function makeMyMap(error, data_2007, data_2012, data_2017, up) {
         .enter().append("path")
         .attr("d", path)
         .style('fill', function(d) {
-            return colorScale(data_2017[d.properties.AC_NO - 1][current_mode]);
+            return map_getColor(data_2017[d.properties.AC_NO - 1][current_mode]);
+            //return colorScale(data_2017[d.properties.AC_NO - 1][current_mode]);
         })
         .on('mouseover', function(d) {
             $(".js-example-basic-single").val(d.properties.AC_NO).change();
@@ -373,9 +374,30 @@ function makeMyMap(error, data_2007, data_2012, data_2017, up) {
             .duration(1000)
 
             .style('fill', function(d) {
-                return colorScale(data_2017[d.properties.AC_NO - 1][current_mode]);
+                return map_getColor(data_2017[d.properties.AC_NO - 1][current_mode]);
             });
 
         $(".js-example-basic-single").val("87").change();
     });
+    function map_getColor(d) {
+      if (current_mode == 'margin'){
+        return d > 70000 ? '#4a1486' :
+               d > 60000  ? '#6a51a3' :
+               d > 50000  ? '#807dba' :
+               d > 40000  ? '#9e9ac8' :
+               d > 30000   ? '#bcbddc' :
+               d > 20000   ? '#dadaeb' :
+               d > 10000   ? '#f2f0f7' :
+                          '#efedf5';
+      } else{
+        return d > 30 ? '#4a1486' :
+               d > 20  ? '#6a51a3' :
+               d > 15  ? '#807dba' :
+               d > 11  ? '#9e9ac8' :
+               d > 7   ? '#bcbddc' :
+               d > 3   ? '#dadaeb' :
+               d > 0   ? '#f2f0f7' :
+                          '#efedf5';
+      }
+    }
 }
