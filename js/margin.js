@@ -223,7 +223,11 @@ function makeMyMap(error, data_2007, data_2012, data_2017, up) {
             .attr('r', card_circle_radius + 4)
             .attr('opacity', 1);
         year_scale_functions.forEach(function(year, i) {
-            info_cards[i].attr("transform", "translate(" + (year.func(year.data[selected_const_code][current_mode]) - 5) + ", " + (height * (i / 3)) + ")");
+            if(!line_transition){
+              info_cards[i].attr("transform", "translate(" + (year.func(year.data[selected_const_code][current_mode]) - 5) + ", " + (height * (i / 3)) + ")");
+            } else{
+              info_cards[i].transition().duration(1000).attr("transform", "translate(" + (year.func(year.data[selected_const_code][current_mode]) - 5) + ", " + (height * (i / 3)) + ")");
+            }
             if(current_mode == 'margin'){
               d3.select(document.getElementById('yr' + (2017 - 5 * i) + 'info_right_top')).text(year.data[selected_const_code]['win_votes'])
                   .style('fill', function() {
@@ -359,13 +363,10 @@ function makeMyMap(error, data_2007, data_2012, data_2017, up) {
         $('#map' + (selected_const_code + 1)).removeClass('map-hover');
         selected_const_code = parseInt($(this).val()) - 1;
         $('#map' + (selected_const_code + 1)).addClass('map-hover');
-
         for (var i = 0; i < 3; i++) {
             highlightCard(document.getElementById('yr' + (2007 + 5 * i) + 'id' + selected_const_code));
         }
-        
         if (!line_transition){
-          console.log('here')
           highlight_line.datum(create_path(selected_const_code))
               .attr("d", d3.line()
                   .curve(d3.curveBundle.beta(1))
