@@ -157,12 +157,19 @@ function makeMyMap(error, data_2007, data_2012, data_2017, up) {
         .data(geo_obj.features)
         .enter().append("path")
         .attr("d", path)
+        .attr('class', 'map-margin-const')
+        .attr("id", function(d){
+          return 'map' + d.properties.AC_NO
+        })
+        //.style('stroke', '#999999')
         .style('fill', function(d) {
             return map_getColor(data_2017[d.properties.AC_NO - 1][current_mode]);
             //return colorScale(data_2017[d.properties.AC_NO - 1][current_mode]);
         })
         .on('mouseover', function(d) {
             $(".js-example-basic-single").val(d.properties.AC_NO).change();
+            d3.select(this)
+              .attr('stroke')
         });
 
     function highlight() {

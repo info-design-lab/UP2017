@@ -7,6 +7,12 @@ body, html{
   stroke-width: 4px;
 }
 
+.map-margin-const:hover{
+    stroke: #333333;
+  stroke-width: 3px;
+
+}
+
 .switch {
   position: relative;
   display: inline-block;
