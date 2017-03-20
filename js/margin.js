@@ -25,7 +25,7 @@ queue()
     .defer(d3.csv, 'data/margins/2012.csv')
     .defer(d3.csv, 'data/margins/2017.csv')
     .defer(d3.json, 'map/uptopo.json')
-    .await(makeMyMap);
+    .await(makemarginmap);
 var map_tooltip = d3.select("body")
     .append("div")
     .attr('class', 'd3-tip')
@@ -38,7 +38,7 @@ var map_tooltip = d3.select("body")
 var margin_scale_2002, margin_scale_2007, margin_scale_2012, margin_scale_2017;
 var line_transition = false; // Transition for connecting lines
 
-function makeMyMap(error, data_2007, data_2012, data_2017, up) {
+function makemarginmap(error, data_2007, data_2012, data_2017, up) {
     //Add years texts
     for (var i = 0; i < 3; i++) {
         svg.append('text')
@@ -200,7 +200,6 @@ function makeMyMap(error, data_2007, data_2012, data_2017, up) {
         }
 
         if (!line_transition){
-          console.log('here')
           highlight_line.datum(create_path(selected_const_code))
               .attr("d", d3.line()
                   .curve(d3.curveBundle.beta(1))
