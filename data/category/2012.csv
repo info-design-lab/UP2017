@@ -1,404 +1,404 @@
-const_id,const_name,category,gender,party
-87,Agra Cantonment,(SC),M,BSP
-89,Agra North,GEN,M,BJP
-90,Agra Rural,(SC),M,BSP
-88,Agra South,GEN,M,BJP
-385,Ajagara,(SC),M,BSP
-281,Akbarpur,GEN,M,SP
-206,Akbarpur Raniya,GEN,M,SP
-279,Alapur,(SC),M,SP
-103,Aliganj,GEN,M,SP
-76,Aligarh,GEN,M,SP
-262,Allahabad North,GEN,M,INC
-263,Allahabad South,GEN,M,SP
-261,Allahabad West,GEN,F,BSP
-101,Amanpur,GEN,M,BSP
-186,Amethi,GEN,M,SP
-193,Amritpur,GEN,M,SP
-41,Amroha,GEN,M,SP
-67,Anupshahr,GEN,M,BSP
-126,Aonla,GEN,M,BJP
-214,Arya Nagar,GEN,M,BJP
-32,Asmoli,GEN,F,SP
-73,Atrauli,GEN,M,SP
-343,Atraulia,GEN,M,SP
-394,Aurai,(SC),F,SP
-204,Auraiya,(SC),M,SP
-241,Ayah Shah,GEN,M,BSP
-275,Ayodhya,GEN,M,SP
-347,Azamgarh,GEN,M,SP
-245,Babaganj,(SC),M,IND
-233,Baberu,GEN,M,SP
-222,Babina,GEN,M,BSP
-177,Bachhrawan,(SC),M,SP
-115,Badaun,GEN,M,SP
-364,Badlapur,GEN,M,SP
-52,Baghpat,GEN,F,BSP
-94,Bah,GEN,M,SP
-118,Baheri,GEN,M,SP
-286,Bahraich,GEN,M,SP
-363,Bairia,GEN,M,SP
-169,Bakshi Kaa Talab,GEN,M,SP
-160,Balamau,(SC),M,SP
-85,Baldev,(SC),M,RLD
-282,Balha,(SC),F,BJP
-361,Ballia Nagar,GEN,M,SP
-294,Balrampur,(SC),M,SP
-235,Banda,GEN,M,INC
-162,Bangarmau,GEN,M,SP
-362,Bansdih,GEN,M,SP
-327,Bansgaon,(SC),M,BSP
-304,Bansi,GEN,M,BJP
-264,Bara,(SC),M,SP
-268,Barabanki,GEN,M,SP
-72,Barauli,GEN,M,RLD
-51,Baraut,GEN,M,BSP
-124,Bareilly,GEN,M,BJP
-125,Bareilly Cantt.,GEN,M,BJP
-342,Barhaj,GEN,M,SP
-19,Barhapur,GEN,M,BSP
-128,Barkhera,GEN,M,SP
-310,Basti Sadar,GEN,M,BSP
-1,Behat,GEN,M,BSP
-357,Belthara Road,(SC),M,SP
-392,Bhadohi,GEN,M,SP
-166,Bhagwant Nagar,GEN,M,SP
-201,Bharthana,(SC),F,SP
-340,Bhatpar Rani,GEN,M,SP
-289,Bhinga,GEN,F,SP
-208,Bhognipur,GEN,M,SP
-120,Bhojipura,GEN,M,IEMC
-195,Bhojpur,GEN,M,SP
-108,Bhongaon,GEN,M,SP
-202,Bidhuna,GEN,M,SP
-22,Bijnor,GEN,M,BJP
-274,Bikapur,GEN,M,SP
-30,Bilari,GEN,M,SP
-36,Bilaspur,GEN,M,INC
-159,Bilgram Mallanwan,GEN,M,BSP
-209,Bilhaur,(SC),F,SP
-114,Bilsi,GEN,M,BSP
-239,Bindki,GEN,M,BSP
-130,Bisalpur,GEN,M,BJP
-112,Bisauli,(SC),M,SP
-247,Bishwavnathganj,GEN,M,SP
-149,Biswan,GEN,M,SP
-123,Bithari Chainpur,GEN,M,BSP
-210,Bithoor,GEN,M,SP
-11,Budhana,GEN,M,SP
-65,Bulandshahr,GEN,M,BSP
-320,Caimpiyarganj,GEN,M,NCP
-253,Chail,GEN,M,BSP
-383,Chakia,(SC),F,SP
-35,Chamraua,GEN,M,BSP
-31,Chandausi,(SC),F,SP
-23,Chandpur,GEN,M,BSP
-231,Charkhari,GEN,F,BJP
-12,Charthawal,GEN,M,BSP
-326,Chauri Chaura,GEN,M,BSP
-395,Chhanbey,(SC),M,SP
-50,Chhaprauli,GEN,M,RLD
-74,Chharra,GEN,M,SP
-81,Chhata,GEN,M,RLD
-196,Chhibramau,GEN,M,SP
-328,Chillupar,GEN,M,BSP
-236,Chitrakoot,GEN,M,SP
-398,Chunar,GEN,M,SP
-298,Colonelganj,GEN,M,SP
-136,Dadraul,GEN,M,SP
-62,Dadri,GEN,M,BSP
-270,Dariyabad,GEN,M,SP
-117,Dataganj,GEN,M,BSP
-68,Debai,GEN,M,SP
-5,Deoband,GEN,M,SP
-337,Deoria,GEN,M,BJP
-20,Dhampur,GEN,M,SP
-39,Dhanaura,(SC),M,SP
-314,Dhanghata,(SC),M,SP
-141,Dhaurahra,GEN,M,BSP
-58,Dholana,GEN,M,SP
-203,Dibiyapur,GEN,M,SP
-350,Didarganj,GEN,M,SP
-306,Domariaganj,GEN,M,PECP
-403,Duddhi,(SC),F,IND
-104,Etah,GEN,M,SP
-200,Etawah,GEN,M,SP
-86,Etmadpur,GEN,M,BSP
-122,Faridpur,(SC),M,SP
-194,Farrukhabad,GEN,M,IND
-93,Fatehabad,GEN,M,BSP
-240,Fatehpur,GEN,M,SP
-91,Fatehpur Sikri,GEN,M,BSP
-332,Fazilnagar,GEN,M,BJP
-97,Firozabad,GEN,M,BJP
-292,Gainsari,GEN,M,SP
-7,Gangoh,GEN,M,INC
-225,Garautha,GEN,M,SP
-60,Garhmukteshwar,GEN,M,SP
-301,Gaura,GEN,M,SP
-185,Gauriganj,GEN,M,SP
-218,Ghatampur,(SC),M,SP
-56,Ghaziabad,GEN,M,BSP
-375,Ghazipur,GEN,M,SP
-400,Ghorawal,GEN,M,SP
-354,Ghosi,GEN,M,SP
-139,Gola Gokrannath,GEN,M,SP
-296,Gonda,GEN,M,SP
-344,Gopalpur,GEN,M,SP
-157,Gopamau,(SC),M,SP
-323,Gorakhpur Rural,GEN,M,BJP
-322,Gorakhpur Urban,GEN,M,BJP
-276,Goshainganj,GEN,M,SP
-83,Goverdhan,GEN,M,BSP
-212,Govind Nagar,GEN,M,BJP
-111,Gunnaur,GEN,M,SP
-393,Gyanpur,GEN,M,SP
-272,Haidergarh,(SC),M,SP
-228,Hamirpur,GEN,F,BJP
-258,Handia,GEN,F,SP
-59,Hapur,(SC),M,INC
-179,Harchandpur,GEN,M,SP
-156,Hardoi,GEN,M,SP
-147,Hargaon,(SC),M,BSP
-307,Harraiya,GEN,M,SP
-42,Hasanpur,GEN,M,SP
-45,Hastinapur,(SC),M,SP
-334,Hata,GEN,M,SP
-78,Hathras,(SC),M,BSP
-242,Husainganj,GEN,M,BSP
-77,Iglas,(SC),M,RLD
-187,Isauli,GEN,M,SP
-305,Itwa,GEN,M,SP
-184,Jagdishpur,(SC),M,INC
-238,Jahanabad,GEN,M,SP
-373,Jakhanian,(SC),M,SP
-132,Jalalabad,GEN,M,BSP
-280,Jalalpur,GEN,M,SP
-106,Jalesar,(SC),M,SP
-376,Jangipur,GEN,M,SP
-96,Jasrana,GEN,M,SP
-199,Jaswantnagar,GEN,M,SP
-366,Jaunpur,GEN,M,INC
-63,Jewar,GEN,M,BSP
-223,Jhansi Nagar,GEN,M,BJP
-191,Kadipur,(SC),M,SP
-192,Kaimganj,(SC),M,SP
-8,Kairana,GEN,M,BJP
-288,Kaiserganj,GEN,M,BJP
-220,Kalpi,GEN,F,INC
-211,Kalyanpur,GEN,M,SP
-198,Kannauj,(SC),M,SP
-216,Kanpur Cantt.,GEN,M,BJP
-25,Kanth,GEN,M,PECP
-303,Kapilvastu,(SC),M,SP
-308,Kaptanganj,GEN,M,BSP
-260,Karachhana,GEN,M,BSP
-110,Karhal,GEN,M,SP
-100,Kasganj,GEN,M,SP
-143,Kasta,(SC),M,SP
-277,Katehari,GEN,M,SP
-131,Katra,GEN,M,SP
-297,Katra Bazar,GEN,M,BJP
-372,Kerakat,(SC),M,SP
-329,Khadda,GEN,M,INC
-243,Khaga,(SC),F,BJP
-71,Khair,(SC),M,RLD
-325,Khajani,(SC),M,BJP
-313,Khalilabad,GEN,M,PECP
-15,Khatauli,GEN,M,RLD
-92,Kheragarh,GEN,M,BSP
-70,Khurja,(SC),M,INC
-215,Kidwai Nagar,GEN,M,INC
-109,Kishni,(SC),M,SP
-46,Kithore,GEN,M,SP
-75,Koil,GEN,M,SP
-265,Koraon,(SC),M,BSP
-246,Kunda,GEN,M,IND
-29,Kundarki,GEN,M,SP
-266,Kursi,GEN,M,SP
-333,Kushinagar,GEN,M,SP
-148,Laharpur,GEN,M,BSP
-142,Lakhimpur,GEN,M,SP
-351,Lalganj,(SC),M,SP
-226,Lalitpur,GEN,M,BSP
-190,Lambhua,GEN,M,SP
-53,Loni,GEN,M,BSP
-175,Lucknow Cantt,GEN,F,INC
-174,Lucknow Central,GEN,M,SP
-173,Lucknow East,GEN,M,BJP
-172,Lucknow North,GEN,M,SP
-171,Lucknow West,GEN,M,SP
-369,Machhlishahr,(SC),M,SP
-219,Madhogarh,GEN,M,BSP
-353,Madhuban,GEN,M,BSP
-311,Mahadewa,(SC),M,SP
-318,Maharajganj,(SC),M,SP
-217,Maharajpur,GEN,M,BJP
-285,Mahasi,GEN,M,BSP
-151,Mahmoodabad,GEN,M,SP
-230,Mahoba,GEN,M,BSP
-145,Maholi,GEN,M,SP
-107,Mainpuri,GEN,M,SP
-397,Majhawan,GEN,M,BSP
-367,Malhani,GEN,M,SP
-168,Malihabad,(SC),M,SP
-237,Manikpur,GEN,M,BSP
-252,Manjhanpur,(SC),M,BSP
-300,Mankapur,(SC),M,SP
-82,Mant,GEN,M,AITC
-105,Marhara,GEN,M,SP
-399,Marihan,GEN,M,INC
-370,Mariyahu,GEN,F,SP
-284,Matera,GEN,M,SP
-84,Mathura,GEN,M,INC
-356,Mau,GEN,M,QED
-224,Mauranipur,(SC),F,SP
-16,Meerapur,GEN,M,BSP
-119,Meerganj,GEN,M,BSP
-48,Meerut,GEN,M,BJP
-47,Meerut Cantt.,GEN,M,BJP
-49,Meerut South,GEN,M,BJP
-352,Mehnagar,(SC),M,SP
-295,Mehnaun,GEN,F,SP
-227,Mehroni,(SC),M,BSP
-259,Meja,GEN,M,SP
-312,Menhdawal,GEN,M,SP
-38,Milak,(SC),M,SP
-273,Milkipur,(SC),M,SP
-396,Mirzapur,GEN,M,SP
-153,Misrikh,(SC),M,SP
-57,Modinagar,GEN,M,RLD
-378,Mohammadabad,GEN,M,QED
-144,Mohammadi,GEN,M,BSP
-164,Mohan,(SC),M,BSP
-176,Mohanlalganj,(SC),F,SP
-28,Moradabad Nagar,GEN,M,SP
-27,Moradabad Rural,GEN,M,SP
-346,Mubarakpur,GEN,M,BSP
-380,Mughalsarai,GEN,M,BSP
-355,Muhammadabad Gohna,(SC),M,SP
-368,Mungra Badshahpur,GEN,F,BJP
-54,Muradnagar,GEN,M,BSP
-14,Muzaffarnagar,GEN,M,SP
-18,Nagina,(SC),M,SP
-17,Najibabad,GEN,M,BSP
-2,Nakur,GEN,M,BSP
-283,Nanpara,GEN,F,INC
-234,Naraini,(SC),M,BSP
-40,Naugawan Sadat,GEN,M,SP
-316,Nautanwa,GEN,M,INC
-121,Nawabganj,GEN,M,SP
-21,Nehtaur,(SC),M,BSP
-138,Nighasan,GEN,M,BJP
-348,Nizamabad,GEN,M,SP
-61,Noida,GEN,M,BJP
-24,Noorpur,GEN,M,BJP
-402,Obra,GEN,M,BSP
-221,Orai,(SC),M,SP
-330,Padrauna,GEN,M,BSP
-137,Palia,GEN,M,BSP
-319,Paniyara,GEN,M,BSP
-338,Pathardeva,GEN,M,SP
-102,Patiyali,GEN,F,SP
-249,Patti,GEN,M,SP
-287,Payagpur,GEN,M,INC
-254,Phaphamau,GEN,M,SP
-315,Pharenda,GEN,M,BJP
-360,Phephana,GEN,M,BJP
-349,Phoolpur Pawai,GEN,M,SP
-256,Phulpur,GEN,M,SP
-127,Pilibhit,GEN,M,SP
-384,Pindra,GEN,M,INC
-321,Pipraich,GEN,F,SP
-134,Powayan,(SC),F,SP
-248,Pratapgarh,GEN,M,SP
-257,Pratappur,GEN,F,SP
-129,Puranpur,(SC),M,SP
-13,Purqazi,(SC),M,BSP
-167,Purwa,GEN,M,SP
-180,Rae Bareli,GEN,M,PECP
-335,Ramkola,(SC),M,SP
-267,Ramnagar,GEN,M,SP
-37,Rampur,GEN,M,SP
-339,Rampur Karkhana,GEN,F,SP
-244,Rampur Khas,GEN,M,INC
-6,Rampur Maniharan,(SC),M,BSP
-250,Raniganj,GEN,M,SP
-358,Rasara,GEN,M,BSP
-205,Rasulabad,(SC),M,SP
-229,Rath,(SC),M,INC
-401,Robertsganj,GEN,M,SP
-387,Rohaniya,GEN,F,AD
-271,Rudauli,GEN,M,BJP
-309,Rudhauli,GEN,M,INC
-336,Rudrapur,GEN,M,INC
-79,Sadabad,GEN,M,SP
-189,Sadar,GEN,M,SP
-163,Safipur,(SC),M,SP
-345,Sagri,GEN,M,SP
-324,Sahajanwa,GEN,M,BSP
-4,Saharanpur,GEN,M,BSP
-3,Saharanpur Nagar,GEN,M,BJP
-113,Sahaswan,GEN,M,SP
-55,Sahibabad,GEN,M,BSP
-374,Saidpur,(SC),M,SP
-382,Saiyadraja,GEN,M,IND
-381,Sakaldiha,GEN,M,IND
-341,Salempur,(SC),M,SP
-181,Salon,(SC),F,SP
-33,Sambhal,GEN,M,SP
-158,Sandi,(SC),F,SP
-161,Sandila,GEN,M,SP
-44,Sardhana,GEN,M,BJP
-182,Sareni,GEN,M,SP
-170,Sarojini Nagar,GEN,M,SP
-154,Sawaijpur,GEN,F,BSP
-391,Sevapuri,GEN,M,SP
-150,Sevata,GEN,M,SP
-155,Shahabad,GEN,M,SP
-365,Shahganj,GEN,M,SP
-135,Shahjahanpur,GEN,M,BJP
-10,Shamli,GEN,M,INC
-116,Shekhupur,GEN,M,SP
-69,Shikarpur,GEN,M,SP
-98,Shikohabad,GEN,M,SP
-386,Shivpur,GEN,M,BSP
-302,Shohratgarh,GEN,F,SP
-290,Shrawasti,GEN,M,SP
-66,Siana,GEN,M,INC
-152,Sidhauli,(SC),M,SP
-359,Sikanderpur,GEN,M,SP
-207,Sikandra,GEN,M,BSP
-80,Sikandra Rao,GEN,M,BSP
-64,Sikandrabad,GEN,F,BJP
-251,Sirathu,GEN,M,BJP
-99,Sirsaganj,GEN,M,SP
-213,Sishamau,GEN,M,SP
-317,Siswa,GEN,M,SP
-146,Sitapur,GEN,M,SP
-43,Siwalkhas,GEN,M,SP
-255,Soraon,(SC),M,SP
-140,Srinagar,(SC),M,SP
-34,Suar,GEN,M,INC
-188,Sultanpur,GEN,M,SP
-331,Tamkuhi Raj,GEN,M,INC
-278,Tanda,GEN,M,SP
-299,Tarabganj,GEN,M,SP
-26,Thakurdwara,GEN,M,BJP
-9,Thana Bhawan,GEN,M,BJP
-133,Tilhar,GEN,M,BSP
-178,Tiloi,GEN,M,INC
-232,Tindwari,GEN,M,INC
-197,Tirwa,GEN,M,SP
-291,Tulsipur,GEN,M,SP
-95,Tundla,(SC),M,BSP
-183,Unchahar,GEN,M,SP
-165,Unnao,GEN,M,SP
-293,Utraula,GEN,M,SP
-390,Varanasi Cantt.,GEN,F,BJP
-388,Varanasi North,GEN,M,BJP
-389,Varanasi South,GEN,M,BJP
-371,Zafrabad,GEN,M,SP
-377,Zahoorabad,GEN,F,SP
-269,Zaidpur,(SC),M,SP
-379,Zamania,GEN,M,SP
+const_id,const_name,category,gender,party,muslim
+87,Agra Cantonment,S.C.,M,BSP,TRUE
+89,Agra North,GEN,M,BJP,TRUE
+90,Agra Rural,S.C.,M,BSP,TRUE
+88,Agra South,GEN,M,BJP,TRUE
+385,Ajagara,S.C.,M,BSP,TRUE
+281,Akbarpur,GEN,M,SP,TRUE
+206,Akbarpur Raniya,GEN,M,SP,TRUE
+279,Alapur,S.C.,M,SP,TRUE
+103,Aliganj,GEN,M,SP,TRUE
+76,Aligarh,GEN,M,SP,TRUE
+262,Allahabad North,GEN,M,INC,TRUE
+263,Allahabad South,GEN,M,SP,TRUE
+261,Allahabad West,GEN,F,BSP,TRUE
+101,Amanpur,GEN,M,BSP,TRUE
+186,Amethi,GEN,M,SP,TRUE
+193,Amritpur,GEN,M,SP,TRUE
+41,Amroha,GEN,M,SP,TRUE
+67,Anupshahr,GEN,M,BSP,TRUE
+126,Aonla,GEN,M,BJP,TRUE
+214,Arya Nagar,GEN,M,BJP,TRUE
+32,Asmoli,GEN,F,SP,TRUE
+73,Atrauli,GEN,M,SP,TRUE
+343,Atraulia,GEN,M,SP,TRUE
+394,Aurai,S.C.,F,SP,TRUE
+204,Auraiya,S.C.,M,SP,TRUE
+241,Ayah Shah,GEN,M,BSP,TRUE
+275,Ayodhya,GEN,M,SP,TRUE
+347,Azamgarh,GEN,M,SP,TRUE
+245,Babaganj,S.C.,M,IND,TRUE
+233,Baberu,GEN,M,SP,TRUE
+222,Babina,GEN,M,BSP,TRUE
+177,Bachhrawan,S.C.,M,SP,TRUE
+115,Badaun,GEN,M,SP,TRUE
+364,Badlapur,GEN,M,SP,TRUE
+52,Baghpat,GEN,F,BSP,TRUE
+94,Bah,GEN,M,SP,TRUE
+118,Baheri,GEN,M,SP,TRUE
+286,Bahraich,GEN,M,SP,TRUE
+363,Bairia,GEN,M,SP,TRUE
+169,Bakshi Kaa Talab,GEN,M,SP,TRUE
+160,Balamau,S.C.,M,SP,TRUE
+85,Baldev,S.C.,M,RLD,TRUE
+282,Balha,S.C.,F,BJP,TRUE
+361,Ballia Nagar,GEN,M,SP,TRUE
+294,Balrampur,S.C.,M,SP,TRUE
+235,Banda,GEN,M,INC,TRUE
+162,Bangarmau,GEN,M,SP,TRUE
+362,Bansdih,GEN,M,SP,TRUE
+327,Bansgaon,S.C.,M,BSP,TRUE
+304,Bansi,GEN,M,BJP,TRUE
+264,Bara,S.C.,M,SP,TRUE
+268,Barabanki,GEN,M,SP,TRUE
+72,Barauli,GEN,M,RLD,TRUE
+51,Baraut,GEN,M,BSP,TRUE
+124,Bareilly,GEN,M,BJP,TRUE
+125,Bareilly Cantt.,GEN,M,BJP,TRUE
+342,Barhaj,GEN,M,SP,TRUE
+19,Barhapur,GEN,M,BSP,TRUE
+128,Barkhera,GEN,M,SP,TRUE
+310,Basti Sadar,GEN,M,BSP,TRUE
+1,Behat,GEN,M,BSP,TRUE
+357,Belthara Road,S.C.,M,SP,TRUE
+392,Bhadohi,GEN,M,SP,TRUE
+166,Bhagwant Nagar,GEN,M,SP,TRUE
+201,Bharthana,S.C.,F,SP,TRUE
+340,Bhatpar Rani,GEN,M,SP,TRUE
+289,Bhinga,GEN,F,SP,TRUE
+208,Bhognipur,GEN,M,SP,TRUE
+120,Bhojipura,GEN,M,IEMC,TRUE
+195,Bhojpur,GEN,M,SP,TRUE
+108,Bhongaon,GEN,M,SP,TRUE
+202,Bidhuna,GEN,M,SP,TRUE
+22,Bijnor,GEN,M,BJP,TRUE
+274,Bikapur,GEN,M,SP,TRUE
+30,Bilari,GEN,M,SP,TRUE
+36,Bilaspur,GEN,M,INC,TRUE
+159,Bilgram Mallanwan,GEN,M,BSP,TRUE
+209,Bilhaur,S.C.,F,SP,TRUE
+114,Bilsi,GEN,M,BSP,TRUE
+239,Bindki,GEN,M,BSP,TRUE
+130,Bisalpur,GEN,M,BJP,TRUE
+112,Bisauli,S.C.,M,SP,TRUE
+247,Bishwavnathganj,GEN,M,SP,TRUE
+149,Biswan,GEN,M,SP,TRUE
+123,Bithari Chainpur,GEN,M,BSP,TRUE
+210,Bithoor,GEN,M,SP,TRUE
+11,Budhana,GEN,M,SP,TRUE
+65,Bulandshahr,GEN,M,BSP,TRUE
+320,Caimpiyarganj,GEN,M,NCP,TRUE
+253,Chail,GEN,M,BSP,TRUE
+383,Chakia,S.C.,F,SP,TRUE
+35,Chamraua,GEN,M,BSP,TRUE
+31,Chandausi,S.C.,F,SP,TRUE
+23,Chandpur,GEN,M,BSP,TRUE
+231,Charkhari,GEN,F,BJP,TRUE
+12,Charthawal,GEN,M,BSP,TRUE
+326,Chauri Chaura,GEN,M,BSP,TRUE
+395,Chhanbey,S.C.,M,SP,TRUE
+50,Chhaprauli,GEN,M,RLD,TRUE
+74,Chharra,GEN,M,SP,TRUE
+81,Chhata,GEN,M,RLD,TRUE
+196,Chhibramau,GEN,M,SP,TRUE
+328,Chillupar,GEN,M,BSP,TRUE
+236,Chitrakoot,GEN,M,SP,TRUE
+398,Chunar,GEN,M,SP,TRUE
+298,Colonelganj,GEN,M,SP,TRUE
+136,Dadraul,GEN,M,SP,TRUE
+62,Dadri,GEN,M,BSP,TRUE
+270,Dariyabad,GEN,M,SP,TRUE
+117,Dataganj,GEN,M,BSP,TRUE
+68,Debai,GEN,M,SP,FALSE
+5,Deoband,GEN,M,SP,FALSE
+337,Deoria,GEN,M,BJP,FALSE
+20,Dhampur,GEN,M,SP,FALSE
+39,Dhanaura,S.C.,M,SP,FALSE
+314,Dhanghata,S.C.,M,SP,FALSE
+141,Dhaurahra,GEN,M,BSP,FALSE
+58,Dholana,GEN,M,SP,FALSE
+203,Dibiyapur,GEN,M,SP,FALSE
+350,Didarganj,GEN,M,SP,FALSE
+306,Domariaganj,GEN,M,PECP,FALSE
+403,Duddhi,S.C.,F,IND,FALSE
+104,Etah,GEN,M,SP,FALSE
+200,Etawah,GEN,M,SP,FALSE
+86,Etmadpur,GEN,M,BSP,FALSE
+122,Faridpur,S.C.,M,SP,FALSE
+194,Farrukhabad,GEN,M,IND,FALSE
+93,Fatehabad,GEN,M,BSP,FALSE
+240,Fatehpur,GEN,M,SP,FALSE
+91,Fatehpur Sikri,GEN,M,BSP,FALSE
+332,Fazilnagar,GEN,M,BJP,FALSE
+97,Firozabad,GEN,M,BJP,FALSE
+292,Gainsari,GEN,M,SP,FALSE
+7,Gangoh,GEN,M,INC,FALSE
+225,Garautha,GEN,M,SP,FALSE
+60,Garhmukteshwar,GEN,M,SP,FALSE
+301,Gaura,GEN,M,SP,FALSE
+185,Gauriganj,GEN,M,SP,FALSE
+218,Ghatampur,S.C.,M,SP,FALSE
+56,Ghaziabad,GEN,M,BSP,FALSE
+375,Ghazipur,GEN,M,SP,FALSE
+400,Ghorawal,GEN,M,SP,FALSE
+354,Ghosi,GEN,M,SP,FALSE
+139,Gola Gokrannath,GEN,M,SP,FALSE
+296,Gonda,GEN,M,SP,FALSE
+344,Gopalpur,GEN,M,SP,FALSE
+157,Gopamau,S.C.,M,SP,FALSE
+323,Gorakhpur Rural,GEN,M,BJP,FALSE
+322,Gorakhpur Urban,GEN,M,BJP,FALSE
+276,Goshainganj,GEN,M,SP,FALSE
+83,Goverdhan,GEN,M,BSP,FALSE
+212,Govind Nagar,GEN,M,BJP,FALSE
+111,Gunnaur,GEN,M,SP,FALSE
+393,Gyanpur,GEN,M,SP,FALSE
+272,Haidergarh,S.C.,M,SP,FALSE
+228,Hamirpur,GEN,F,BJP,FALSE
+258,Handia,GEN,F,SP,FALSE
+59,Hapur,S.C.,M,INC,FALSE
+179,Harchandpur,GEN,M,SP,FALSE
+156,Hardoi,GEN,M,SP,FALSE
+147,Hargaon,S.C.,M,BSP,FALSE
+307,Harraiya,GEN,M,SP,FALSE
+42,Hasanpur,GEN,M,SP,FALSE
+45,Hastinapur,S.C.,M,SP,FALSE
+334,Hata,GEN,M,SP,FALSE
+78,Hathras,S.C.,M,BSP,FALSE
+242,Husainganj,GEN,M,BSP,FALSE
+77,Iglas,S.C.,M,RLD,FALSE
+187,Isauli,GEN,M,SP,FALSE
+305,Itwa,GEN,M,SP,FALSE
+184,Jagdishpur,S.C.,M,INC,FALSE
+238,Jahanabad,GEN,M,SP,FALSE
+373,Jakhanian,S.C.,M,SP,FALSE
+132,Jalalabad,GEN,M,BSP,FALSE
+280,Jalalpur,GEN,M,SP,FALSE
+106,Jalesar,S.C.,M,SP,FALSE
+376,Jangipur,GEN,M,SP,FALSE
+96,Jasrana,GEN,M,SP,FALSE
+199,Jaswantnagar,GEN,M,SP,FALSE
+366,Jaunpur,GEN,M,INC,FALSE
+63,Jewar,GEN,M,BSP,FALSE
+223,Jhansi Nagar,GEN,M,BJP,FALSE
+191,Kadipur,S.C.,M,SP,FALSE
+192,Kaimganj,S.C.,M,SP,FALSE
+8,Kairana,GEN,M,BJP,FALSE
+288,Kaiserganj,GEN,M,BJP,FALSE
+220,Kalpi,GEN,F,INC,FALSE
+211,Kalyanpur,GEN,M,SP,FALSE
+198,Kannauj,S.C.,M,SP,FALSE
+216,Kanpur Cantt.,GEN,M,BJP,FALSE
+25,Kanth,GEN,M,PECP,FALSE
+303,Kapilvastu,S.C.,M,SP,FALSE
+308,Kaptanganj,GEN,M,BSP,FALSE
+260,Karachhana,GEN,M,BSP,FALSE
+110,Karhal,GEN,M,SP,FALSE
+100,Kasganj,GEN,M,SP,FALSE
+143,Kasta,S.C.,M,SP,FALSE
+277,Katehari,GEN,M,SP,FALSE
+131,Katra,GEN,M,SP,FALSE
+297,Katra Bazar,GEN,M,BJP,FALSE
+372,Kerakat,S.C.,M,SP,FALSE
+329,Khadda,GEN,M,INC,FALSE
+243,Khaga,S.C.,F,BJP,FALSE
+71,Khair,S.C.,M,RLD,FALSE
+325,Khajani,S.C.,M,BJP,FALSE
+313,Khalilabad,GEN,M,PECP,FALSE
+15,Khatauli,GEN,M,RLD,FALSE
+92,Kheragarh,GEN,M,BSP,FALSE
+70,Khurja,S.C.,M,INC,FALSE
+215,Kidwai Nagar,GEN,M,INC,FALSE
+109,Kishni,S.C.,M,SP,FALSE
+46,Kithore,GEN,M,SP,FALSE
+75,Koil,GEN,M,SP,FALSE
+265,Koraon,S.C.,M,BSP,FALSE
+246,Kunda,GEN,M,IND,FALSE
+29,Kundarki,GEN,M,SP,FALSE
+266,Kursi,GEN,M,SP,FALSE
+333,Kushinagar,GEN,M,SP,FALSE
+148,Laharpur,GEN,M,BSP,FALSE
+142,Lakhimpur,GEN,M,SP,FALSE
+351,Lalganj,S.C.,M,SP,FALSE
+226,Lalitpur,GEN,M,BSP,FALSE
+190,Lambhua,GEN,M,SP,FALSE
+53,Loni,GEN,M,BSP,FALSE
+175,Lucknow Cantt,GEN,F,INC,FALSE
+174,Lucknow Central,GEN,M,SP,FALSE
+173,Lucknow East,GEN,M,BJP,FALSE
+172,Lucknow North,GEN,M,SP,FALSE
+171,Lucknow West,GEN,M,SP,FALSE
+369,Machhlishahr,S.C.,M,SP,FALSE
+219,Madhogarh,GEN,M,BSP,FALSE
+353,Madhuban,GEN,M,BSP,FALSE
+311,Mahadewa,S.C.,M,SP,FALSE
+318,Maharajganj,S.C.,M,SP,FALSE
+217,Maharajpur,GEN,M,BJP,FALSE
+285,Mahasi,GEN,M,BSP,FALSE
+151,Mahmoodabad,GEN,M,SP,FALSE
+230,Mahoba,GEN,M,BSP,FALSE
+145,Maholi,GEN,M,SP,FALSE
+107,Mainpuri,GEN,M,SP,FALSE
+397,Majhawan,GEN,M,BSP,FALSE
+367,Malhani,GEN,M,SP,FALSE
+168,Malihabad,S.C.,M,SP,FALSE
+237,Manikpur,GEN,M,BSP,FALSE
+252,Manjhanpur,S.C.,M,BSP,FALSE
+300,Mankapur,S.C.,M,SP,FALSE
+82,Mant,GEN,M,AITC,FALSE
+105,Marhara,GEN,M,SP,FALSE
+399,Marihan,GEN,M,INC,FALSE
+370,Mariyahu,GEN,F,SP,FALSE
+284,Matera,GEN,M,SP,TRUE
+84,Mathura,GEN,M,INC,TRUE
+356,Mau,GEN,M,QED,TRUE
+224,Mauranipur,S.C.,F,SP,TRUE
+16,Meerapur,GEN,M,BSP,TRUE
+119,Meerganj,GEN,M,BSP,TRUE
+48,Meerut,GEN,M,BJP,TRUE
+47,Meerut Cantt.,GEN,M,BJP,TRUE
+49,Meerut South,GEN,M,BJP,TRUE
+352,Mehnagar,S.C.,M,SP,TRUE
+295,Mehnaun,GEN,F,SP,TRUE
+227,Mehroni,S.C.,M,BSP,TRUE
+259,Meja,GEN,M,SP,TRUE
+312,Menhdawal,GEN,M,SP,TRUE
+38,Milak,S.C.,M,SP,TRUE
+273,Milkipur,S.C.,M,SP,TRUE
+396,Mirzapur,GEN,M,SP,TRUE
+153,Misrikh,S.C.,M,SP,TRUE
+57,Modinagar,GEN,M,RLD,TRUE
+378,Mohammadabad,GEN,M,QED,TRUE
+144,Mohammadi,GEN,M,BSP,TRUE
+164,Mohan,S.C.,M,BSP,TRUE
+176,Mohanlalganj,S.C.,F,SP,TRUE
+28,Moradabad Nagar,GEN,M,SP,TRUE
+27,Moradabad Rural,GEN,M,SP,TRUE
+346,Mubarakpur,GEN,M,BSP,TRUE
+380,Mughalsarai,GEN,M,BSP,TRUE
+355,Muhammadabad Gohna,S.C.,M,SP,TRUE
+368,Mungra Badshahpur,GEN,F,BJP,TRUE
+54,Muradnagar,GEN,M,BSP,TRUE
+14,Muzaffarnagar,GEN,M,SP,TRUE
+18,Nagina,S.C.,M,SP,TRUE
+17,Najibabad,GEN,M,BSP,TRUE
+2,Nakur,GEN,M,BSP,TRUE
+283,Nanpara,GEN,F,INC,TRUE
+234,Naraini,S.C.,M,BSP,TRUE
+40,Naugawan Sadat,GEN,M,SP,TRUE
+316,Nautanwa,GEN,M,INC,TRUE
+121,Nawabganj,GEN,M,SP,TRUE
+21,Nehtaur,S.C.,M,BSP,TRUE
+138,Nighasan,GEN,M,BJP,TRUE
+348,Nizamabad,GEN,M,SP,TRUE
+61,Noida,GEN,M,BJP,TRUE
+24,Noorpur,GEN,M,BJP,TRUE
+402,Obra,GEN,M,BSP,TRUE
+221,Orai,S.C.,M,SP,TRUE
+330,Padrauna,GEN,M,BSP,TRUE
+137,Palia,GEN,M,BSP,TRUE
+319,Paniyara,GEN,M,BSP,TRUE
+338,Pathardeva,GEN,M,SP,TRUE
+102,Patiyali,GEN,F,SP,TRUE
+249,Patti,GEN,M,SP,TRUE
+287,Payagpur,GEN,M,INC,TRUE
+254,Phaphamau,GEN,M,SP,TRUE
+315,Pharenda,GEN,M,BJP,TRUE
+360,Phephana,GEN,M,BJP,TRUE
+349,Phoolpur Pawai,GEN,M,SP,TRUE
+256,Phulpur,GEN,M,SP,TRUE
+127,Pilibhit,GEN,M,SP,TRUE
+384,Pindra,GEN,M,INC,TRUE
+321,Pipraich,GEN,F,SP,TRUE
+134,Powayan,S.C.,F,SP,TRUE
+248,Pratapgarh,GEN,M,SP,TRUE
+257,Pratappur,GEN,F,SP,TRUE
+129,Puranpur,S.C.,M,SP,TRUE
+13,Purqazi,S.C.,M,BSP,TRUE
+167,Purwa,GEN,M,SP,TRUE
+180,Rae Bareli,GEN,M,PECP,TRUE
+335,Ramkola,S.C.,M,SP,TRUE
+267,Ramnagar,GEN,M,SP,TRUE
+37,Rampur,GEN,M,SP,TRUE
+339,Rampur Karkhana,GEN,F,SP,TRUE
+244,Rampur Khas,GEN,M,INC,TRUE
+6,Rampur Maniharan,S.C.,M,BSP,TRUE
+250,Raniganj,GEN,M,SP,TRUE
+358,Rasara,GEN,M,BSP,TRUE
+205,Rasulabad,S.C.,M,SP,TRUE
+229,Rath,S.C.,M,INC,TRUE
+401,Robertsganj,GEN,M,SP,TRUE
+387,Rohaniya,GEN,F,AD,TRUE
+271,Rudauli,GEN,M,BJP,TRUE
+309,Rudhauli,GEN,M,INC,TRUE
+336,Rudrapur,GEN,M,INC,TRUE
+79,Sadabad,GEN,M,SP,TRUE
+189,Sadar,GEN,M,SP,TRUE
+163,Safipur,S.C.,M,SP,TRUE
+345,Sagri,GEN,M,SP,TRUE
+324,Sahajanwa,GEN,M,BSP,TRUE
+4,Saharanpur,GEN,M,BSP,TRUE
+3,Saharanpur Nagar,GEN,M,BJP,TRUE
+113,Sahaswan,GEN,M,SP,TRUE
+55,Sahibabad,GEN,M,BSP,TRUE
+374,Saidpur,S.C.,M,SP,TRUE
+382,Saiyadraja,GEN,M,IND,TRUE
+381,Sakaldiha,GEN,M,IND,TRUE
+341,Salempur,S.C.,M,SP,TRUE
+181,Salon,S.C.,F,SP,TRUE
+33,Sambhal,GEN,M,SP,TRUE
+158,Sandi,S.C.,F,SP,TRUE
+161,Sandila,GEN,M,SP,TRUE
+44,Sardhana,GEN,M,BJP,TRUE
+182,Sareni,GEN,M,SP,TRUE
+170,Sarojini Nagar,GEN,M,SP,TRUE
+154,Sawaijpur,GEN,F,BSP,TRUE
+391,Sevapuri,GEN,M,SP,TRUE
+150,Sevata,GEN,M,SP,TRUE
+155,Shahabad,GEN,M,SP,TRUE
+365,Shahganj,GEN,M,SP,TRUE
+135,Shahjahanpur,GEN,M,BJP,TRUE
+10,Shamli,GEN,M,INC,TRUE
+116,Shekhupur,GEN,M,SP,TRUE
+69,Shikarpur,GEN,M,SP,TRUE
+98,Shikohabad,GEN,M,SP,TRUE
+386,Shivpur,GEN,M,BSP,TRUE
+302,Shohratgarh,GEN,F,SP,TRUE
+290,Shrawasti,GEN,M,SP,TRUE
+66,Siana,GEN,M,INC,TRUE
+152,Sidhauli,S.C.,M,SP,TRUE
+359,Sikanderpur,GEN,M,SP,TRUE
+207,Sikandra,GEN,M,BSP,TRUE
+80,Sikandra Rao,GEN,M,BSP,TRUE
+64,Sikandrabad,GEN,F,BJP,TRUE
+251,Sirathu,GEN,M,BJP,TRUE
+99,Sirsaganj,GEN,M,SP,TRUE
+213,Sishamau,GEN,M,SP,TRUE
+317,Siswa,GEN,M,SP,TRUE
+146,Sitapur,GEN,M,SP,TRUE
+43,Siwalkhas,GEN,M,SP,TRUE
+255,Soraon,S.C.,M,SP,TRUE
+140,Srinagar,S.C.,M,SP,TRUE
+34,Suar,GEN,M,INC,TRUE
+188,Sultanpur,GEN,M,SP,TRUE
+331,Tamkuhi Raj,GEN,M,INC,TRUE
+278,Tanda,GEN,M,SP,TRUE
+299,Tarabganj,GEN,M,SP,TRUE
+26,Thakurdwara,GEN,M,BJP,TRUE
+9,Thana Bhawan,GEN,M,BJP,TRUE
+133,Tilhar,GEN,M,BSP,TRUE
+178,Tiloi,GEN,M,INC,TRUE
+232,Tindwari,GEN,M,INC,TRUE
+197,Tirwa,GEN,M,SP,TRUE
+291,Tulsipur,GEN,M,SP,TRUE
+95,Tundla,S.C.,M,BSP,TRUE
+183,Unchahar,GEN,M,SP,TRUE
+165,Unnao,GEN,M,SP,TRUE
+293,Utraula,GEN,M,SP,TRUE
+390,Varanasi Cantt.,GEN,F,BJP,TRUE
+388,Varanasi North,GEN,M,BJP,TRUE
+389,Varanasi South,GEN,M,BJP,TRUE
+371,Zafrabad,GEN,M,SP,TRUE
+377,Zahoorabad,GEN,F,SP,TRUE
+269,Zaidpur,S.C.,M,SP,TRUE
+379,Zamania,GEN,M,SP,TRUE
