@@ -9,39 +9,39 @@ const_id,const_name,category,gender,party,muslim
 8,Kairana,GEN,M,BJP,FALSE
 9,Thana Bhawan,GEN,M,BJP,FALSE
 10,Shamli,GEN,M,INC,FALSE
-11,Budhana,GEN,M,SP,TRUE
-12,Charthawal,GEN,M,BSP,TRUE
+11,Budhana,GEN,M,SP,FALSE
+12,Charthawal,GEN,M,BSP,FALSE
 13,Purqazi,S.C.,M,BSP,FALSE
 14,Muzaffarnagar,GEN,M,SP,FALSE
 15,Khatauli,GEN,M,RLD,FALSE
-16,Meerapur,GEN,M,BSP,TRUE
-17,Najibabad,GEN,M,BSP,TRUE
+16,Meerapur,GEN,M,BSP,FALSE
+17,Najibabad,GEN,M,BSP,FALSE
 18,Nagina,S.C.,M,SP,FALSE
-19,Barhapur,GEN,M,BSP,TRUE
+19,Barhapur,GEN,M,BSP,FALSE
 20,Dhampur,GEN,M,SP,FALSE
 21,Nehtaur,S.C.,M,BSP,FALSE
 22,Bijnor,GEN,M,BJP,FALSE
-23,Chandpur,GEN,M,BSP,TRUE
+23,Chandpur,GEN,M,BSP,FALSE
 24,Noorpur,GEN,M,BJP,FALSE
-25,Kanth,GEN,M,PECP,TRUE
+25,Kanth,GEN,M,PECP,FALSE
 26,Thakurdwara,GEN,M,BJP,FALSE
-27,Moradabad Rural,GEN,M,SP,TRUE
-28,Moradabad Nagar,GEN,M,SP,TRUE
-29,Kundarki,GEN,M,SP,TRUE
-30,Bilari,GEN,M,SP,TRUE
+27,Moradabad Rural,GEN,M,SP,FALSE
+28,Moradabad Nagar,GEN,M,SP,FALSE
+29,Kundarki,GEN,M,SP,FALSE
+30,Bilari,GEN,M,SP,FALSE
 31,Chandausi,S.C.,F,SP,FALSE
 32,Asmoli,GEN,F,SP,FALSE
-33,Sambhal,GEN,M,SP,TRUE
+33,Sambhal,GEN,M,SP,FALSE
 34,Suar,GEN,M,INC,FALSE
-35,Chamraua,GEN,M,BSP,TRUE
+35,Chamraua,GEN,M,BSP,FALSE
 36,Bilaspur,GEN,M,INC,FALSE
-37,Rampur,GEN,M,SP,TRUE
+37,Rampur,GEN,M,SP,FALSE
 38,Milak,S.C.,M,SP,FALSE
 39,Dhanaura,S.C.,M,SP,FALSE
-40,Naugawan Sadat,GEN,M,SP,TRUE
-41,Amroha,GEN,M,SP,TRUE
-42,Hasanpur,GEN,M,SP,TRUE
-43,Siwalkhas,GEN,M,SP,TRUE
+40,Naugawan Sadat,GEN,M,SP,FALSE
+41,Amroha,GEN,M,SP,FALSE
+42,Hasanpur,GEN,M,SP,FALSE
+43,Siwalkhas,GEN,M,SP,FALSE
 44,Sardhana,GEN,M,BJP,FALSE
 45,Hastinapur,S.C.,M,SP,FALSE
 46,Kithore,GEN,M,SP,FALSE
@@ -51,8 +51,8 @@ const_id,const_name,category,gender,party,muslim
 50,Chhaprauli,GEN,M,RLD,FALSE
 51,Baraut,GEN,M,BSP,FALSE
 52,Baghpat,GEN,F,BSP,FALSE
-53,Loni,GEN,M,BSP,TRUE
-54,Muradnagar,GEN,M,BSP,TRUE
+53,Loni,GEN,M,BSP,FALSE
+54,Muradnagar,GEN,M,BSP,FALSE
 55,Sahibabad,GEN,M,BSP,FALSE
 56,Ghaziabad,GEN,M,BSP,FALSE
 57,Modinagar,GEN,M,RLD,FALSE
@@ -63,7 +63,7 @@ const_id,const_name,category,gender,party,muslim
 62,Dadri,GEN,M,BSP,FALSE
 63,Jewar,GEN,M,BSP,FALSE
 64,Sikandrabad,GEN,F,BJP,FALSE
-65,Bulandshahr,GEN,M,BSP,TRUE
+65,Bulandshahr,GEN,M,BSP,FALSE
 66,Siana,GEN,M,INC,FALSE
 67,Anupshahr,GEN,M,BSP,FALSE
 68,Debai,GEN,M,SP,FALSE
@@ -73,8 +73,8 @@ const_id,const_name,category,gender,party,muslim
 72,Barauli,GEN,M,RLD,FALSE
 73,Atrauli,GEN,M,SP,FALSE
 74,Chharra,GEN,M,SP,FALSE
-75,Koil,GEN,M,SP,TRUE
-76,Aligarh,GEN,M,SP,TRUE
+75,Koil,GEN,M,SP,FALSE
+76,Aligarh,GEN,M,SP,FALSE
 77,Iglas,S.C.,M,RLD,FALSE
 78,Hathras,S.C.,M,BSP,FALSE
 79,Sadabad,GEN,M,SP,FALSE
@@ -100,7 +100,7 @@ const_id,const_name,category,gender,party,muslim
 99,Sirsaganj,GEN,M,SP,FALSE
 100,Kasganj,GEN,M,SP,FALSE
 101,Amanpur,GEN,M,BSP,FALSE
-102,Patiyali,GEN,F,SP,TRUE
+102,Patiyali,GEN,F,SP,FALSE
 103,Aliganj,GEN,M,SP,FALSE
 104,Etah,GEN,M,SP,FALSE
 105,Marhara,GEN,M,SP,FALSE
@@ -112,20 +112,20 @@ const_id,const_name,category,gender,party,muslim
 111,Gunnaur,GEN,M,SP,FALSE
 112,Bisauli,S.C.,M,SP,FALSE
 113,Sahaswan,GEN,M,SP,FALSE
-114,Bilsi,GEN,M,BSP,TRUE
-115,Badaun,GEN,M,SP,TRUE
+114,Bilsi,GEN,M,BSP,FALSE
+115,Badaun,GEN,M,SP,FALSE
 116,Shekhupur,GEN,M,SP,FALSE
 117,Dataganj,GEN,M,BSP,FALSE
-118,Baheri,GEN,M,SP,TRUE
-119,Meerganj,GEN,M,BSP,TRUE
-120,Bhojipura,GEN,M,IEMC,TRUE
+118,Baheri,GEN,M,SP,FALSE
+119,Meerganj,GEN,M,BSP,FALSE
+120,Bhojipura,GEN,M,IEMC,FALSE
 121,Nawabganj,GEN,M,SP,FALSE
 122,Faridpur,S.C.,M,SP,FALSE
 123,Bithari Chainpur,GEN,M,BSP,FALSE
 124,Bareilly,GEN,M,BJP,FALSE
 125,Bareilly Cantt.,GEN,M,BJP,FALSE
 126,Aonla,GEN,M,BJP,FALSE
-127,Pilibhit,GEN,M,SP,TRUE
+127,Pilibhit,GEN,M,SP,FALSE
 128,Barkhera,GEN,M,SP,FALSE
 129,Puranpur,S.C.,M,SP,FALSE
 130,Bisalpur,GEN,M,BJP,FALSE
@@ -146,21 +146,21 @@ const_id,const_name,category,gender,party,muslim
 145,Maholi,GEN,M,SP,FALSE
 146,Sitapur,GEN,M,SP,FALSE
 147,Hargaon,S.C.,M,BSP,FALSE
-148,Laharpur,GEN,M,BSP,TRUE
+148,Laharpur,GEN,M,BSP,FALSE
 149,Biswan,GEN,M,SP,FALSE
 150,Sevata,GEN,M,SP,FALSE
 151,Mahmoodabad,GEN,M,SP,FALSE
 152,Sidhauli,S.C.,M,SP,FALSE
 153,Misrikh,S.C.,M,SP,FALSE
 154,Sawaijpur,GEN,F,BSP,FALSE
-155,Shahabad,GEN,M,SP,TRUE
+155,Shahabad,GEN,M,SP,FALSE
 156,Hardoi,GEN,M,SP,FALSE
 157,Gopamau,S.C.,M,SP,FALSE
 158,Sandi,S.C.,F,SP,FALSE
 159,Bilgram Mallanwan,GEN,M,BSP,FALSE
 160,Balamau,S.C.,M,SP,FALSE
 161,Sandila,GEN,M,SP,FALSE
-162,Bangarmau,GEN,M,SP,TRUE
+162,Bangarmau,GEN,M,SP,FALSE
 163,Safipur,S.C.,M,SP,FALSE
 164,Mohan,S.C.,M,BSP,FALSE
 165,Unnao,GEN,M,SP,FALSE
@@ -169,14 +169,14 @@ const_id,const_name,category,gender,party,muslim
 168,Malihabad,S.C.,M,SP,FALSE
 169,Bakshi Kaa Talab,GEN,M,SP,FALSE
 170,Sarojini Nagar,GEN,M,SP,FALSE
-171,Lucknow West,GEN,M,SP,TRUE
+171,Lucknow West,GEN,M,SP,FALSE
 172,Lucknow North,GEN,M,SP,FALSE
 173,Lucknow East,GEN,M,BJP,FALSE
 174,Lucknow Central,GEN,M,SP,FALSE
 175,Lucknow Cantt,GEN,F,INC,FALSE
 176,Mohanlalganj,S.C.,F,SP,FALSE
 177,Bachhrawan,S.C.,M,SP,FALSE
-178,Tiloi,GEN,M,INC,TRUE
+178,Tiloi,GEN,M,INC,FALSE
 179,Harchandpur,GEN,M,SP,FALSE
 180,Rae Bareli,GEN,M,PECP,FALSE
 181,Salon,S.C.,F,SP,FALSE
@@ -185,7 +185,7 @@ const_id,const_name,category,gender,party,muslim
 184,Jagdishpur,S.C.,M,INC,FALSE
 185,Gauriganj,GEN,M,SP,FALSE
 186,Amethi,GEN,M,SP,FALSE
-187,Isauli,GEN,M,SP,TRUE
+187,Isauli,GEN,M,SP,FALSE
 188,Sultanpur,GEN,M,SP,FALSE
 189,Sadar,GEN,M,SP,FALSE
 190,Lambhua,GEN,M,SP,FALSE
@@ -193,7 +193,7 @@ const_id,const_name,category,gender,party,muslim
 192,Kaimganj,S.C.,M,SP,FALSE
 193,Amritpur,GEN,M,SP,FALSE
 194,Farrukhabad,GEN,M,IND,FALSE
-195,Bhojpur,GEN,M,SP,TRUE
+195,Bhojpur,GEN,M,SP,FALSE
 196,Chhibramau,GEN,M,SP,FALSE
 197,Tirwa,GEN,M,SP,FALSE
 198,Kannauj,S.C.,M,SP,FALSE
@@ -238,9 +238,9 @@ const_id,const_name,category,gender,party,muslim
 237,Manikpur,GEN,M,BSP,FALSE
 238,Jahanabad,GEN,M,SP,FALSE
 239,Bindki,GEN,M,BSP,FALSE
-240,Fatehpur,GEN,M,SP,TRUE
+240,Fatehpur,GEN,M,SP,FALSE
 241,Ayah Shah,GEN,M,BSP,FALSE
-242,Husainganj,GEN,M,BSP,TRUE
+242,Husainganj,GEN,M,BSP,FALSE
 243,Khaga,S.C.,F,BJP,FALSE
 244,Rampur Khas,GEN,M,INC,FALSE
 245,Babaganj,S.C.,M,IND,FALSE
@@ -251,20 +251,20 @@ const_id,const_name,category,gender,party,muslim
 250,Raniganj,GEN,M,SP,FALSE
 251,Sirathu,GEN,M,BJP,FALSE
 252,Manjhanpur,S.C.,M,BSP,FALSE
-253,Chail,GEN,M,BSP,TRUE
-254,Phaphamau,GEN,M,SP,TRUE
+253,Chail,GEN,M,BSP,FALSE
+254,Phaphamau,GEN,M,SP,FALSE
 255,Soraon,S.C.,M,SP,FALSE
-256,Phulpur,GEN,M,SP,TRUE
+256,Phulpur,GEN,M,SP,FALSE
 257,Pratappur,GEN,F,SP,FALSE
 258,Handia,GEN,F,SP,FALSE
 259,Meja,GEN,M,SP,FALSE
 260,Karachhana,GEN,M,BSP,FALSE
 261,Allahabad West,GEN,F,BSP,FALSE
 262,Allahabad North,GEN,M,INC,FALSE
-263,Allahabad South,GEN,M,SP,TRUE
+263,Allahabad South,GEN,M,SP,FALSE
 264,Bara,S.C.,M,SP,FALSE
 265,Koraon,S.C.,M,BSP,FALSE
-266,Kursi,GEN,M,SP,TRUE
+266,Kursi,GEN,M,SP,FALSE
 267,Ramnagar,GEN,M,SP,FALSE
 268,Barabanki,GEN,M,SP,FALSE
 269,Zaidpur,S.C.,M,SP,FALSE
@@ -276,7 +276,7 @@ const_id,const_name,category,gender,party,muslim
 275,Ayodhya,GEN,M,SP,FALSE
 276,Goshainganj,GEN,M,SP,FALSE
 277,Katehari,GEN,M,SP,FALSE
-278,Tanda,GEN,M,SP,TRUE
+278,Tanda,GEN,M,SP,FALSE
 279,Alapur,S.C.,M,SP,FALSE
 280,Jalalpur,GEN,M,SP,FALSE
 281,Akbarpur,GEN,M,SP,FALSE
@@ -284,14 +284,14 @@ const_id,const_name,category,gender,party,muslim
 283,Nanpara,GEN,F,INC,FALSE
 284,Matera,GEN,M,SP,FALSE
 285,Mahasi,GEN,M,BSP,FALSE
-286,Bahraich,GEN,M,SP,TRUE
+286,Bahraich,GEN,M,SP,FALSE
 287,Payagpur,GEN,M,INC,FALSE
 288,Kaiserganj,GEN,M,BJP,FALSE
 289,Bhinga,GEN,F,SP,FALSE
 290,Shrawasti,GEN,M,SP,FALSE
-291,Tulsipur,GEN,M,SP,TRUE
+291,Tulsipur,GEN,M,SP,FALSE
 292,Gainsari,GEN,M,SP,FALSE
-293,Utraula,GEN,M,SP,TRUE
+293,Utraula,GEN,M,SP,FALSE
 294,Balrampur,S.C.,M,SP,FALSE
 295,Mehnaun,GEN,F,SP,FALSE
 296,Gonda,GEN,M,SP,FALSE
@@ -311,7 +311,7 @@ const_id,const_name,category,gender,party,muslim
 310,Basti Sadar,GEN,M,BSP,FALSE
 311,Mahadewa,S.C.,M,SP,FALSE
 312,Menhdawal,GEN,M,SP,FALSE
-313,Khalilabad,GEN,M,PECP,TRUE
+313,Khalilabad,GEN,M,PECP,FALSE
 314,Dhanghata,S.C.,M,SP,FALSE
 315,Pharenda,GEN,M,BJP,FALSE
 316,Nautanwa,GEN,M,INC,FALSE
@@ -336,35 +336,35 @@ const_id,const_name,category,gender,party,muslim
 335,Ramkola,S.C.,M,SP,FALSE
 336,Rudrapur,GEN,M,INC,FALSE
 337,Deoria,GEN,M,BJP,FALSE
-338,Pathardeva,GEN,M,SP,TRUE
-339,Rampur Karkhana,GEN,F,SP,TRUE
+338,Pathardeva,GEN,M,SP,FALSE
+339,Rampur Karkhana,GEN,F,SP,FALSE
 340,Bhatpar Rani,GEN,M,SP,FALSE
 341,Salempur,S.C.,M,SP,FALSE
 342,Barhaj,GEN,M,SP,FALSE
 343,Atraulia,GEN,M,SP,FALSE
-344,Gopalpur,GEN,M,SP,TRUE
+344,Gopalpur,GEN,M,SP,FALSE
 345,Sagri,GEN,M,SP,FALSE
-346,Mubarakpur,GEN,M,BSP,TRUE
+346,Mubarakpur,GEN,M,BSP,FALSE
 347,Azamgarh,GEN,M,SP,FALSE
-348,Nizamabad,GEN,M,SP,TRUE
+348,Nizamabad,GEN,M,SP,FALSE
 349,Phoolpur Pawai,GEN,M,SP,FALSE
-350,Didarganj,GEN,M,SP,TRUE
+350,Didarganj,GEN,M,SP,FALSE
 351,Lalganj,S.C.,M,SP,FALSE
 352,Mehnagar,S.C.,M,SP,FALSE
 353,Madhuban,GEN,M,BSP,FALSE
 354,Ghosi,GEN,M,SP,FALSE
 355,Muhammadabad Gohna,S.C.,M,SP,FALSE
-356,Mau,GEN,M,QED,TRUE
+356,Mau,GEN,M,QED,FALSE
 357,Belthara Road,S.C.,M,SP,FALSE
 358,Rasara,GEN,M,BSP,FALSE
-359,Sikanderpur,GEN,M,SP,TRUE
+359,Sikanderpur,GEN,M,SP,FALSE
 360,Phephana,GEN,M,BJP,FALSE
 361,Ballia Nagar,GEN,M,SP,FALSE
 362,Bansdih,GEN,M,SP,FALSE
 363,Bairia,GEN,M,SP,FALSE
 364,Badlapur,GEN,M,SP,FALSE
 365,Shahganj,GEN,M,SP,FALSE
-366,Jaunpur,GEN,M,INC,TRUE
+366,Jaunpur,GEN,M,INC,FALSE
 367,Malhani,GEN,M,SP,FALSE
 368,Mungra Badshahpur,GEN,F,BJP,FALSE
 369,Machhlishahr,S.C.,M,SP,FALSE
@@ -375,8 +375,8 @@ const_id,const_name,category,gender,party,muslim
 374,Saidpur,S.C.,M,SP,FALSE
 375,Ghazipur,GEN,M,SP,FALSE
 376,Jangipur,GEN,M,SP,FALSE
-377,Zahoorabad,GEN,F,SP,TRUE
-378,Mohammadabad,GEN,M,QED,TRUE
+377,Zahoorabad,GEN,F,SP,FALSE
+378,Mohammadabad,GEN,M,QED,FALSE
 379,Zamania,GEN,M,SP,FALSE
 380,Mughalsarai,GEN,M,BSP,FALSE
 381,Sakaldiha,GEN,M,IND,FALSE
@@ -390,7 +390,7 @@ const_id,const_name,category,gender,party,muslim
 389,Varanasi South,GEN,M,BJP,FALSE
 390,Varanasi Cantt.,GEN,F,BJP,FALSE
 391,Sevapuri,GEN,M,SP,FALSE
-392,Bhadohi,GEN,M,SP,TRUE
+392,Bhadohi,GEN,M,SP,FALSE
 393,Gyanpur,GEN,M,SP,FALSE
 394,Aurai,S.C.,F,SP,FALSE
 395,Chhanbey,S.C.,M,SP,FALSE

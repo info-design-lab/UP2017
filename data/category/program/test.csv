@@ -252,7 +252,7 @@ const_id,const_name,category,gender,party,muslim
 251,Sirathu,GEN,M,BJP,FALSE
 252,Manjhanpur,S.C.,M,BSP,FALSE
 253,Chail,GEN,M,BSP,TRUE
-254,Phaphamau,GEN,M,SP,TRUE
+254,Phaphamau,GEN,M,SP,FALSE
 255,Soraon,S.C.,M,SP,FALSE
 256,Phulpur,GEN,M,SP,TRUE
 257,Pratappur,GEN,F,SP,FALSE
