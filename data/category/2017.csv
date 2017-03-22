@@ -85,7 +85,7 @@ const_id,const_name,party,gender,category,muslim
 84,Mathura,BJP,M,GEN,FALSE
 85,Baldev,BJP,M,S.C.,FALSE
 86,Etmadpur,BJP,M,GEN,FALSE
-87,Agra Cantt.,BJP,M,GEN,FALSE
+87,Agra Cantt.,BJP,M,S.C.,FALSE
 88,Agra South,BJP,M,GEN,FALSE
 89,Agra North,BJP,M,GEN,FALSE
 90,Agra Rural,BJP,F,S.C.,FALSE
@@ -107,7 +107,7 @@ const_id,const_name,party,gender,category,muslim
 106,Jalesar,BJP,M,S.C.,FALSE
 107,Mainpuri,SP,M,GEN,FALSE
 108,Bhongaon,BJP,M,GEN,FALSE
-109,Kishani (SC),SP,M,S.C.,FALSE
+109,Kishani,SP,M,S.C.,FALSE
 110,Karhal,SP,M,GEN,FALSE
 111,Gunnaur,BJP,M,GEN,FALSE
 112,Bisauli,BJP,M,S.C.,FALSE
@@ -280,7 +280,7 @@ const_id,const_name,party,gender,category,muslim
 279,Alapur,BJP,F,S.C.,FALSE
 280,Jalalpur,BSP,M,GEN,FALSE
 281,Akbarpur,BSP,M,GEN,FALSE
-282,BALHA (S.C.),BJP,M,S.C.,FALSE
+282,BALHA,BJP,M,S.C.,FALSE
 283,Nanpara,BJP,F,GEN,FALSE
 284,Matera,SP,M,GEN,TRUE
 285,Mahasi,BJP,M,GEN,FALSE
@@ -309,7 +309,7 @@ const_id,const_name,party,gender,category,muslim
 308,Kaptanganj,BJP,M,GEN,FALSE
 309,Rudhauli,BJP,M,GEN,FALSE
 310,Basti Sadar,BJP,M,GEN,FALSE
-311,Mahadewa S.C,BJP,M,S.C.,FALSE
+311,Mahadewa,BJP,M,S.C.,FALSE
 312,MENHDAWAL,BJP,M,GEN,FALSE
 313,KHALILABAD,BJP,M,GEN,FALSE
 314,Dhanghata,BJP,M,S.C.,FALSE
@@ -355,7 +355,7 @@ const_id,const_name,party,gender,category,muslim
 354,Ghosi,BJP,M,GEN,FALSE
 355,Muhammadabad- Gohna (SC),BJP,M,S.C.,FALSE
 356,Mau,BSP,M,S.C.,TRUE
-357,Belthara Road,BJP,M,GEN,FALSE
+357,Belthara Road,BJP,M,S.C.,FALSE
 358,Rasara,BSP,M,GEN,FALSE
 359,Sikanderpur,BJP,M,GEN,FALSE
 360,Phephana,BJP,M,GEN,FALSE
