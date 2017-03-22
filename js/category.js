@@ -103,9 +103,9 @@ function makecategorymap(error, data_2007, data_2012, data_2017, up) {
               .style("stroke", "#65737e")          // colour the line
               .style("stroke-width", 2)
               .style("stroke-linecap", "round")
-              .attr('x1', document.body.clientWidth*(2*i + 1)/6)
+              .attr('x1', document.body.clientWidth*(2*i + 1)/6 + 5)
               .attr('y1', category_height + 127)
-              .attr('x2', document.body.clientWidth*(2*i + 1)/6 + 20)
+              .attr('x2', document.body.clientWidth*(2*i + 1)/6 + 25)
               .attr('y2', category_height + 127);
               category_svg.append('text')
                       .attr('x', document.body.clientWidth*(2*i + 1)/6 + 3)
