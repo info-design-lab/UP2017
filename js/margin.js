@@ -55,7 +55,7 @@ function makemarginmap(error, data_2007, data_2012, data_2017, up) {
     margin_scale_2007 = d3.scaleLinear().domain([9, 53128]).range([75, width]);
     margin_scale_2012 = d3.scaleLinear().domain([18, 88255]).range([75, width]);
     margin_scale_2017 = d3.scaleLinear().domain([171, 150685]).range([75, width]);
-    var votes_scale = [[ '#4a1486', '> 70000'], ['#6a51a3', '70000 - 60000'], ['#807dba', '60000 - 50000'], ['#9e9ac8', '50000 - 40000'], ['#bcbddc', '40000 - 30000'], ['#dadaeb', '30000 - 20000'], ['#f2f0f7', '20000 - 10000'], ['#efedf5', '< 10000']];
+    var votes_scale = [[ '#4a1486', '> 70,000'], ['#6a51a3', '70,000 - 60,000'], ['#807dba', '60,000 - 50,000'], ['#9e9ac8', '50,000 - 40,000'], ['#bcbddc', '40,000 - 30,000'], ['#dadaeb', '30,000 - 20,000'], ['#f2f0f7', '20,000 - 10,000'], ['#efedf5', '< 10,000']];
     var percent_scale = [[ '#91003f', '> 30'], ['#ce1256', '30 - 20'], ['#e7298a', '20 - 15'], ['#df65b0', '15 - 11'], ['#c994c7', '11 - 7'], ['#d4b9da', '7 - 3'], ['#e7e1ef', '3 - 1'], ['#f7f4f9', '< 1']];
     var scale = []
     for(var i = 0; i < 8; i++){
