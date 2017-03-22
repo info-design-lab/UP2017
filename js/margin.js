@@ -1,4 +1,3 @@
-
 var party_colors = {
     'INC': '#0392cf', // blue
     'BJP': '#feb24c', // orange
@@ -19,6 +18,10 @@ var margin_map_height = 600;
 var margin_map_svg = d3.select("#margin-map").append("svg")
     .attr("width", margin_map_width)
     .attr("height", margin_map_width);
+var margin_map_legend = d3.select("#margin-legend").append("svg")
+    .attr("width", $("#margin-legend").width())
+    .attr("height", 180);
+
 queue()
     //.defer(d3.csv, 'data/margins/2002.csv')
     .defer(d3.csv, 'data/margins/2007.csv')
@@ -48,12 +51,29 @@ function makemarginmap(error, data_2007, data_2012, data_2017, up) {
             .style("font-size", "13px")
             .text(2007 + i * 5);
     }
-
     // Important ! domain is given manually
-    //margin_scale_2002 = d3.scaleLinear().domain([26, 183899]).range([75, width]);
     margin_scale_2007 = d3.scaleLinear().domain([9, 53128]).range([75, width]);
     margin_scale_2012 = d3.scaleLinear().domain([18, 88255]).range([75, width]);
     margin_scale_2017 = d3.scaleLinear().domain([171, 150685]).range([75, width]);
+    var votes_scale = [[ '#4a1486', '> 70000'], ['#6a51a3', '70000 - 60000'], ['#807dba', '60000 - 50000'], ['#9e9ac8', '50000 - 40000'], ['#bcbddc', '40000 - 30000'], ['#dadaeb', '30000 - 20000'], ['#f2f0f7', '20000 - 10000'], ['#efedf5', '< 10000']];
+    var percent_scale = [[ '#91003f', '> 30'], ['#ce1256', '30 - 20'], ['#e7298a', '20 - 15'], ['#df65b0', '15 - 11'], ['#c994c7', '11 - 7'], ['#d4b9da', '7 - 3'], ['#e7e1ef', '3 - 1'], ['#f7f4f9', '< 1']];
+    var scale = []
+    for(var i = 0; i < 8; i++){
+      scale.push(
+        margin_map_legend.append('rect')
+           .attr('x', 0)
+           .attr('y', (20 + 2)*i)
+           .attr('width', 20)
+           .attr('height', 20)
+           .attr('fill', votes_scale[i][0])
+      );
+      scale.push(
+        margin_map_legend.append('text')
+           .attr('x', 30)
+           .attr('y', (20 + 2)*i + 15)
+           .text(votes_scale[i][1])
+      )
+    }
     highlight_line = svg.append("path")
         .datum(create_path(1))
         .attr("class", "line")
@@ -69,7 +89,6 @@ function makemarginmap(error, data_2007, data_2012, data_2017, up) {
         )
         .style('stroke', 'transparent')
         .style('opacity', 0.5);
-
     var year_scale_functions = [{
             "func": margin_scale_2017,
             "data": data_2017
@@ -187,7 +206,6 @@ function makemarginmap(error, data_2007, data_2012, data_2017, up) {
             //$(this).removeClass('map-hover');
             return map_tooltip.style("visibility", "hidden");
         });
-
     function highlight() {
         normalCard();
         $('#map' + (selected_const_code + 1)).removeClass('map-hover');
@@ -215,7 +233,6 @@ function makemarginmap(error, data_2007, data_2012, data_2017, up) {
           line_transition = false;
         }
     }
-
     function highlightCard(c) {
         d3.select(c).moveToFront();
         d3.select(c.getElementsByTagName("circle")[0])
@@ -299,7 +316,6 @@ function makemarginmap(error, data_2007, data_2012, data_2017, up) {
 
         });
     }
-
     function normalCard() {
         for (var i = 0; i < 3; i++) {
             d3.select(document.getElementById('yr' + (2007 + 5 * i) + 'id' + selected_const_code).getElementsByTagName("circle")[0])
@@ -307,7 +323,6 @@ function makemarginmap(error, data_2007, data_2012, data_2017, up) {
                 .attr('opacity', 0.5);
         }
     }
-
     function create_path(i) {
         var path_array = [];
         path_array.push([margin_scale_2017(data_2017[i][current_mode]) + 5, height / 6 - 10]);
@@ -426,6 +441,16 @@ function makemarginmap(error, data_2007, data_2012, data_2017, up) {
                     })
                 );
         $(".js-example-basic-single").val(selected_const_code + 1).change();
+        for(var i = 0; i < 8; i++){
+          if(current_mode == 'percent'){
+          scale[2*i].transition().duration(1000).attr('fill', percent_scale[i][0])
+          scale[2*i + 1].transition().duration(1000).text(percent_scale[i][1])
+        }
+        else{
+          scale[2*i].transition().duration(1000).attr('fill', votes_scale[i][0])
+          scale[2*i + 1].transition().duration(1000).text(votes_scale[i][1])
+        }
+      }
     });
     function map_getColor(d) {
       if (current_mode == 'margin'){
@@ -444,7 +469,7 @@ function makemarginmap(error, data_2007, data_2012, data_2017, up) {
                d > 11  ? '#df65b0' :
                d > 7   ? '#c994c7' :
                d > 3   ? '#d4b9da' :
-               d > 0   ? '#e7e1ef' :
+               d > 1   ? '#e7e1ef' :
                           '#f7f4f9';
       }
     }
