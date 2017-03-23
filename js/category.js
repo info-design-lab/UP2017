@@ -22,7 +22,7 @@ function makecategorymap(error, data_2007, data_2012, data_2017, up) {
     //Add Year Name
     for(var i=0; i<3; i++){
       category_svg.append('text')
-          .attr('x', document.body.clientWidth*(2*i + 1)/6)
+          .attr('x', document.body.clientWidth*(2*(2-i) + 1)/6)
           .attr('y', category_height + 20)
           .style('font-size', '20px')
           .attr('text-anchor', 'middle')
@@ -255,9 +255,8 @@ function makecategorymap(error, data_2007, data_2012, data_2017, up) {
         });
     update_numbers(2007);
     // Translate Map
-    map_2017.attr("transform", "translate(" + (category_width / 3) + ", 0)");
-    map_2007.attr("transform", "translate(" + (-category_width / 3) + ", 0)");
-
+    map_2017.attr("transform", "translate(" + (-category_width / 3) + ", 0)");
+    map_2007.attr("transform", "translate(" + (category_width / 3) + ", 0)");
     function select_const(i, data) {
         if (document.getElementById("F").checked && data[i - 1]['gender'] == 'F') {
             return true;
