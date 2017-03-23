@@ -1,7 +1,7 @@
 body, html{
   font-family: 'Roboto Condensed', sans-serif;
 }
-.radio{
+.radio, .checkbox{
 	display:inline !important;
 }
 
