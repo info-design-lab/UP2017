@@ -1,6 +1,9 @@
 body, html{
   font-family: 'Roboto Condensed', sans-serif;
 }
+.radio{
+	display:inline !important;
+}
 
 .line {
   fill: none;
