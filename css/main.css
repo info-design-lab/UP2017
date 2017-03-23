@@ -114,10 +114,10 @@ input:checked + .slider:before {
 }
 
 svg{
-  overflow: visible;
+  overflow: visible !important;
 }
 g{
-  overflow: visible;
+  overflow: visible !important;
 }
 
 .map_label{
