@@ -143,6 +143,8 @@ function makecategorymap(error, data_2007, data_2012, data_2017, up) {
                 return '#e5e6eb';
             }
         })
+        .attr('stroke-width', '0.2px')
+        .style('stroke', 'black')
         .on('mouseover', function(d) {
             $(this).addClass('map-hover');
             if (event) {
@@ -188,6 +190,8 @@ function makecategorymap(error, data_2007, data_2012, data_2017, up) {
           }
 
         })
+        .attr('stroke-width', '0.2px')
+        .style('stroke', 'black')
         .on('mouseover', function(d) {
             $(this).addClass('map-hover');
             if (event) {
@@ -233,6 +237,8 @@ function makecategorymap(error, data_2007, data_2012, data_2017, up) {
               return '#e5e6eb';
           }
         })
+        .attr('stroke-width', '0.2px')
+        .style('stroke', 'black')
         .on('mouseover', function(d) {
             $(this).addClass('map-hover');
             if (event) {

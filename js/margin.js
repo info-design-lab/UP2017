@@ -192,9 +192,10 @@ function makemarginmap(error, data_2007, data_2012, data_2017, up) {
         .style('fill', function(d) {
             return map_getColor(data_2017[d.properties.AC_NO - 1][current_mode]);
         })
+        .attr('stroke-width', '0.2px')
+        .style('stroke', 'black')
         .on('mouseover', function(d) {
             $('#map' + (selected_const_code + 1)).removeClass('map-hover');
-            $(this).addClass('map-hover');
             $(".js-example-basic-single").val(d.properties.AC_NO).change();
             if(event){
               map_tooltip.style("visibility", "visible")
@@ -205,9 +206,9 @@ function makemarginmap(error, data_2007, data_2012, data_2017, up) {
             return map_tooltip.style("top", (event.pageY - 50) + "px").style("left", (event.pageX + 10) + "px");
         })
         .on("mouseout", function(d) {
-            //$(this).removeClass('map-hover');
             return map_tooltip.style("visibility", "hidden");
         });
+
     function highlight() {
         normalCard();
         $('#map' + (selected_const_code + 1)).removeClass('map-hover');
@@ -352,20 +353,7 @@ function makemarginmap(error, data_2007, data_2012, data_2017, up) {
         path_array.push([margin_scale_2007(data_2007[i][current_mode]) + 5, height / 6 * 4 + 5 - 10]);
         path_array.push([margin_scale_2007(data_2007[i][current_mode]) + 5, height / 6 * 4 + 10 - 10]);
         path_array.push([margin_scale_2007(data_2007[i][current_mode]) + 5, height / 6 * 5 - 10]);
-        /*
-        path_array.push([margin_scale_2007(data_2007[i][current_mode]) + 5, height/8*6 - 10]);
-        path_array.push([margin_scale_2007(data_2007[i][current_mode]) + 5, height/8*6 - 5]);
 
-        d1 = margin_scale_2007(data_2007[i][current_mode]) + 5;
-        d2 = margin_scale_2002(data_2002[i][current_mode]) + 5;
-        path_array.push([d1+Math.sign(d2-d1)*d3.min([5,Math.abs((d2-d1))]), height/8*6]);
-        path_array.push([(d1+d2)/2, height/8*6]);
-        path_array.push([d2-Math.sign(d2-d1)*d3.min([5,Math.abs((d2-d1))]), height/8*6]);
-
-        path_array.push([margin_scale_2002(data_2002[i][current_mode]) + 5, height/8*6 + 5]);
-        path_array.push([margin_scale_2002(data_2002[i][current_mode]) + 5, height/8*6 + 10]);
-        path_array.push([margin_scale_2002(data_2002[i][current_mode]) + 5, height/8*7]);
-        */
         return path_array;
     }
     d3.selection.prototype.moveToFront = function() {
