@@ -1,10 +1,12 @@
 var party_colors = {
+    "Turnout": "#762a83",
     'INC': '#0392cf', // blue
-    'BJP': '#feb24c', // orange
-    'SP': '#bd0026', // red
-    'BSP': '#7bc043', // green
+    'BJP': '#feb24c', // orange //#ffd296
+    'BSP': '#7bc043', // green #9ac677
+    'SP': '#bd0026', // red #d37689
     'IND': '#65737e'
 }
+
 var width = document.body.clientWidth * 0.90,
     height = 275;
 var card_circle_radius = 6;

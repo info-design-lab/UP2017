@@ -1,10 +1,3 @@
-
-var party_colors = {
-    'INC': '#0392cf', // blue
-    'BJP': '#feb24c', // orange
-    'SP': '#bd0026', // red
-    'BSP': '#7bc043', // green
-}
 var category_width = document.body.clientWidth;
 var category_height = document.body.clientWidth / 3.5;
 var category_svg = d3.select("#category-chart").append("svg").attr("width", category_width).attr("height", category_height + 160);

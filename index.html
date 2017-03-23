@@ -18,7 +18,7 @@
 
   </head>
 
-<body>
+<body onload="newmaps('17')">
   <div class="section">
     <div class='row'>
       <div class="col-md-3"></div>
@@ -104,8 +104,62 @@
       <div class="col-md-3"></div>
     </div>
   </div>
-
-
+  <div class="toviz"> </div>
+<div class="section">
+  <div class="options_container noselect" >
+		<div id="year_dropdown" data-old-value="17" data-first-run="true" autocomplete="off">
+			<form>
+				<div>
+					<label class="noselect">
+						<input autocomplete="off" name="year" type="radio" class="radio" onclick="makeviz(this)" value="07">
+						2007
+					</label>
+				</div>
+				<div>
+					<label class="noselect">
+						<input autocomplete="off" name="year" type="radio" class="radio" onclick="makeviz(this)" value="12">
+						2012
+					</label>
+				</div>
+				<div>
+					<label class="noselect">
+						<input autocomplete="off" name="year" type="radio" class="radio" onclick="makeviz(this)" value="17" checked="checked">
+						2017
+					</label>
+				</div>
+			</form>
+		</div>
+		<div class="position_toggle_container noselect">
+			<div>
+				<label class="noselect">
+					<input autocomplete="off" type="checkbox" id="winner_checkbox" class="checkbox" onclick="toggle(this)" value="won" checked="checked">
+					<span class="checkbox_label">
+						Constituencies where the party won
+						<a onClick="checkOnly(this)" class="toggle_checkbox" href="#">Only</a>
+					</span>
+				</label>
+			</div>
+			<div>
+				<label class="noselect">
+					<input autocomplete="off" type="checkbox" id="runnerup_checkbox" class="checkbox" onclick="toggle(this)" value="runnerup" checked="checked">
+					<span class="checkbox_label">
+						Constituencies where the party was the runner up
+						<a onClick="checkOnly(this)" class="toggle_checkbox" href="#">Only</a>
+					</span>
+				</label>
+			</div>
+			<div>
+				<label class="noselect">
+					<input autocomplete="off" type="checkbox" id="below_checkbox" class="checkbox" onclick="toggle(this)" value="third" checked="checked">
+					<span class="checkbox_label">
+						Constituencies where the party was 3rd and Below
+						<a onClick="checkOnly(this)" class="toggle_checkbox" href="#">Only</a>
+					</span>
+				</label>
+			</div>
+		</div>
+		</div>
+</div>
   <div class="section">
     <div class='row'>
       <div class="col-md-3"></div>
@@ -181,6 +235,7 @@
     </div>
   </div>
   <script src="js/margin.js">  </script>
+  <script src="js/turnout.js">  </script>
   <script src="js/category.js">  </script>
 </body>
 </html>
