@@ -18,17 +18,17 @@
 
   </head>
 
-<body onload="newmaps('17')">
+<body>
   <div class="section">
     <div class='row'>
       <div class="col-md-3"></div>
       <div class="col-md-6">
-        <h1>Exploring UP 2017 Elections</h1>
+        <h1>Exploring 2017 UP Assembly Election Results</h1>
         <h4>Arihant Parsoya, Manas Sharma and Venkatesh Rajamanickam</h4>
         <h3>Victory Margins</h3>
         <p>
-          The election to the 17th Uttar Pradesh Legislative Assembly was held from 11 February to 8 March 2017 in 7 phases. This election saw voter turnout of 60-61% compared to 59.48% in the previous election. Bharatiya Janata Party won this election by an overwhelming three-quarter majority of 325 seats, despite not projecting a chief ministerial candidate before the election. As part of its election strategy BJP contested under a collective leadership and capitalised mostly on the political clout and 'brand' of its leader, Narendra Modi. In the previous election in 2012, the Samajwadi Party won a majority and formed government in the leadership of Akhilesh Yadav.
-          In January 2016, the Election Commission of India published updated electoral rolls in all 403 assembly segments.[2] In July 2016, Election Commission decided to increase the number of polling booths in Uttar Pradesh for the 2017 Assembly elections. New polling centres will be planned in the constituencies having more than 1,500 registered voters as well as polling booths in six constituencies of Muzaffarnagar, Budhana, Purkazi, Khatoli, Charthawal and Midanpur to be raised from 1,769 to 1,819 booths.[3][4] Voter assistance booths would be set up and photo slip of voters in a new design would be sent to them. First time, the Form-2B would contain the photograph of the candidates and their nationality.
+          The story of the 17th Uttar Pradesh Legislative Assembly is the story of Bharatiya Janata Party's victory by an overwhelming three-quarter majority of 325 seats in a 403 seat assembly. The incumbent was the Samajwadi Party under the leadership of the Chief Minister Akhilesh Yadav who formed a coalition with Rajiv Gandhi's Indian National Congress. Bahujan Samajwadi Party lead by the former Chief Minister Mayawati formed the third front.
+          In a series of visualizations we explore the various dimensions of BJP's victory.
         </p>
       </div>
       <div class="col-md-3"></div>
@@ -66,7 +66,7 @@
       <div class="col-md-3">
         <div class="section" style="margin-left:10%;">
           <p>
-            A number of Michelangelo's works of painting, sculpture, and architecture rank among the most famous in existence.[1] His output in every field of interest was prodigious; given the sheer volume of surviving correspondence, sketches, and reminiscences taken into account, he is the best-documented artist of the 16th century.
+            The chart and the linked map show the margin of victory in each of the 403 constituencies over the last 3 assembly elections. Hover mouse cursor over the dots in the chart or constituencies to see the votes polled by the winner and the runner up, and the margin of victory. You can also select a constituency through the pull-down menu or enter the name directly. Toggle between the votes and percentage of the margins of victory. 
           </p>
           <img src="images/margin_explained.png" style="width:100%;"/>
         </div>
@@ -104,62 +104,8 @@
       <div class="col-md-3"></div>
     </div>
   </div>
-  <div class="toviz"> </div>
-<div class="section">
-  <div class="options_container noselect" >
-		<div id="year_dropdown" data-old-value="17" data-first-run="true" autocomplete="off">
-			<form>
-				<div>
-					<label class="noselect">
-						<input autocomplete="off" name="year" type="radio" class="radio" onclick="makeviz(this)" value="07">
-						2007
-					</label>
-				</div>
-				<div>
-					<label class="noselect">
-						<input autocomplete="off" name="year" type="radio" class="radio" onclick="makeviz(this)" value="12">
-						2012
-					</label>
-				</div>
-				<div>
-					<label class="noselect">
-						<input autocomplete="off" name="year" type="radio" class="radio" onclick="makeviz(this)" value="17" checked="checked">
-						2017
-					</label>
-				</div>
-			</form>
-		</div>
-		<div class="position_toggle_container noselect">
-			<div>
-				<label class="noselect">
-					<input autocomplete="off" type="checkbox" id="winner_checkbox" class="checkbox" onclick="toggle(this)" value="won" checked="checked">
-					<span class="checkbox_label">
-						Constituencies where the party won
-						<a onClick="checkOnly(this)" class="toggle_checkbox" href="#">Only</a>
-					</span>
-				</label>
-			</div>
-			<div>
-				<label class="noselect">
-					<input autocomplete="off" type="checkbox" id="runnerup_checkbox" class="checkbox" onclick="toggle(this)" value="runnerup" checked="checked">
-					<span class="checkbox_label">
-						Constituencies where the party was the runner up
-						<a onClick="checkOnly(this)" class="toggle_checkbox" href="#">Only</a>
-					</span>
-				</label>
-			</div>
-			<div>
-				<label class="noselect">
-					<input autocomplete="off" type="checkbox" id="below_checkbox" class="checkbox" onclick="toggle(this)" value="third" checked="checked">
-					<span class="checkbox_label">
-						Constituencies where the party was 3rd and Below
-						<a onClick="checkOnly(this)" class="toggle_checkbox" href="#">Only</a>
-					</span>
-				</label>
-			</div>
-		</div>
-		</div>
-</div>
+
+
   <div class="section">
     <div class='row'>
       <div class="col-md-3"></div>
@@ -235,7 +181,6 @@
     </div>
   </div>
   <script src="js/margin.js">  </script>
-  <script src="js/turnout.js">  </script>
   <script src="js/category.js">  </script>
 </body>
 </html>
