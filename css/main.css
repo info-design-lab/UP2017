@@ -106,6 +106,16 @@ input:checked + .slider:before {
 	stroke-width:0.2;
 }
 
+.tool{
+  z-index: 1000000;
+}
+
+svg{
+  overflow: visible;
+}
+g{
+  overflow: visible;
+}
 
 .map_label{
   font-size: 14px;
