@@ -8,7 +8,7 @@ body, html{
 	display:inline !important;
 }
 
-.margin_text{
+.turnout_text{
 	position:relative;
 	z-index:-999;
 }
