@@ -131,13 +131,13 @@ function makecategorymap(error, data_2007, data_2012, data_2017, up) {
         .attr('height', category_width / 4)
         .attr('width', 150)
         .append("g").attr("transform", "translate( " + (6*category_width / 6) + ", " + (category_height + 50) + ") rotate(90)");
-        var x = d3.scaleBand()
+    var x = d3.scaleBand()
             .rangeRound([0, 150])
             .padding(0.3)
             .align(0.3);
-        var y = d3.scaleLinear()
+    var y = d3.scaleLinear()
             .rangeRound([category_width / 4, 0]);
-        var z = d3.scaleOrdinal(d3.schemeCategory20)
+    var z = d3.scaleOrdinal(d3.schemeCategory20)
             .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
             var stack = d3.stack();
     // Translate Map
@@ -255,7 +255,6 @@ function makecategorymap(error, data_2007, data_2012, data_2017, up) {
             });
     });
     d3.csv("data/category/stack_2007.csv", type, function(error, data) {
-
         data.sort(function(a, b) {
             return b.total - a.total;
         });
