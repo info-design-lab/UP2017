@@ -6,7 +6,6 @@ var party_colors = {
     'SP': '#bd0026', // red #d37689
     'IND': '#65737e'
 }
-
 var width = document.body.clientWidth * 0.90,
     height = 275;
 var card_circle_radius = 6;
@@ -23,7 +22,6 @@ var margin_map_svg = d3.select("#margin-map").append("svg")
 var margin_map_legend = d3.select("#margin-legend").append("svg")
     .attr("width", $("#margin-legend").width())
     .attr("height", 180);
-
 queue()
     //.defer(d3.csv, 'data/margins/2002.csv')
     .defer(d3.csv, 'data/margins/2007.csv')
@@ -31,7 +29,7 @@ queue()
     .defer(d3.csv, 'data/margins/2017.csv')
     .defer(d3.json, 'map/uptopo.json')
     .await(makemarginmap);
-var map_tooltip = d3.select("body")
+var map_tooltip = d3.select("#margin-map")
     .append("div")
     .attr('class', 'd3-tip')
     .style("position", "absolute")
@@ -197,13 +195,12 @@ function makemarginmap(error, data_2007, data_2012, data_2017, up) {
         .on('mouseover', function(d) {
             $('#map' + (selected_const_code + 1)).removeClass('map-hover');
             $(".js-example-basic-single").val(d.properties.AC_NO).change();
-            if(event){
-              map_tooltip.style("visibility", "visible")
-            }
+            map_tooltip.style("visibility", "visible");
             map_tooltip.html('<strong>' + data_2017[d.properties.AC_NO - 1]['constituency'] + '</strong><br>' + data_2017[d.properties.AC_NO - 1][current_mode]);
         })
         .on("mousemove", function(d) {
-            return map_tooltip.style("top", (event.pageY - 50) + "px").style("left", (event.pageX + 10) + "px");
+            mouse = d3.mouse(this);
+            return map_tooltip.style("top", (mouse[1] - 60) + "px").style("left", (mouse[0] + 20) + "px");
         })
         .on("mouseout", function(d) {
             return map_tooltip.style("visibility", "hidden");
