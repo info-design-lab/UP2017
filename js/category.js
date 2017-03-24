@@ -183,6 +183,13 @@ function makecategorymap(error, data_2007, data_2012, data_2017, up) {
             .call(d3.axisBottom(x))
             .selectAll("text")
             .style("text-anchor", "end")
+            .style('fill', function(d){
+              if(party_colors[d]){
+                return party_colors[d];
+              } else{
+                return '#6a51a3';
+              }
+            })
             .attr("dx", "-1em")
             .attr("dy", "-0.5em")
             .attr("transform", function(d) {
@@ -238,6 +245,13 @@ function makecategorymap(error, data_2007, data_2012, data_2017, up) {
             .call(d3.axisBottom(x))
             .selectAll("text")
             .style("text-anchor", "end")
+            .style('fill', function(d){
+              if(party_colors[d]){
+                return party_colors[d];
+              } else{
+                return '#6a51a3';
+              }
+            })
             .attr("dx", "-1em")
             .attr("dy", "-0.5em")
             .attr("transform", function(d) {
@@ -293,6 +307,13 @@ function makecategorymap(error, data_2007, data_2012, data_2017, up) {
             .call(d3.axisBottom(x))
             .selectAll("text")
             .style("text-anchor", "end")
+            .style('fill', function(d){
+              if(party_colors[d]){
+                return party_colors[d];
+              } else{
+                return '#6a51a3';
+              }
+            })
             .attr("dx", "-1em")
             .attr("dy", "-0.5em")
             .attr("transform", function(d) {
