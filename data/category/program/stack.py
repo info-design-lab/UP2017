@@ -2,7 +2,7 @@ import csv
 from re import match
 
 data = []
-with open('2007.csv') as csvfile:
+with open('2017.csv') as csvfile:
     readCSV = csv.reader(csvfile, delimiter=',')
     for row in readCSV:
         data.append(row)
@@ -44,6 +44,6 @@ res = [['party', 'S', 'S&F', 'F', 'F&M', 'M']]
 for i in d:
     res.append([i, *d[i]])
 print(res)
-with open('stack_2007.csv', 'w', newline='') as fp:
+with open('stack_2017.csv', 'w', newline='') as fp:
     a = csv.writer(fp, delimiter=',')
     a.writerows(res)

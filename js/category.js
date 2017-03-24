@@ -138,7 +138,7 @@ function makecategorymap(error, data_2007, data_2012, data_2017, up) {
     var y = d3.scaleLinear()
             .rangeRound([category_width / 4, 0]);
     var z = d3.scaleOrdinal(d3.schemeCategory20)
-            .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
+            .range(["#fbb4ae", "#b3cde3", "#ccebc5", "#decbe4", "#decbe4"]);
             var stack = d3.stack();
     // Translate Map
     map_2017.attr("transform", "translate(" + (-category_width / 3) + ", 0)");
