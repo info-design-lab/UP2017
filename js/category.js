@@ -1,4 +1,3 @@
-
 var category_width = $("#category-chart").width();
 var category_height = category_width / 3.5;
 var category_svg = d3.select("#category-chart").append("svg").attr("width", category_width).attr("height", category_height + 200);
@@ -139,24 +138,25 @@ function makecategorymap(error, data_2007, data_2012, data_2017, up) {
             .rangeRound([category_width / 4, 0]);
     var z = d3.scaleOrdinal(d3.schemeCategory20)
             .range(["#fbb4ae", "#b3cde3", "#ccebc5", "#decbe4", "#decbe4"]);
-            var stack = d3.stack();
+    var stack = d3.stack();
+    var stack_data_17, stack_data_12, stack_data_07;
     // Translate Map
     map_2017.attr("transform", "translate(" + (-category_width / 3) + ", 0)");
     map_2007.attr("transform", "translate(" + (category_width / 3) + ", 0)");
-
     d3.csv("data/category/stack_2017.csv", type, function(error, data) {
-        data.sort(function(a, b) {
+        stack_data_17 = data;
+        stack_data_17.sort(function(a, b) {
             return b.total - a.total;
         });
-        x.domain(data.map(function(d) {
+        x.domain(stack_data_17.map(function(d) {
             return d.party;
         }));
-        y.domain([0, d3.max(data, function(d) {
+        y.domain([0, d3.max(stack_data_17, function(d) {
             return d.total;
         })]).nice();
-        z.domain(data.columns.slice(1));
-        g_17.selectAll(".serie")
-            .data(stack.keys(data.columns.slice(1))(data))
+        z.domain(stack_data_17.columns.slice(1));
+        stack_map_17 = g_17.selectAll(".serie")
+            .data(stack.keys(stack_data_17.columns.slice(1))(stack_data_17))
             .enter().append("g")
             .attr("class", "serie")
             .attr("fill", function(d) {
@@ -177,7 +177,7 @@ function makecategorymap(error, data_2007, data_2012, data_2017, up) {
                 return y(d[0]) - y(d[1]);
             })
             .attr("width", x.bandwidth());
-        g_17.append("g")
+        stack_x_17 = g_17.append("g")
             .attr("class", "axis axis--x")
             .attr("transform", "translate(0," + category_width / 4 + ")")
             .call(d3.axisBottom(x))
@@ -195,7 +195,7 @@ function makecategorymap(error, data_2007, data_2012, data_2017, up) {
             .attr("transform", function(d) {
                 return "rotate(-90)"
             });
-        g_17.append("g")
+        stack_y_17 = g_17.append("g")
             .attr("class", "axis axis--y")
             .call(d3.axisLeft(y).ticks(10, "s"))
             .selectAll("text")
@@ -207,6 +207,7 @@ function makecategorymap(error, data_2007, data_2012, data_2017, up) {
             });
     });
     d3.csv("data/category/stack_2012.csv", type, function(error, data) {
+        stack_data_12 = data;
         data.sort(function(a, b) {
             return b.total - a.total;
         });
@@ -217,7 +218,7 @@ function makecategorymap(error, data_2007, data_2012, data_2017, up) {
             return d.total;
         })]).nice();
         z.domain(data.columns.slice(1));
-        g_12.selectAll(".serie")
+        stack_map_12 = g_12.selectAll(".serie")
             .data(stack.keys(data.columns.slice(1))(data))
             .enter().append("g")
             .attr("class", "serie")
@@ -239,7 +240,7 @@ function makecategorymap(error, data_2007, data_2012, data_2017, up) {
                 return y(d[0]) - y(d[1]);
             })
             .attr("width", x.bandwidth());
-        g_12.append("g")
+        stack_x_12 = g_12.append("g")
             .attr("class", "axis axis--x")
             .attr("transform", "translate(0," + category_width / 4 + ")")
             .call(d3.axisBottom(x))
@@ -257,7 +258,7 @@ function makecategorymap(error, data_2007, data_2012, data_2017, up) {
             .attr("transform", function(d) {
                 return "rotate(-90)"
             });
-        g_12.append("g")
+        stack_x_07 = g_12.append("g")
             .attr("class", "axis axis--y")
             .call(d3.axisLeft(y).ticks(10, "s"))
             .selectAll("text")
@@ -269,6 +270,7 @@ function makecategorymap(error, data_2007, data_2012, data_2017, up) {
             });
     });
     d3.csv("data/category/stack_2007.csv", type, function(error, data) {
+        stack_data_07 = data;
         data.sort(function(a, b) {
             return b.total - a.total;
         });
@@ -279,7 +281,7 @@ function makecategorymap(error, data_2007, data_2012, data_2017, up) {
             return d.total;
         })]).nice();
         z.domain(data.columns.slice(1));
-        g_07.selectAll(".serie")
+        stack_map_07 = g_07.selectAll(".serie")
             .data(stack.keys(data.columns.slice(1))(data))
             .enter().append("g")
             .attr("class", "serie")
@@ -301,7 +303,7 @@ function makecategorymap(error, data_2007, data_2012, data_2017, up) {
                 return y(d[0]) - y(d[1]);
             })
             .attr("width", x.bandwidth());
-        g_07.append("g")
+        stack_x_07 = g_07.append("g")
             .attr("class", "axis axis--x")
             .attr("transform", "translate(0," + category_width / 4 + ")")
             .call(d3.axisBottom(x))
@@ -319,7 +321,7 @@ function makecategorymap(error, data_2007, data_2012, data_2017, up) {
             .attr("transform", function(d) {
                 return "rotate(-90)"
             });
-        g_07.append("g")
+        stack_y_07 = g_07.append("g")
             .attr("class", "axis axis--y")
             .call(d3.axisLeft(y).ticks(10, "s"))
             .selectAll("text")
@@ -374,9 +376,6 @@ function makecategorymap(error, data_2007, data_2012, data_2017, up) {
         } else if (document.getElementById("SC").checked && data[i - 1]['category'] == 'S.C.') {
             return true;
         }
-        //else if(document.getElementById("ST").checked && data[i - 1]['category'] == 'S.C.'){
-        //  return true;
-        //}
         else {
             return false;
         }
