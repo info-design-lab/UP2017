@@ -1,5 +1,5 @@
-var category_width = document.body.clientWidth;
-var category_height = document.body.clientWidth / 3.5;
+var category_width = $("#category-chart").width();
+var category_height = category_width / 3.5;
 var category_svg = d3.select("#category-chart").append("svg").attr("width", category_width).attr("height", category_height + 160);
 var category_bjp_const = category_inc_const = category_bsp_const = category_sp_const = category_other_const = 0;
 var category_tooltip = d3.select("body")
@@ -22,71 +22,71 @@ function makecategorymap(error, data_2007, data_2012, data_2017, up) {
     //Add Year Name
     for(var i=0; i<3; i++){
       category_svg.append('text')
-          .attr('x', document.body.clientWidth*(2*(2-i) + 1)/6)
+          .attr('x', category_width*(2*(2-i) + 1)/6)
           .attr('y', category_height + 20)
           .style('font-size', '20px')
           .attr('text-anchor', 'middle')
           .text(2007 + 5*i);
       category_svg.append('text')
-              .attr('x', document.body.clientWidth*(2*i + 1)/6)
+              .attr('x', category_width*(2*i + 1)/6)
               .attr('y', category_height + 40)
               .attr('fill', party_colors['BJP'])
               .attr('text-anchor', 'end')
               .text('BJP:');
       category_svg.append('text')
-              .attr('x', document.body.clientWidth*(2*i + 1)/6 + 3)
+              .attr('x', category_width*(2*i + 1)/6 + 3)
               .attr('y', category_height + 40)
               .attr('id', 'category-bjp-const' + (2007 + 5*i))
               .attr('fill', '#555555')
               .attr('text-anchor', 'start')
               .text('0');
       category_svg.append('text')
-              .attr('x', document.body.clientWidth*(2*i + 1)/6)
+              .attr('x', category_width*(2*i + 1)/6)
               .attr('y', category_height + 60)
               .attr('fill', party_colors['INC'])
               .attr('text-anchor', 'end')
               .text('INC:');
               category_svg.append('text')
-                      .attr('x', document.body.clientWidth*(2*i + 1)/6 + 3)
+                      .attr('x', category_width*(2*i + 1)/6 + 3)
                       .attr('y', category_height + 60)
                       .attr('id', 'category-inc-const' + (2007 + 5*i))
                       .attr('fill', '#555555')
                       .attr('text-anchor', 'start')
                       .text('0');
       category_svg.append('text')
-              .attr('x', document.body.clientWidth*(2*i + 1)/6)
+              .attr('x', category_width*(2*i + 1)/6)
               .attr('y', category_height + 80)
               .attr('fill', party_colors['BSP'])
               .attr('text-anchor', 'end')
               .text('BSP:');
       category_svg.append('text')
-                      .attr('x', document.body.clientWidth*(2*i + 1)/6 + 3)
+                      .attr('x', category_width*(2*i + 1)/6 + 3)
                       .attr('y', category_height + 80)
                       .attr('id', 'category-bsp-const' + (2007 + 5*i))
                       .attr('fill', '#555555')
                       .attr('text-anchor', 'start')
                       .text('0');
       category_svg.append('text')
-              .attr('x', document.body.clientWidth*(2*i + 1)/6)
+              .attr('x', category_width*(2*i + 1)/6)
               .attr('y', category_height + 100)
               .attr('fill', party_colors['SP'])
               .attr('text-anchor', 'end')
               .text('SP:');
               category_svg.append('text')
-                      .attr('x', document.body.clientWidth*(2*i + 1)/6 + 3)
+                      .attr('x', category_width*(2*i + 1)/6 + 3)
                       .attr('y', category_height + 100)
                       .attr('id', 'category-sp-const' + (2007 + 5*i))
                       .attr('fill', '#555555')
                       .attr('text-anchor', 'start')
                       .text('0');
       category_svg.append('text')
-              .attr('x', document.body.clientWidth*(2*i + 1)/6)
+              .attr('x', category_width*(2*i + 1)/6)
               .attr('y', category_height + 120)
-              .attr('fill', '#65737e')
+              .attr('fill', '#6a51a3')
               .attr('text-anchor', 'end')
               .text('OTHER:');
               category_svg.append('text')
-                      .attr('x', document.body.clientWidth*(2*i + 1)/6 + 3)
+                      .attr('x', category_width*(2*i + 1)/6 + 3)
                       .attr('y', category_height + 120)
                       .attr('id', 'category-other-const' + (2007 + 5*i))
                       .attr('fill', '#555555')
@@ -96,12 +96,12 @@ function makecategorymap(error, data_2007, data_2012, data_2017, up) {
               .style("stroke", "#65737e")          // colour the line
               .style("stroke-width", 2)
               .style("stroke-linecap", "round")
-              .attr('x1', document.body.clientWidth*(2*i + 1)/6 + 5)
+              .attr('x1', category_width*(2*i + 1)/6 + 5)
               .attr('y1', category_height + 127)
-              .attr('x2', document.body.clientWidth*(2*i + 1)/6 + 25)
+              .attr('x2', category_width*(2*i + 1)/6 + 25)
               .attr('y2', category_height + 127);
               category_svg.append('text')
-                      .attr('x', document.body.clientWidth*(2*i + 1)/6 + 3)
+                      .attr('x', category_width*(2*i + 1)/6 + 3)
                       .attr('y', category_height + 140)
                       .attr('id', 'category-total-const' + (2007 + 5*i))
                       .attr('fill', '#555555')
@@ -137,7 +137,7 @@ function makecategorymap(error, data_2007, data_2012, data_2017, up) {
                 if (party_colors[data_2017[d.properties.AC_NO - 1]['party']]) {
                     return party_colors[data_2017[d.properties.AC_NO - 1]['party']];
                 } else {
-                    return 'red';
+                    return '#6a51a3';
                 }
             } else {
                 return '#e5e6eb';
@@ -183,7 +183,7 @@ function makecategorymap(error, data_2007, data_2012, data_2017, up) {
               if (party_colors[data_2012[d.properties.AC_NO - 1]['party']]) {
                   return party_colors[data_2012[d.properties.AC_NO - 1]['party']];
               } else {
-                  return 'red';
+                  return '#6a51a3';
               }
           } else {
               return '#e5e6eb';
@@ -231,7 +231,7 @@ function makecategorymap(error, data_2007, data_2012, data_2017, up) {
               if (party_colors[data_2007[d.properties.AC_NO - 1]['party']]) {
                   return party_colors[data_2007[d.properties.AC_NO - 1]['party']];
               } else {
-                  return 'red';
+                  return '#6a51a3';
               }
           } else {
               return '#e5e6eb';
