@@ -1,7 +1,6 @@
 var category_width = $("#category-chart").width();
 var category_height = category_width / 3.5;
 var category_svg = d3.select("#category-chart").append("svg").attr("width", category_width).attr("height", category_height + 160);
-var category_bjp_const = category_inc_const = category_bsp_const = category_sp_const = category_other_const = 0;
 var category_tooltip = d3.select("body")
     .append("div")
     .attr('class', 'd3-tip')
@@ -71,27 +70,10 @@ function makecategorymap(error, data_2007, data_2012, data_2017, up) {
             $(this).removeClass('map-hover');
             return category_tooltip.style("visibility", "hidden");
         });
-    update_numbers(2017);
-    category_bjp_const = category_inc_const = category_bsp_const = category_sp_const = category_other_const = 0;
     var map_2012 = d.append("path")
         .attr("d", path)
         .attr('fill', function(d) {
           if (select_const(d.properties.AC_NO, data_2012)) {
-              if(data_2012[d.properties.AC_NO - 1]['party'] == 'BJP'){
-                category_bjp_const += 1;
-              }
-              else if(data_2012[d.properties.AC_NO - 1]['party'] == 'INC'){
-                category_inc_const += 1;
-              }
-              else if(data_2012[d.properties.AC_NO - 1]['party'] == 'BSP'){
-                category_bsp_const += 1;
-              }
-              else if(data_2012[d.properties.AC_NO - 1]['party'] == 'SP'){
-                category_sp_const += 1;
-              }
-              else {
-                category_other_const += 1;
-              }
               if (party_colors[data_2012[d.properties.AC_NO - 1]['party']]) {
                   return party_colors[data_2012[d.properties.AC_NO - 1]['party']];
               } else {
@@ -118,28 +100,10 @@ function makecategorymap(error, data_2007, data_2012, data_2017, up) {
             $(this).removeClass('map-hover');
             return category_tooltip.style("visibility", "hidden");
         });
-    update_numbers(2012);
-    category_bjp_const = category_inc_const = category_bsp_const = category_sp_const = category_other_const = 0;
     var map_2007 = d.append("path")
         .attr("d", path)
         .attr('fill', function(d) {
           if (select_const(d.properties.AC_NO, data_2007)) {
-              if(data_2007[d.properties.AC_NO - 1]['party'] == 'BJP'){
-                category_bjp_const += 1;
-              }
-              else if(data_2007[d.properties.AC_NO - 1]['party'] == 'INC'){
-                category_inc_const += 1;
-              }
-              else if(data_2007[d.properties.AC_NO - 1]['party'] == 'BSP'){
-                category_bsp_const += 1;
-              }
-              else if(data_2007[d.properties.AC_NO - 1]['party'] == 'SP'){
-                category_sp_const += 1;
-              }
-              else {
-                category_other_const += 1;
-              }
-
               if (party_colors[data_2007[d.properties.AC_NO - 1]['party']]) {
                   return party_colors[data_2007[d.properties.AC_NO - 1]['party']];
               } else {
@@ -165,7 +129,6 @@ function makecategorymap(error, data_2007, data_2012, data_2017, up) {
             $(this).removeClass('map-hover');
             return category_tooltip.style("visibility", "hidden");
         });
-    update_numbers(2007);
     // Translate Map
     map_2017.attr("transform", "translate(" + (-category_width / 3) + ", 0)");
     map_2007.attr("transform", "translate(" + (category_width / 3) + ", 0)");
@@ -185,25 +148,8 @@ function makecategorymap(error, data_2007, data_2012, data_2017, up) {
         }
     }
     $(".category-checkbox").change(function() {
-        category_bjp_const = category_inc_const = category_bsp_const = category_sp_const = category_other_const = 0;
         map_2017.transition().duration(1000).attr('fill', function(d) {
             if (select_const(d.properties.AC_NO, data_2017)) {
-                if(data_2017[d.properties.AC_NO - 1]['party'] == 'BJP'){
-                  category_bjp_const += 1;
-                }
-                else if(data_2017[d.properties.AC_NO - 1]['party'] == 'INC'){
-                  category_inc_const += 1;
-                }
-                else if(data_2017[d.properties.AC_NO - 1]['party'] == 'BSP'){
-                  category_bsp_const += 1;
-                }
-                else if(data_2017[d.properties.AC_NO - 1]['party'] == 'SP'){
-                  category_sp_const += 1;
-                }
-                else {
-                  category_other_const += 1;
-                }
-
                 if (party_colors[data_2017[d.properties.AC_NO - 1]['party']]) {
                     return party_colors[data_2017[d.properties.AC_NO - 1]['party']];
                 } else {
@@ -213,25 +159,8 @@ function makecategorymap(error, data_2007, data_2012, data_2017, up) {
                 return '#e5e6eb';
             }
         })
-        update_numbers(2017);
-        category_bjp_const = category_inc_const = category_bsp_const = category_sp_const = category_other_const = 0;
         map_2012.transition().duration(1000).attr('fill', function(d) {
           if (select_const(d.properties.AC_NO, data_2012)) {
-              if(data_2012[d.properties.AC_NO - 1]['party'] == 'BJP'){
-                category_bjp_const += 1;
-              }
-              else if(data_2012[d.properties.AC_NO - 1]['party'] == 'INC'){
-                category_inc_const += 1;
-              }
-              else if(data_2012[d.properties.AC_NO - 1]['party'] == 'BSP'){
-                category_bsp_const += 1;
-              }
-              else if(data_2012[d.properties.AC_NO - 1]['party'] == 'SP'){
-                category_sp_const += 1;
-              }
-              else {
-                category_other_const += 1;
-              }
               if (party_colors[data_2012[d.properties.AC_NO - 1]['party']]) {
                   return party_colors[data_2012[d.properties.AC_NO - 1]['party']];
               } else {
@@ -242,26 +171,8 @@ function makecategorymap(error, data_2007, data_2012, data_2017, up) {
           }
 
         })
-        update_numbers(2012);
-        category_bjp_const = category_inc_const = category_bsp_const = category_sp_const = category_other_const = 0;
         map_2007.transition().duration(1000).attr('fill', function(d) {
           if (select_const(d.properties.AC_NO, data_2007)) {
-              if(data_2007[d.properties.AC_NO - 1]['party'] == 'BJP'){
-                category_bjp_const += 1;
-              }
-              else if(data_2007[d.properties.AC_NO - 1]['party'] == 'INC'){
-                category_inc_const += 1;
-              }
-              else if(data_2007[d.properties.AC_NO - 1]['party'] == 'BSP'){
-                category_bsp_const += 1;
-              }
-              else if(data_2007[d.properties.AC_NO - 1]['party'] == 'SP'){
-                category_sp_const += 1;
-              }
-              else {
-                category_other_const += 1;
-              }
-
               if (party_colors[data_2007[d.properties.AC_NO - 1]['party']]) {
                   return party_colors[data_2007[d.properties.AC_NO - 1]['party']];
               } else {
@@ -271,14 +182,6 @@ function makecategorymap(error, data_2007, data_2012, data_2017, up) {
               return '#e5e6eb';
           }
         })
-        update_numbers(2007);
     });
-    function update_numbers(year){
-      d3.select('#category-bjp-const'+ year).text(category_bjp_const);
-      d3.select('#category-inc-const'+ year).text(category_inc_const);
-      d3.select('#category-bsp-const'+ year).text(category_bsp_const);
-      d3.select('#category-sp-const'+ year).text(category_sp_const);
-      d3.select('#category-other-const'+ year).text(category_other_const);
-      d3.select('#category-total-const'+ year).text(category_bjp_const + category_other_const + category_sp_const + category_bsp_const + category_inc_const);
     }
 }
