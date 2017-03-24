@@ -110,6 +110,7 @@ input:checked + .slider:before {
 }
 
 .tool{
+	position:relative;
   z-index: 1000000;
 }
 
