@@ -23,7 +23,7 @@ function showtool(){
 
 
 	d3.selectAll(consti).each(function(){
-		d3.select(this).style("stroke-width","3");
+		d3.select(this).style("stroke-width","1");
 	});
 
 	var g_turnout=d3.select(".turnout.toviz");
