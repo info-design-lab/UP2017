@@ -156,6 +156,17 @@ d3.json("map/uptopo.json",function(error,up){
 	.style("stroke-width",0.2)
 	.style("stroke","black");
 
+	g12.append("text").text("Muslim Constituencies").attr("transform",function(){return "translate("+((width/3-55))+","+(20)+")";}).attr("class","map_label").attr("text-anchor","middle");
+
+	g17.append("text").text("2017 Results").attr("transform",function(){return "translate("+((width/3-55))+","+(20)+")";}).attr("class","map_label").attr("text-anchor","middle");
+
+	var reflist=['INC','BJP','BSP','SP',"SBSP","QED","IEMC","PECP"];
+	for (i=0;i<reflist.length;i++){
+		//debugger;
+		g17.append("circle").attr("r","8px").attr("transform",("translate("+(width/2-padding)+","+i*20+")")).attr("fill",party_colors[reflist[i]]);
+		g17.append("text").text(reflist[i]).attr("font-size","14px").attr("transform",("translate("+(width/2-padding/2)+","+(i*20+6)+")")).attr("text-anchor","start");
+	}
+
 	g17.selectAll("path")
 	.data(geo_obj.features)
 	.enter().append("path")
@@ -197,15 +208,6 @@ d3.json("map/uptopo.json",function(error,up){
 	.attr("width",150)
 	.attr("height",65);
 
-	g12.append("text").text("Muslim Constituencies").attr("transform",function(){return "translate("+((width/3-55))+","+(20)+")";}).attr("class","map_label").attr("text-anchor","middle");
 
-	g17.append("text").text("2017 Results").attr("transform",function(){return "translate("+((width/3-55))+","+(20)+")";}).attr("class","map_label").attr("text-anchor","middle");
-
-	var reflist=['INC','BJP','BSP','SP',"SBSP","QED","IEMC","PECP"];
-	for (i=0;i<reflist.length;i++){
-		//debugger;
-		g17.append("circle").attr("r","8px").attr("transform",("translate("+(width/2-padding)+","+i*20+")")).attr("fill",party_colors[reflist[i]]);
-		g17.append("text").text(reflist[i]).attr("font-size","14px").attr("transform",("translate("+(width/2-padding/2)+","+(i*20+6)+")")).attr("text-anchor","start");
-	}
 });
 
