@@ -162,7 +162,7 @@ d3.json("map/uptopo.json",function(error,up){
 	var reflist=['INC','BJP','BSP','SP',"SBSP","QED","IEMC","PECP"];
 	for (i=0;i<reflist.length;i++){
 		//debugger;
-		g17.append("circle").attr("r","8px").attr("transform",("translate("+(width/2-padding)+","+i*20+")")).attr("fill",party_colors[reflist[i]]);
+		g17.append("circle").attr("r","8px").attr("transform",("translate("+(width/2-padding)+","+i*20+")")).attr("fill",party_colors[reflist[i]]).style('opacity', '0.7');
 		g17.append("text").text(reflist[i]).attr("font-size","14px").attr("transform",("translate("+(width/2-padding/2)+","+(i*20+6)+")")).attr("text-anchor","start");
 	}
 
