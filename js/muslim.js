@@ -20,7 +20,7 @@ function show_m_tool(){
 
 	d3.select(".mviz_container").selectAll(consti).each(function(){
 
-		d3.select(this).style("stroke-width","3");
+		d3.select(this).style("stroke-width","1");
 	});
 
 	var g12=d3.select(".mviz12");
