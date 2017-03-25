@@ -36,6 +36,24 @@ body, html{
 
 }
 
+.axis--x line{
+  stroke:transparent;
+}
+.axis--x path  {
+  stroke:transparent;
+}
+
+.axis--y line{
+  stroke:#c0c5ce;
+}
+.axis--y path {
+  stroke:#c0c5ce;
+}
+
+.axis--y text {
+  stroke:#a7adba;
+}
+
 .d3-tip {
   line-height: 1;
   font-weight: normal;

@@ -131,7 +131,7 @@ function makecategorymap(error, data_2007, data_2012, data_2017, up) {
         .attr('width', 150)
         .append("g").attr("transform", "translate( " + (6*category_width / 6) + ", " + (category_height + 50) + ") rotate(90)");
     var x = d3.scaleBand()
-            .rangeRound([0, 150])
+            .rangeRound([0, 100])
             .padding(0.3)
             .align(0.3);
     var y = d3.scaleLinear()
