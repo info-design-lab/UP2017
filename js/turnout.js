@@ -381,6 +381,25 @@ function newmaps(year){
 		g_sp=d3.select(".sp.toviz");
 		g_bsp=d3.select(".bsp.toviz");
 
+		var defs = svg.append("defs");
+		var filter = defs.append("filter")
+		    .attr("id", "drop-shadow")
+		    .attr("height", "130%");
+		filter.append("feGaussianBlur")
+		    .attr("in", "SourceAlpha")
+		    .attr("stdDeviation", 2)
+		    .attr("result", "blur");
+		filter.append("feOffset")
+		    .attr("in", "blur")
+		    .attr("dx", 2)
+		    .attr("dy", 2)
+		    .attr("result", "offsetBlur");
+		var feMerge = filter.append("feMerge");
+		feMerge.append("feMergeNode")
+		    .attr("in", "offsetBlur")
+		feMerge.append("feMergeNode")
+		    .attr("in", "SourceGraphic");
+
 		d3.selectAll("g.toviz").each(function(){
 			var tool=d3.select(this).append("g").attr("class","tool hidden");
 			tool.append("g").attr("class","description")
@@ -388,7 +407,8 @@ function newmaps(year){
 			.attr("rx", 3)
 			.attr("ry", 3)
 			.attr("width","150")
-			.attr("height",65);
+			.attr("height",65)
+			.style("filter", "url(#drop-shadow)");
 		});
 
 		//g_turnout.append("rect").attr("class","overlay")

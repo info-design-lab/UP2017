@@ -180,7 +180,8 @@ g{
 
 .description rect {
     stroke: #000;
-    stroke-width:1.5px;
+    stroke-width: 0.5px;
+    border: 2px solid black;
     fill: #fff;
     opacity: 1;
 }

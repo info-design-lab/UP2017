@@ -99,7 +99,6 @@ d3.json("map/uptopo.json",function(error,up){
 
 	if (error) throw error;
 
-
 	var geo_obj=topojson.feature(up,up.objects.up);
 
 	var width=1000;
@@ -194,6 +193,25 @@ d3.json("map/uptopo.json",function(error,up){
 	.style("stroke-width",0.2)
 	.style("stroke","black");
 
+	var defs = svg.append("defs");
+	var filter = defs.append("filter")
+	    .attr("id", "drop-shadow")
+	    .attr("height", "130%");
+	filter.append("feGaussianBlur")
+	    .attr("in", "SourceAlpha")
+	    .attr("stdDeviation", 2)
+	    .attr("result", "blur");
+	filter.append("feOffset")
+	    .attr("in", "blur")
+	    .attr("dx", 2)
+	    .attr("dy", 2)
+	    .attr("result", "offsetBlur");
+	var feMerge = filter.append("feMerge");
+	feMerge.append("feMergeNode")
+	    .attr("in", "offsetBlur")
+	feMerge.append("feMergeNode")
+	    .attr("in", "SourceGraphic");
+
 	var tool=g12.append("g")
 	.attr("class","tool hidden");
 	tool.append("g").attr("class","description")
@@ -201,7 +219,8 @@ d3.json("map/uptopo.json",function(error,up){
 	.attr("rx", 3)
 	.attr("ry", 3)
 	.attr("width",150)
-	.attr("height",65);
+	.attr("height",65)
+	.style("filter", "url(#drop-shadow)");
 
 	var tool=g17.append("g")
 	.attr("class","tool hidden");
@@ -210,7 +229,8 @@ d3.json("map/uptopo.json",function(error,up){
 	.attr("rx", 3)
 	.attr("ry", 3)
 	.attr("width",150)
-	.attr("height",65);
+	.attr("height",65)
+	.style("filter", "url(#drop-shadow)");
 
 
 });
