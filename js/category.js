@@ -24,7 +24,8 @@ function makecategorymap(error, data_2007, data_2012, data_2017, up) {
       category_svg.append('text')
         .attr('x', (2*i+1)*category_width/6)
         .attr('y', category_height)
-        .text(2017 - i*5);
+        .text(2017 - i*5)
+        .style('font-size', '20px');
     }
     var geo_obj = topojson.feature(up, up.objects.up);
     var projection = d3.geoMercator()

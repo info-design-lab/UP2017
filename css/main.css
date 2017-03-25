@@ -35,6 +35,10 @@ body, html{
   stroke-width: 3px;
 
 }
+.axis{
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 15px;
+}
 
 .axis--x line{
   stroke:transparent;
@@ -51,8 +55,10 @@ body, html{
 }
 
 .axis--y text {
+  font-size: 10px;
   stroke:#a7adba;
 }
+
 
 .d3-tip {
   line-height: 1;
