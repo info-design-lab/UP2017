@@ -155,9 +155,9 @@ d3.json("map/uptopo.json",function(error,up){
 	.style("stroke-width",0.2)
 	.style("stroke","black");
 
-	g12.append("text").text("Muslim Constituencies").attr("transform",function(){return "translate("+((width/3-55))+","+(20)+")";}).attr("class","map_label").attr("text-anchor","middle");
+	g12.append("text").text("Muslim Constituencies").attr("transform",function(){return "translate("+((width/3-55))+","+(20)+")";}).attr("class","map_label").attr("text-anchor","middle").style('font-size', '20px');
 
-	g17.append("text").text("2017 Results").attr("transform",function(){return "translate("+((width/3-55))+","+(20)+")";}).attr("class","map_label").attr("text-anchor","middle");
+	g17.append("text").text("2017 Results").attr("transform",function(){return "translate("+((width/3-55))+","+(20)+")";}).attr("class","map_label").attr("text-anchor","middle").style('font-size', '20px');
 
 	var reflist=['INC','BJP','BSP','SP',"SBSP","QED","IEMC","PECP"];
 	for (i=0;i<reflist.length;i++){

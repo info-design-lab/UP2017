@@ -247,7 +247,7 @@ function newmaps(year){
 			var party_midcolors=['#ffd296',"#fcc376",'#b6deef',"#6bb9db",'#f9869d',"#e23d5e",'#c2f796',"#9ad868"];
 			var tout_colors=['#edf8fb','#bfd3e6','#9ebcda','#8c96c6','#8c6bb1','#88419d','#6e016b'];
 
-			g_turnout.append("text").text("VOTER TURNOUT").attr("transform",function(){return "translate("+(width/2-150)+",20)"}).attr("class","map_label").style("fill",party_colors["Turnout"]).attr("text-anchor","middle");
+			g_turnout.append("text").text("VOTER TURNOUT").attr("transform",function(){return "translate("+(width/2-150)+",20)"}).attr("class","map_label").style("fill",party_colors["Turnout"]).attr("text-anchor","middle").style('font-size', '20px');
 
 			for(var j=0;j<7;j++)
 			{
@@ -263,7 +263,7 @@ function newmaps(year){
 
 			for(var i=1;i<glist.length;i++){
 
-				glist[i].append("text").text(reflist[i]).attr("transform",function(){return "translate("+((width/4-55))+","+(20)+")";}).attr("class","map_label").attr("text-anchor","middle").style("fill",party_colors[reflist[i]]);
+				glist[i].append("text").text(reflist[i]).attr("transform",function(){return "translate("+((width/4-55))+","+(20)+")";}).attr("class","map_label").attr("text-anchor","middle").style("fill",party_colors[reflist[i]]).style('font-size', '17px');
 
 				glist[i].append("text").text("High Loss").attr("transform",function(){return "translate("+((width/4-84))+","+(50)+")";}).attr("class","map_label_small").attr("text-anchor","middle");
 
