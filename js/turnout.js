@@ -51,8 +51,9 @@ function showtool(){
 		var win_votes=d3.select(this).data()[0].properties["W_V"+year];
 		var win_party=d3.select(this).data()[0].properties["W_P"+year];
 		var runnerup_party=d3.select(this).data()[0].properties["RU_P"+year];
+		var runnerup_votes=d3.select(this).data()[0].properties["RU_V"+year];
 
-		var margin=Math.abs(+votes-(+win_votes))==0?+votes:Math.abs(+votes-(+win_votes));
+		var margin=Math.abs(+votes-(+win_votes))==0?+votes-(+runnerup_votes):Math.abs(+votes-(+win_votes));
 		if(party==win_party){
 			glist[i].select(".description").append("text").text(party).attr("x",5).attr("y",15).style("font-size","13px").style("font-weight","600").style("fill",party_colors[party]);
 			glist[i].select(".description").append("text").text(d3.select(this).data()[0].properties["AC_NAME"]).attr("x",5).attr("y",30).style("font-size","13px");
