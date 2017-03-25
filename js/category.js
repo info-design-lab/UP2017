@@ -1,7 +1,7 @@
 var category_width = $("#category-chart").width();
 var category_height = category_width / 3.5;
 var category_svg = d3.select("#category-chart").append("svg").attr("width", category_width).attr("height", category_height + 200);
-var category_tooltip = d3.select("body")
+var category_tooltip = d3.select("#category-chart")
     .append("div")
     .attr('class', 'd3-tip')
     .style("position", "absolute")
@@ -51,13 +51,12 @@ function makecategorymap(error, data_2007, data_2012, data_2017, up) {
         .style('stroke', 'black')
         .on('mouseover', function(d) {
             $(this).addClass('map-hover');
-            if (event) {
-                category_tooltip.style("visibility", "visible")
-            }
+            category_tooltip.style("visibility", "visible");
             category_tooltip.html('<strong>' + data_2017[d.properties.AC_NO - 1]['const_name'] + '</strong><br>' + 'Party: ' + data_2017[d.properties.AC_NO - 1]['party'] + '<br>' + 'Category: ' + data_2017[d.properties.AC_NO - 1]['category'] + '<br>Gender: ' + data_2017[d.properties.AC_NO - 1]['gender']);
         })
         .on("mousemove", function(d) {
-            return category_tooltip.style("top", (event.pageY - 50) + "px").style("left", (event.pageX + 10) + "px");
+            var mouse = d3.mouse(this);
+            return category_tooltip.style("top", (mouse[1] - 90) + "px").style("left", (mouse[0] + 20 - category_width/3) + "px");
         })
         .on("mouseout", function(d) {
             $(this).removeClass('map-hover');
@@ -81,13 +80,12 @@ function makecategorymap(error, data_2007, data_2012, data_2017, up) {
         .style('stroke', 'black')
         .on('mouseover', function(d) {
             $(this).addClass('map-hover');
-            if (event) {
-                category_tooltip.style("visibility", "visible")
-            }
+            category_tooltip.style("visibility", "visible");
             category_tooltip.html('<strong>' + data_2012[d.properties.AC_NO - 1]['const_name'] + '</strong><br>' + 'Party: ' + data_2012[d.properties.AC_NO - 1]['party'] + '<br>' + 'Category: ' + data_2012[d.properties.AC_NO - 1]['category'] + '<br>Gender: ' + data_2012[d.properties.AC_NO - 1]['gender']);
         })
         .on("mousemove", function(d) {
-            return category_tooltip.style("top", (event.pageY - 50) + "px").style("left", (event.pageX + 10) + "px");
+          var mouse = d3.mouse(this);
+          return category_tooltip.style("top", (mouse[1] - 90) + "px").style("left", (mouse[0] + 20) + "px");
         })
         .on("mouseout", function(d) {
             $(this).removeClass('map-hover');
@@ -110,13 +108,12 @@ function makecategorymap(error, data_2007, data_2012, data_2017, up) {
         .style('stroke', 'black')
         .on('mouseover', function(d) {
             $(this).addClass('map-hover');
-            if (event) {
-                category_tooltip.style("visibility", "visible")
-            }
+            category_tooltip.style("visibility", "visible");
             category_tooltip.html('<strong>' + data_2007[d.properties.AC_NO - 1]['const_name'] + '</strong><br>' + 'Party: ' + data_2007[d.properties.AC_NO - 1]['party'] + '<br>' + 'Category: ' + data_2007[d.properties.AC_NO - 1]['category'] + '<br>Gender: ' + data_2007[d.properties.AC_NO - 1]['gender']);
         })
         .on("mousemove", function(d) {
-            return category_tooltip.style("top", (event.pageY - 50) + "px").style("left", (event.pageX + 10) + "px");
+          var mouse = d3.mouse(this);
+          return category_tooltip.style("top", (mouse[1] - 90) + "px").style("left", (mouse[0] + 20 + category_width/3) + "px");
         })
         .on("mouseout", function(d) {
             $(this).removeClass('map-hover');
@@ -151,6 +148,7 @@ function makecategorymap(error, data_2007, data_2012, data_2017, up) {
     map_2017.attr("transform", "translate(" + (-category_width / 3) + ", 0)");
     map_2007.attr("transform", "translate(" + (category_width / 3) + ", 0)");
     d3.csv("data/category/stack_2017.csv", type, function(error, data) {
+        console.log(data)
         stack_data_17 = data;
         stack_data_17.sort(function(a, b) {
             return b.total - a.total;
