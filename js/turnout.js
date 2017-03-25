@@ -23,9 +23,9 @@ function showtool(){
 
 
 	d3.selectAll(consti).each(function(){
-
-		d3.select(this).style("stroke-width","1");
+		d3.select(this).style("stroke-width","3");
 	});
+
 	var g_turnout=d3.select(".turnout.toviz");
 	var g_bjp=d3.select(".bjp.toviz");
 	var g_inc=d3.select(".inc.toviz");
