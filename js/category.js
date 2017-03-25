@@ -20,6 +20,12 @@ queue()
 
 function makecategorymap(error, data_2007, data_2012, data_2017, up) {
     //Add Year Name
+    for(var i=0; i<3; i++){
+      category_svg.append('text')
+        .attr('x', (2*i+1)*category_width/6)
+        .attr('y', category_height)
+        .text(2017 - i*5);
+    }
     var geo_obj = topojson.feature(up, up.objects.up);
     var projection = d3.geoMercator()
         .fitSize([category_width, category_height], geo_obj);
