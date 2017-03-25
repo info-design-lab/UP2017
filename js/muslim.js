@@ -6,7 +6,8 @@ var party_colors = {
     'BJP': '#feb24c', // orange //#ffd296
     'BSP': '#7bc043', // green #9ac677
     'SP': '#bd0026', // red #d37689
-    'IND': '#65737e'
+    'IND': '#65737e',
+    "SBSP":"#22409A",
 };
 
 function show_m_tool(){
@@ -59,6 +60,7 @@ function show_m_tool(){
 
 	var win_votes=d3.select(this).data()[0].properties["W_V17"];
 	var win_party=d3.select(this).data()[0].properties["W_P17"];
+	var old_party=d3.select(this).data()[0].properties["W_P12"];
 	var runnerup_party=d3.select(this).data()[0].properties["RU_P17"];
 	var runnerup_votes=d3.select(this).data()[0].properties["RU_V17"];
 	var margin=+win_votes-(+runnerup_votes);
@@ -73,7 +75,7 @@ function show_m_tool(){
 	g17.select(".description")
 	.append("text")
 	.text(function(){
-		if(win_party==runnerup_party) return "Seat was retained";
+		if(win_party==old_party) return "Seat was retained";
 		else return "Seat was won";
 	})
 	.attr("x",5)
@@ -98,11 +100,11 @@ d3.json("map/uptopo.json",function(error,up){
 	var geo_obj=topojson.feature(up,up.objects.up);
 
 	var width=1000;
-	var height=600;
+	var height=300;
 	var padding=20;
 
 	var projection=d3.geoMercator()
-	.fitSize([(width/2-padding),(height/2-padding)],geo_obj);
+	.fitSize([(width/2-padding),(height-padding)],geo_obj);
 
 	var path=d3.geoPath().projection(projection);
 
@@ -145,7 +147,7 @@ d3.json("map/uptopo.json",function(error,up){
 			return party_colors[d.properties["W_P12"]];
 		}
 		else{
-			return "#aaa";
+			return "#eee";
 		}
 	})
 	.style("stroke-width",0.2)
@@ -172,7 +174,7 @@ d3.json("map/uptopo.json",function(error,up){
 			return party_colors[d.properties["W_P17"]];
 		}
 		else{
-			return "#aaa";
+			return "#eee";
 		}
 	})
 	.style("stroke-width",0.2)
@@ -192,5 +194,8 @@ d3.json("map/uptopo.json",function(error,up){
 	.attr("width",150)
 	.attr("height",65);
 
+	g12.append("text").text("Muslim Constituencies").attr("transform",function(){return "translate("+((width/3-55))+","+(20)+")";}).attr("class","map_label").attr("text-anchor","middle");
+
+	g17.append("text").text("2017 Results").attr("transform",function(){return "translate("+((width/3-55))+","+(20)+")";}).attr("class","map_label").attr("text-anchor","middle");
 });
 
