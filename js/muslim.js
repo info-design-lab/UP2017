@@ -198,6 +198,8 @@ d3.json("map/uptopo.json",function(error,up){
 	.attr("class","tool hidden");
 	tool.append("g").attr("class","description")
 	.append("rect")
+	.attr("rx", 3)
+	.attr("ry", 3)
 	.attr("width",150)
 	.attr("height",65);
 
@@ -205,6 +207,8 @@ d3.json("map/uptopo.json",function(error,up){
 	.attr("class","tool hidden");
 	tool.append("g").attr("class","description")
 	.append("rect")
+	.attr("rx", 3)
+	.attr("ry", 3)
 	.attr("width",150)
 	.attr("height",65);
 
