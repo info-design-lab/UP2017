@@ -8,6 +8,18 @@ body, html{
 	display:inline !important;
 }
 
+.mviz_container{
+  margin-top: 20px;
+  text-align: center;
+  position: relative;
+  z-index: 999;
+}
+
+.mviz_text{
+  position: relative;
+  z-index: -999;
+}
+
 .turnout_text{
 	position:relative;
 	z-index:-999;
