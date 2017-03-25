@@ -90,7 +90,7 @@ function show_m_tool(){
 
 }
 
-d3.json("uptoponew.json",function(error,up){
+d3.json("map/uptopo.json",function(error,up){
 
 	if (error) throw error;
 
