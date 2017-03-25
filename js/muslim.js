@@ -7,7 +7,10 @@ var party_colors = {
     'BSP': '#7bc043', // green #9ac677
     'SP': '#bd0026', // red #d37689
     'IND': '#65737e',
-    "SBSP":"#22409A",
+    "SBSP":"#feb24c",
+    "QED":"#D1FF3F",
+    "IEMC":"#00BF25",
+    "PECP":"#FF33CC"
 };
 
 function show_m_tool(){
@@ -100,7 +103,7 @@ d3.json("map/uptopo.json",function(error,up){
 	var geo_obj=topojson.feature(up,up.objects.up);
 
 	var width=1000;
-	var height=300;
+	var height=350;
 	var padding=20;
 
 	var projection=d3.geoMercator()
@@ -122,7 +125,7 @@ d3.json("map/uptopo.json",function(error,up){
 	.attr("class","mviz17")
 	.attr("width",width/2)
 	.attr("height",height)
-	.attr("transform",function(){return "translate("+width/2+",0)"});
+	.attr("transform",function(){return "translate("+(width/2-2*padding)+",0)"});
 
 	g12.selectAll("path")
 	.data(geo_obj.features)
@@ -197,5 +200,12 @@ d3.json("map/uptopo.json",function(error,up){
 	g12.append("text").text("Muslim Constituencies").attr("transform",function(){return "translate("+((width/3-55))+","+(20)+")";}).attr("class","map_label").attr("text-anchor","middle");
 
 	g17.append("text").text("2017 Results").attr("transform",function(){return "translate("+((width/3-55))+","+(20)+")";}).attr("class","map_label").attr("text-anchor","middle");
+
+	var reflist=['INC','BJP','BSP','SP',"SBSP","QED","IEMC","PECP"];
+	for (i=0;i<reflist.length;i++){
+		//debugger;
+		g17.append("circle").attr("r","8px").attr("transform",("translate("+(width/2-padding)+","+i*20+")")).attr("fill",party_colors[reflist[i]]);
+		g17.append("text").text(reflist[i]).attr("font-size","14px").attr("transform",("translate("+(width/2-padding/2)+","+(i*20+6)+")")).attr("text-anchor","start");
+	}
 });
 
