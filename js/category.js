@@ -149,9 +149,6 @@ function makecategorymap(error, data_2007, data_2012, data_2017, up) {
     map_2007.attr("transform", "translate(" + (category_width / 3) + ", 0)");
     d3.csv("data/category/stack_2017.csv", type, function(error, data) {
         stack_data_17 = data;
-        stack_data_17.sort(function(a, b) {
-            return b.total - a.total;
-        });
         x.domain(stack_data_17.map(function(d) {
             return d.party;
         }));
@@ -212,9 +209,6 @@ function makecategorymap(error, data_2007, data_2012, data_2017, up) {
     });
     d3.csv("data/category/stack_2012.csv", type, function(error, data) {
         stack_data_12 = data;
-        data.sort(function(a, b) {
-            return b.total - a.total;
-        });
         x.domain(data.map(function(d) {
             return d.party;
         }));
@@ -275,9 +269,6 @@ function makecategorymap(error, data_2007, data_2012, data_2017, up) {
     });
     d3.csv("data/category/stack_2007.csv", type, function(error, data) {
         stack_data_07 = data;
-        data.sort(function(a, b) {
-            return b.total - a.total;
-        });
         x.domain(data.map(function(d) {
             return d.party;
         }));
