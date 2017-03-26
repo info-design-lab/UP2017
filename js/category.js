@@ -148,7 +148,6 @@ function makecategorymap(error, data_2007, data_2012, data_2017, up) {
     map_2017.attr("transform", "translate(" + (-category_width / 3) + ", 0)");
     map_2007.attr("transform", "translate(" + (category_width / 3) + ", 0)");
     d3.csv("data/category/stack_2017.csv", type, function(error, data) {
-        console.log(data)
         stack_data_17 = data;
         stack_data_17.sort(function(a, b) {
             return b.total - a.total;
@@ -390,4 +389,27 @@ function makecategorymap(error, data_2007, data_2012, data_2017, up) {
         d.total = t;
         return d;
     }
+}
+
+function categoryOnly(str, event){
+  event.preventDefault();
+  if(str === "SC"){
+    $("#SC").prop("checked", false);
+    $("#F").prop("checked", false);
+    $("#M").prop("checked", false);
+    document.getElementById('SC').click();
+
+  }
+  else if(str === "F"){
+    $("#SC").prop("checked", false);
+    $("#F").prop("checked", false);
+    $("#M").prop("checked", false);
+    document.getElementById('F').click();
+  }
+  else if(str === "M"){
+    $("#SC").prop("checked", false);
+    $("#F").prop("checked", false);
+    $("#M").prop("checked", false);
+    document.getElementById('M').click();
+  }
 }

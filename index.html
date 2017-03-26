@@ -210,7 +210,7 @@
         <h2>4. Party Performance in SC, Women and Muslim Constituencies</h2>
         <p>
           In this visualization, we show the comparison of the number of constituencies that parties have won in the reserved SC constituencies (UP assembly has no ST constituencies), and the number of women MLAs and Muslim MLAs that the parties have managed to send to the Legislative Assembly over the last three elections.
-          
+
           </p>
       </div>
       <div class="col-md-3"></div>
@@ -222,11 +222,19 @@
         </div>
         <div class="col-md-2">
           <h4>Category</h4>
-          <input class="category-checkbox" type="checkbox" id="SC" value="SC" checked>&nbsp SC<br />
-          <input class="category-checkbox" type="checkbox" id="F" value="F" checked>&nbsp Female<br />
-          <input class="category-checkbox" type="checkbox" id="M" value="M" checked>&nbsp Muslim <br />
-          <br />
-          
+          <div class='row'>
+            <div class="col-md-6">
+              <label class="noselect">  <input class="category-checkbox" type="checkbox" id="SC" value="SC" checked>&nbsp SC<br /></label>
+              <label class="noselect">  <input class="category-checkbox" type="checkbox" id="F" value="F" checked>&nbsp Female<br /></label>
+              <label class="noselect">  <input class="category-checkbox" type="checkbox" id="M" value="M" checked>&nbsp Muslim <br /></label>
+              <br />
+            </div>
+            <div class="col-md-6">
+            <label class="noselect">  <a onclick="categoryOnly('SC', event)" class="toggle_checkbox" href="#">Only</a></label><br />
+            <label class="noselect">  <a onClick="categoryOnly('F', event)" class="toggle_checkbox" href="#">Only</a></label><br />
+            <label class="noselect">  <a onClick="categoryOnly('M', event)" class="toggle_checkbox" href="#">Only</a> </label>
+            </div>
+          </div>
           <h4>Category Colors</h4>
           <span class="rectangle" style="background: #fbb4ae;">&nbsp  &nbsp &nbsp</span> S.C.<br />
           <span class="rectangle" style="background: #ccebc5;">&nbsp  &nbsp &nbsp</span> Female<br />
@@ -250,9 +258,7 @@
       <div class="col-md-6">
         <h3>About the data</h3>
         <p>
-
           The analysis and visualization is made from datasets from the Election Commision of India. The analysis or transformation of data presented here should not be attributed to the ECI or the Indian Government.
-          
           <br>
           <br>Created at: <a href="http://info-design-lab.github.io" target="_blank">Information Design Lab IDC IIT Bombay</a>
           <br>
