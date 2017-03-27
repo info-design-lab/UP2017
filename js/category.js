@@ -119,6 +119,197 @@ function makecategorymap(error, data_2007, data_2012, data_2017, up) {
             $(this).removeClass('map-hover');
             return category_tooltip.style("visibility", "hidden");
         });
+
+    }   
+
+    d3.selectAll(".category-checkbox").data(catnames).enter();
+}
+
+function select_const(i, data) {
+	if (document.getElementById("F").checked && data[i - 1]['gender'] == 'F') {
+		return true;
+	}
+	else if (document.getElementById("M").checked && data[i - 1]['muslim'] == 'TRUE') {
+		return true;
+	}
+	else if (document.getElementById("SC").checked && data[i - 1]['category'] == 'S.C.') {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
+function total(d) {
+
+	var total=0;
+	for (i = 0; i < d.length; ++i) {
+		for (j=1;j<=Object.keys(d).length;j++)
+		{
+
+			total+=d[i][catnames[j-1]]["value"];
+		}
+		d[i].total=total;
+
+		total=0;
+	}      
+
+	return d;
+}
+
+function toggleCategory(cat,name){
+
+
+	d3.select(cat).attr("checked",function(){return d3.select(cat).attr("checked")==="unchecked"?"checked":"unchecked";});
+
+
+
+
+	var series,
+	isDisabling;
+
+	var stacks=[stack_data_07,stack_data_12,stack_data_17];
+	var garr=[g_07,g_12,g_17];
+	var years=["07","12","17"];
+
+	for (var k=stacks.length-1;k>=0;k--)
+	{
+
+		for(var i=stacks.length-1;i>=0;i--){
+
+			isDisabling=!stacks[k][i][name]["disabled"];
+			stacks[k][i][name]["disabled"]=isDisabling;
+		}
+
+
+		var newdata = jQuery.extend(true, {}, stacks[k]);
+		for (var i=0;i<stacks[k].length;i++)
+		{
+			var object=stacks[k][i];
+			for (var property in object) {
+				if (object.hasOwnProperty(property)) {
+					if (newdata[i][property].disabled){
+						delete newdata[i][property];
+					}
+				}
+			}
+		}
+		var newcatnames=catnames.slice();
+		newcatnames.removeIf(function(item){
+			return stacks[k][0][item]["disabled"];
+		});
+
+		var newdata=$.map(newdata, function(value, index) {
+			return [value];
+		})
+		var junk=newdata.splice(-1,1);
+
+		var stack=d3.stack().keys(newcatnames).value(function(d,key){
+			return d[key]["value"];
+		});
+
+		var newstack=stack(newdata);
+
+
+
+		var joinKey=function(d){return d.key;}
+
+		layers=garr[k].selectAll(".layers").data(newstack,joinKey); 
+        //debugger ;
+        redraw(garr[k],years[k]);
+        
+    }
+
+    if(name==="F")
+    {
+        
+        toggleCategory(null,"F&M");
+    }
+    if(name==="F&M")
+    {
+        
+        toggleCategory(null,"S&F");
+    }
+
+
+}
+
+function redraw(g,year){
+	var layerstoberemoved;
+
+	layerstoberemoved=layers.exit();
+    debugger;
+
+
+    layerstoberemoved.selectAll("rect")
+    .transition(t)
+    .attr("y",function(d){
+        return y(d[0]);
+    })
+    .attr("height","0")
+    .on("end",function(){
+    	c+=1;
+    	console.log(c);
+    	if(c===15)
+    	{
+            debugger;
+    		c=0;
+    		layerstoberemoved.remove();
+    	}
+    });
+
+    //d3.selectAll(this).remove();
+    //debugger;
+
+    
+
+    
+    var layerstobeadded=layers.enter().append("g")
+    .attr("class", "layers y"+year)
+    .attr("fill", function(d) {
+      return z(d.key);
+  })
+    .selectAll("rect")
+    .data(function(d) {
+      return d;
+  })
+    .enter()
+    .append("rect")
+    .attr("class",function(d){
+        //debugger;
+        return d3.select(this.parentElement).data()[0]["key"]+"rect"})
+    .attr("x", function(d) {
+      return x(d.data.party);
+  })
+    .transition(t)      
+    .attr("y", function(d) {
+      return y(d[1]);
+  })
+    .attr("height", function(d) {
+      return y(d[0]) - y(d[1]);
+  })
+    .attr("width", x.bandwidth());
+
+
+    layers.each(function(d){
+    	d3.select(this).selectAll("rect").data(function(d) {
+    		return d;
+    	})
+    	.attr("class",function(d){
+    		return d3.select(this.parentElement).data()[0]["key"]+"rect"})
+    	.attr("x", function(d) {
+    		return x(d.data.party);
+    	})
+    	.transition(t)  
+    	.attr("y", function(d) {
+    		return y(d[1]);
+    	})
+
+    	.attr("height", function(d) {
+
+    		return y(d[0]) - y(d[1]);
+    	})
+    	.attr("width", x.bandwidth());
+
     var g_17 = category_svg
         .append('g')
         .attr('height', category_width / 4)
@@ -266,6 +457,7 @@ function makecategorymap(error, data_2007, data_2012, data_2017, up) {
             .attr("transform", function(d) {
                 return "rotate(-90)"
             });
+
     });
     d3.csv("data/category/stack_2007.csv", type, function(error, data) {
         stack_data_07 = data;
