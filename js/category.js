@@ -504,7 +504,7 @@ function total(d) {
 	return d;
 }
 
-function toggleCategory(cat){
+function toggleCategory(cat,name){
 
 
 	d3.select(cat).attr("checked",function(){return d3.select(cat).attr("checked")==="unchecked"?"checked":"unchecked";});
@@ -518,8 +518,6 @@ function toggleCategory(cat){
 	var stacks=[stack_data_07,stack_data_12,stack_data_17];
 	var garr=[g_07,g_12,g_17];
 	var years=["07","12","17"];
-
-	var name=d3.select(cat).attr("value");
 
 	for (var k=stacks.length-1;k>=0;k--)
 	{
@@ -569,13 +567,25 @@ function toggleCategory(cat){
         
     }
 
+    if(name==="F")
+    {
+        
+        toggleCategory(null,"F&M");
+    }
+    if(name==="F&M")
+    {
+        
+        toggleCategory(null,"S&F");
+    }
+
+
 }
 
 function redraw(g,year){
 	var layerstoberemoved;
 
 	layerstoberemoved=layers.exit();
-    //debugger;
+    debugger;
 
 
     layerstoberemoved.selectAll("rect")
@@ -589,6 +599,7 @@ function redraw(g,year){
     	console.log(c);
     	if(c===15)
     	{
+            debugger;
     		c=0;
     		layerstoberemoved.remove();
     	}
@@ -600,31 +611,31 @@ function redraw(g,year){
     
 
     
-    	var layerstobeadded=layers.enter().append("g")
-    	.attr("class", "layers y"+year)
-    	.attr("fill", function(d) {
-    		return z(d.key);
-    	})
-    	.selectAll("rect")
-    	.data(function(d) {
-    		return d;
-    	})
-    	.enter()
-    	.append("rect")
-    	.attr("class",function(d){
+    var layerstobeadded=layers.enter().append("g")
+    .attr("class", "layers y"+year)
+    .attr("fill", function(d) {
+      return z(d.key);
+  })
+    .selectAll("rect")
+    .data(function(d) {
+      return d;
+  })
+    .enter()
+    .append("rect")
+    .attr("class",function(d){
         //debugger;
         return d3.select(this.parentElement).data()[0]["key"]+"rect"})
-    	.attr("x", function(d) {
-    		return x(d.data.party);
-    	})
-    	.transition(t)      
-    	.attr("y", function(d) {
-    		return y(d[1]);
-    	})
-    	.attr("height", function(d) {
-    		return y(d[0]) - y(d[1]);
-    	})
-    	.attr("width", x.bandwidth());
+    .attr("x", function(d) {
+      return x(d.data.party);
+  })
+    .transition(t)      
+    .attr("y", function(d) {
+      return y(d[1]);
+  })
+    .attr("height", function(d) {
+      return y(d[0]) - y(d[1]);
+  })
+    .attr("width", x.bandwidth());
 
 
     layers.each(function(d){
