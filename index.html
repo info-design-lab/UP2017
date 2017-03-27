@@ -9,11 +9,11 @@
     <script src="scripts/queue.js"></script>
     <script type="text/javascript" src="scripts/jquery-3.1.1.min.js"></script>
     <script src="scripts/select2.min.js"></script>
-    <script src="https://d3js.org/topojson.v2.min.js"></script>
+    <script src="js/topojson.min.js"></script>
     <script src="scripts/bootstrap/bootstrap.min.js"></script>
     <link href="scripts/bootstrap/bootstrap.min.css" rel="stylesheet" />
     <link href="css/select2.min.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    
     <link href="css/main.css" rel="stylesheet">
 
   </head>
@@ -224,9 +224,9 @@
           <h4>Category</h4>
           <div class='row'>
             <div class="col-md-6">
-              <label class="noselect">  <input class="category-checkbox" type="checkbox" id="SC" value="SC" checked>&nbsp SC<br /></label>
-              <label class="noselect">  <input class="category-checkbox" type="checkbox" id="F" value="F" checked>&nbsp Female<br /></label>
-              <label class="noselect">  <input class="category-checkbox" type="checkbox" id="M" value="M" checked>&nbsp Muslim <br /></label>
+              <label class="noselect">  <input onClick="toggleCategory(this)" class="category-checkbox" type="checkbox" id="SC" value="SC" checked="checked">&nbsp SC<br /></label>
+              <label class="noselect">  <input onClick="toggleCategory(this)" class="category-checkbox" type="checkbox" id="F" value="F" checked="checked">&nbsp Female<br /></label>
+              <label class="noselect">  <input onClick="toggleCategory(this)" class="category-checkbox" type="checkbox" id="M" value="M" checked="checked">&nbsp Muslim <br /></label>
               <br />
             </div>
             <div class="col-md-6">
