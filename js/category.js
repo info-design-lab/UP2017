@@ -321,27 +321,62 @@ function makecategorymap(error, data_2007, data_2012, data_2017, up) {
 
 function categoryOnly(cate,event){
 
+	event.preventDefault();
+
 	d3.selectAll(".category-checkbox").each(
 		function(){
 			if(d3.select(this).attr("checked")==="checked"&&d3.select(this).attr("value")!==cate)
 			{
-
-				this.click();
-
-                //d3.select(this).attr("checked","unchecked");
-                
-            }
-            else if(d3.select(this).attr("checked")==="unchecked"&&d3.select(this).attr("value")===cate)
-            {
-
-
-            	this.click();
-
-               //d3.select(this).attr("checked","checked");
-
-           }
+				this.click();               
+            }            
        });
-	event.preventDefault();
+	if(d3.select("#"+cate).attr("checked")==="checked")
+            {
+            	debugger;
+            	d3.select("#"+cate)._groups[0][0].click();
+            	//this.click();
+               //d3.select(this).attr("checked","checked");
+           }
+           debugger;
+           setTimeout(function(){
+           	d3.select("#"+cate)._groups[0][0].click();
+           },500);
+    
+
+	//if(cate==="F")
+	//{
+		//if(stack_data_17[0]["S&F"].disabled)
+			//toggleCategory(null,"S&F",true);
+		//if(stack_data_17[0]["F&M"].disabled)
+			//toggleCategory(null,"F&M",true);
+		//if(!stack_data_17[0]["S"].disabled)
+			//toggleCategory(null,"S",true);
+		//if(!stack_data_17[0]["M"].disabled)
+			//toggleCategory(null,"M",true);
+	//}
+	//if(cate==="M")
+	//{
+		//if(!stack_data_17[0]["S&F"].disabled)
+			//toggleCategory(null,"S&F",true);
+		//if(stack_data_17[0]["F&M"].disabled)
+			//toggleCategory(null,"F&M",true);
+		//if(!stack_data_17[0]["S"].disabled)
+			//toggleCategory(null,"S",true);
+		//if(!stack_data_17[0]["F"].disabled)
+			//toggleCategory(null,"F",true);
+	//}
+	//if(cate==="SC")
+	//{
+		//if(stack_data_17[0]["S&F"].disabled)
+			//toggleCategory(null,"S&F",true);
+		//if(!stack_data_17[0]["F&M"].disabled)
+			//toggleCategory(null,"F&M",true);
+		//if(!stack_data_17[0]["M"].disabled)
+			//toggleCategory(null,"M",true);
+		//if(!stack_data_17[0]["F"].disabled)
+			//toggleCategory(null,"F",true);
+	//}
+
 }
 
 
@@ -510,8 +545,6 @@ function toggleCategory(cat,name){
 	d3.select(cat).attr("checked",function(){return d3.select(cat).attr("checked")==="unchecked"?"checked":"unchecked";});
 
 
-
-
 	var series,
 	isDisabling;
 
@@ -565,19 +598,50 @@ function toggleCategory(cat,name){
         //debugger ;
         redraw(garr[k],years[k]);
         
-    }
+    }  
+    
 
     if(name==="F")
     {
-        
-        toggleCategory(null,"F&M");
+    	if(stack_data_17[0]["F"].disabled)
+    	{
+    		if(!stack_data_17[0]["S&F"].disabled)
+    			toggleCategory(null,"S&F");
+    		if(!stack_data_17[0]["F&M"].disabled){   
+    			toggleCategory(null,"F&M");
+    		}
+    	}
+    	else{
+    		if(stack_data_17[0]["S&F"].disabled)
+    			toggleCategory(null,"S&F");
+    		if(stack_data_17[0]["F&M"].disabled)    
+    			toggleCategory(null,"F&M");
+    	}
     }
-    if(name==="F&M")
+    if(name==="M")
     {
-        
-        toggleCategory(null,"S&F");
+    	if(stack_data_17[0]["M"].disabled)
+    	{
+    		if(!stack_data_17[0]["F&M"].disabled)    
+    			toggleCategory(null,"F&M");
+    	}
+    	else{
+    		if(stack_data_17[0]["F&M"].disabled)    
+    			toggleCategory(null,"F&M");
+    	}
     }
-
+    if(name==="SC")
+    {
+    	if(stack_data_17[0]["SC"].disabled)
+    	{
+    		if(!stack_data_17[0]["S&F"].disabled)    
+    			toggleCategory(null,"S&F");
+    	}
+    	else{
+    		if(stack_data_17[0]["S&F"].disabled)    
+    			toggleCategory(null,"S&F");
+    	}
+    }
 
 }
 
@@ -585,25 +649,25 @@ function redraw(g,year){
 	var layerstoberemoved;
 
 	layerstoberemoved=layers.exit();
-    debugger;
 
 
-    layerstoberemoved.selectAll("rect")
-    .transition(t)
-    .attr("y",function(d){
-        return y(d[0]);
-    })
-    .attr("height","0")
-    .on("end",function(){
-    	c+=1;
-    	console.log(c);
-    	if(c===15)
-    	{
-            debugger;
-    		c=0;
-    		layerstoberemoved.remove();
-    	}
-    });
+
+	layerstoberemoved.selectAll("rect")
+	.transition(t)
+	.attr("y",function(d){
+		return y(d[0]);
+	})
+	.attr("height","0")
+	.on("end",function(){
+		c+=1;
+		console.log(c);
+		if(c===15)
+		{
+
+			c=0;
+			layerstoberemoved.remove();
+		}
+	});
 
     //d3.selectAll(this).remove();
     //debugger;
@@ -614,27 +678,27 @@ function redraw(g,year){
     var layerstobeadded=layers.enter().append("g")
     .attr("class", "layers y"+year)
     .attr("fill", function(d) {
-      return z(d.key);
-  })
+    	return z(d.key);
+    })
     .selectAll("rect")
     .data(function(d) {
-      return d;
-  })
+    	return d;
+    })
     .enter()
     .append("rect")
     .attr("class",function(d){
         //debugger;
         return d3.select(this.parentElement).data()[0]["key"]+"rect"})
     .attr("x", function(d) {
-      return x(d.data.party);
-  })
+    	return x(d.data.party);
+    })
     .transition(t)      
     .attr("y", function(d) {
-      return y(d[1]);
-  })
+    	return y(d[1]);
+    })
     .attr("height", function(d) {
-      return y(d[0]) - y(d[1]);
-  })
+    	return y(d[0]) - y(d[1]);
+    })
     .attr("width", x.bandwidth());
 
 
