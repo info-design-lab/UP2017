@@ -223,17 +223,36 @@
         <div class="col-md-2">
           <h4>Category</h4>
           <div class='row'>
-            <div class="col-md-6">
-              <label class="noselect">  <input autocomplete="off" onClick="preparestack(this,['SC','S&F'],event,false)" class="category-checkbox" type="checkbox" id="SC" value="SC" checked="checked">&nbsp SC<br /></label>
-              <label class="noselect">  <input autocomplete="off" onClick="preparestack(this,['F','F&M','S&F'],event,false)" class="category-checkbox" type="checkbox" id="F" value="F" checked="checked">&nbsp Female<br /></label>
-              <label class="noselect">  <input autocomplete="off" onClick="preparestack(this,['M','F&M'],event,false)" class="category-checkbox" type="checkbox" id="M" value="M" checked="checked">&nbsp Muslim <br /></label>
-              <br />
+            <div class="col-md-12">
+            <div>
+              <label class="noselect"> 
+               <input autocomplete="off" onClick="preparestack(this,['SC','S&F'],event,false)" class="category-checkbox" type="checkbox" id="SC" value="SC" checked="checked">
+               <span>
+               SC
+               <a onclick="preparestack(this,['SC','S&F'], event,true)" val="SC" class="toggle_checkbox" href="#" style="float: right;">Only</a>
+               </span>
+               </label>
+               </div>
+               <div>
+              <label class="noselect"> 
+               <input autocomplete="off" onClick="preparestack(this,['F','F&M','S&F'],event,false)" class="category-checkbox" type="checkbox" id="F" value="F" checked="checked">
+               <span>Female
+               <a onClick="preparestack(this,['F','F&M','S&F'], event,true)" val="F" class="toggle_checkbox" href="#" style="float: right;">Only</a>
+               </span>
+               </label>
+               </div>
+
+               <div>
+              <label class="noselect">
+                <input autocomplete="off" onClick="preparestack(this,['M','F&M'],event,false)" class="category-checkbox" type="checkbox" id="M" value="M" checked="checked">
+                <span>
+                Muslim 
+                 <a onClick="preparestack(this,['M','F&M'], event,true)" val="M" class="toggle_checkbox" href="#" style="float: right;">Only</a>
+                </span>
+                </label>
+                </div>
             </div>
-            <div class="col-md-6">
-            <label class="noselect">  <a onclick="preparestack(this,['SC','S&F'], event,true)" val="SC" class="toggle_checkbox" href="#">Only</a></label><br />
-            <label class="noselect">  <a onClick="preparestack(this,['F','F&M','S&F'], event,true)" val="F" class="toggle_checkbox" href="#">Only</a></label><br />
-            <label class="noselect">  <a onClick="preparestack(this,['M','F&M'], event,true)" val="M" class="toggle_checkbox" href="#">Only</a> </label>
-            </div>
+            
           </div>
           <h4>Category Colors</h4>
           <span class="rectangle" style="background: #1D5C7B;">&nbsp  &nbsp &nbsp</span> SC<br />
