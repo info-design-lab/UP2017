@@ -13,7 +13,7 @@ var category_tooltip = d3.select("#category-chart")
 .style("fill", '#808080');
 
 var t = d3.transition()
-.duration(1000);
+.duration(200);
 
 var g_17;
 var g_12;
@@ -319,66 +319,75 @@ function makecategorymap(error, data_2007, data_2012, data_2017, up) {
 
 }
 
-function categoryOnly(cate,event){
-
-	event.preventDefault();
-
-	d3.selectAll(".category-checkbox").each(
-		function(){
-			if(d3.select(this).attr("checked")==="checked"&&d3.select(this).attr("value")!==cate)
-			{
-				this.click();               
-            }            
-       });
-	if(d3.select("#"+cate).attr("checked")==="checked")
-            {
-            	debugger;
-            	d3.select("#"+cate)._groups[0][0].click();
-            	//this.click();
-               //d3.select(this).attr("checked","checked");
-           }
-           debugger;
-           setTimeout(function(){
-           	d3.select("#"+cate)._groups[0][0].click();
-           },500);
+function preparestack(clicked_category,names,event,isclickonly)
+{
+    if(isclickonly)
+        event.preventDefault();
+    else{
+        if(d3.select(clicked_category).attr("checked")==="checked")
+            d3.select(clicked_category).attr("checked","unchecked");
+        else
+            d3.select(clicked_category).attr("checked","checked");
+    }
     
+    var stacks=[stack_data_07,stack_data_12,stack_data_17];
+    for(i=0;i<stacks.length;i++)
+    {
+        debugger;
+        if(isclickonly)
+        {
+            for(j=0;j<catnames.length;j++)
+            {
+                if(names.indexOf(catnames[j])!=-1)
+                {
+                    for(k=0;k<5;k++)
+                        stacks[i][k][catnames[j]].disabled=false;
+                }
+                else{
+                    for(k=0;k<5;k++)
+                        stacks[i][k][catnames[j]].disabled=true;
+                }
+            }
+            corresponding_checkbox=d3.select(clicked_category).attr("val");
+            d3.selectAll(".category-checkbox").each(function(){
+                if(this.getAttribute("id")===corresponding_checkbox){
+                    d3.select("#"+corresponding_checkbox)["_groups"][0][0].checked=true;
+                    d3.select("#"+corresponding_checkbox).attr("checked","checked");
+                }
+                else{
+                    d3.select(this)["_groups"][0][0].checked=false;
+                    d3.select(this).attr("checked","unchecked");
+                }
+            });
+        }
+        else{
+            //debugger;
+            for (var j=0;j<names.length;j++)
+            {
+                debugger;
 
-	//if(cate==="F")
-	//{
-		//if(stack_data_17[0]["S&F"].disabled)
-			//toggleCategory(null,"S&F",true);
-		//if(stack_data_17[0]["F&M"].disabled)
-			//toggleCategory(null,"F&M",true);
-		//if(!stack_data_17[0]["S"].disabled)
-			//toggleCategory(null,"S",true);
-		//if(!stack_data_17[0]["M"].disabled)
-			//toggleCategory(null,"M",true);
-	//}
-	//if(cate==="M")
-	//{
-		//if(!stack_data_17[0]["S&F"].disabled)
-			//toggleCategory(null,"S&F",true);
-		//if(stack_data_17[0]["F&M"].disabled)
-			//toggleCategory(null,"F&M",true);
-		//if(!stack_data_17[0]["S"].disabled)
-			//toggleCategory(null,"S",true);
-		//if(!stack_data_17[0]["F"].disabled)
-			//toggleCategory(null,"F",true);
-	//}
-	//if(cate==="SC")
-	//{
-		//if(stack_data_17[0]["S&F"].disabled)
-			//toggleCategory(null,"S&F",true);
-		//if(!stack_data_17[0]["F&M"].disabled)
-			//toggleCategory(null,"F&M",true);
-		//if(!stack_data_17[0]["M"].disabled)
-			//toggleCategory(null,"M",true);
-		//if(!stack_data_17[0]["F"].disabled)
-			//toggleCategory(null,"F",true);
-	//}
+                var name=names[j];
+                //debugger;
+                var checkbox=d3.select(clicked_category).attr("checked");
+                for(var k=0;k<5;k++){
+                    if(checkbox==="checked"){
+                        if(stacks[i][k][name].disabled===true)
+                            stacks[i][k][name].disabled=false;
+                    }
+                    else
+                    {
+                        if(!stacks[i][k][name].disabled)
+                            stacks[i][k][name].disabled=true;
+                    }
+                }
+            }
+        }
+    }
+
+    //debugger;
+    toggleCategory();
 
 }
-
 
 function createStackChart(){
 	var category_svg=d3.select("#category-chart").select("svg");
@@ -539,11 +548,7 @@ function total(d) {
 	return d;
 }
 
-function toggleCategory(cat,name){
-
-
-	d3.select(cat).attr("checked",function(){return d3.select(cat).attr("checked")==="unchecked"?"checked":"unchecked";});
-
+function toggleCategory(){
 
 	var series,
 	isDisabling;
@@ -554,94 +559,86 @@ function toggleCategory(cat,name){
 
 	for (var k=stacks.length-1;k>=0;k--)
 	{
+        var newdata = jQuery.extend(true, {}, stacks[k]);
+        for (var i=0;i<stacks[k].length;i++)
+        {
+           var object=stacks[k][i];
+           for (var property in object) {
+            if (object.hasOwnProperty(property)) {
+             if (newdata[i][property].disabled){
+              delete newdata[i][property];
+          }
+      }
+  }
+}
+var newcatnames=catnames.slice();
+newcatnames.removeIf(function(item){
+   return stacks[k][0][item]["disabled"];
+});
 
-		for(var i=stacks.length-1;i>=0;i--){
+var newdata=$.map(newdata, function(value, index) {
+   return [value];
+})
+var junk=newdata.splice(-1,1);
 
-			isDisabling=!stacks[k][i][name]["disabled"];
-			stacks[k][i][name]["disabled"]=isDisabling;
-		}
+var stack=d3.stack().keys(newcatnames).value(function(d,key){
+   return d[key]["value"];
+});
 
-
-		var newdata = jQuery.extend(true, {}, stacks[k]);
-		for (var i=0;i<stacks[k].length;i++)
-		{
-			var object=stacks[k][i];
-			for (var property in object) {
-				if (object.hasOwnProperty(property)) {
-					if (newdata[i][property].disabled){
-						delete newdata[i][property];
-					}
-				}
-			}
-		}
-		var newcatnames=catnames.slice();
-		newcatnames.removeIf(function(item){
-			return stacks[k][0][item]["disabled"];
-		});
-
-		var newdata=$.map(newdata, function(value, index) {
-			return [value];
-		})
-		var junk=newdata.splice(-1,1);
-
-		var stack=d3.stack().keys(newcatnames).value(function(d,key){
-			return d[key]["value"];
-		});
-
-		var newstack=stack(newdata);
+var newstack=stack(newdata);
 
 
 
-		var joinKey=function(d){return d.key;}
+var joinKey=function(d){return d.key;}
 
-		layers=garr[k].selectAll(".layers").data(newstack,joinKey); 
+layers=garr[k].selectAll(".layers").data(newstack,joinKey); 
         //debugger ;
         redraw(garr[k],years[k]);
         
     }  
     
 
-    if(name==="F")
-    {
-    	if(stack_data_17[0]["F"].disabled)
-    	{
-    		if(!stack_data_17[0]["S&F"].disabled)
-    			toggleCategory(null,"S&F");
-    		if(!stack_data_17[0]["F&M"].disabled){   
-    			toggleCategory(null,"F&M");
-    		}
-    	}
-    	else{
-    		if(stack_data_17[0]["S&F"].disabled)
-    			toggleCategory(null,"S&F");
-    		if(stack_data_17[0]["F&M"].disabled)    
-    			toggleCategory(null,"F&M");
-    	}
-    }
-    if(name==="M")
-    {
-    	if(stack_data_17[0]["M"].disabled)
-    	{
-    		if(!stack_data_17[0]["F&M"].disabled)    
-    			toggleCategory(null,"F&M");
-    	}
-    	else{
-    		if(stack_data_17[0]["F&M"].disabled)    
-    			toggleCategory(null,"F&M");
-    	}
-    }
-    if(name==="SC")
-    {
-    	if(stack_data_17[0]["SC"].disabled)
-    	{
-    		if(!stack_data_17[0]["S&F"].disabled)    
-    			toggleCategory(null,"S&F");
-    	}
-    	else{
-    		if(stack_data_17[0]["S&F"].disabled)    
-    			toggleCategory(null,"S&F");
-    	}
-    }
+    //if(name==="F")
+    //{
+    	//if(stack_data_17[0]["F"].disabled)
+    	//{
+    		//if(!stack_data_17[0]["S&F"].disabled)
+    			//toggleCategory(null,"S&F");
+    		//if(!stack_data_17[0]["F&M"].disabled){   
+    			//toggleCategory(null,"F&M");
+    		//}
+    	//}
+    	//else{
+    		//if(stack_data_17[0]["S&F"].disabled)
+    			//toggleCategory(null,"S&F");
+    		//if(stack_data_17[0]["F&M"].disabled)    
+    			//toggleCategory(null,"F&M");
+    	//}
+    //}
+    //if(name==="M")
+    //{
+    	//if(stack_data_17[0]["M"].disabled)
+    	//{
+    		//if(!stack_data_17[0]["F&M"].disabled)    
+    			//toggleCategory(null,"F&M");
+    	//}
+    	//else{
+    		//if(stack_data_17[0]["F&M"].disabled)    
+    			//toggleCategory(null,"F&M");
+    	//}
+    //}
+    //if(name==="SC")
+    //{
+    	//if(stack_data_17[0]["SC"].disabled)
+    	//{
+    		//if(!stack_data_17[0]["S&F"].disabled)    
+    			//toggleCategory(null,"S&F");
+    	//}
+    	//else{
+    		//if(stack_data_17[0]["S&F"].disabled)    
+    			//toggleCategory(null,"S&F");
+    	//}
+    //}
 
 }
 
@@ -652,27 +649,33 @@ function redraw(g,year){
 
 
 
-	layerstoberemoved.selectAll("rect")
-	.transition(t)
-	.attr("y",function(d){
-		return y(d[0]);
-	})
-	.attr("height","0")
-	.on("end",function(){
-		c+=1;
-		console.log(c);
-		if(c===15)
-		{
-
-			c=0;
-			layerstoberemoved.remove();
-		}
-	});
+	
 
     //d3.selectAll(this).remove();
     //debugger;
 
     
+    layers.each(function(d){
+        d3.select(this).selectAll("rect").data(function(d) {
+            return d;
+        })
+        .attr("class",function(d){
+            return d3.select(this.parentElement).data()[0]["key"]+"rect"})
+        .attr("x", function(d) {
+            return x(d.data.party);
+        })
+        .transition(t)
+        .attr("y", function(d) {
+            return y(d[1]);
+        })
+
+        .attr("height", function(d) {
+
+            return y(d[0]) - y(d[1]);
+        })
+        .attr("width", x.bandwidth());
+    });
+
 
     
     var layerstobeadded=layers.enter().append("g")
@@ -702,25 +705,26 @@ function redraw(g,year){
     .attr("width", x.bandwidth());
 
 
-    layers.each(function(d){
-    	d3.select(this).selectAll("rect").data(function(d) {
-    		return d;
-    	})
-    	.attr("class",function(d){
-    		return d3.select(this.parentElement).data()[0]["key"]+"rect"})
-    	.attr("x", function(d) {
-    		return x(d.data.party);
-    	})
-    	.transition(t)  
-    	.attr("y", function(d) {
-    		return y(d[1]);
-    	})
-
-    	.attr("height", function(d) {
-
-    		return y(d[0]) - y(d[1]);
-    	})
-    	.attr("width", x.bandwidth());
+    
+    layerstoberemoved.selectAll("rect")
+    .transition(t)
+    .attr("y",function(d){
+        return y(d[0]);
+    })
+    .attr("height","0")
+    .on("end",function(){
+        c+=1;
+        //console.log(c);
+        if(c===15)
+        {
+            c=0;
+            layerstoberemoved.remove();
+        }
+    })
+    .on("interrupt",function(){
+        console.log("interrupt");
+        c=0;
+        layerstoberemoved.remove();
     });
 
 
